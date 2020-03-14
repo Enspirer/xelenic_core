@@ -1,17 +1,30 @@
 <?php
-
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PartnershipsController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\User\ProfileController;
 
+
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
  */
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('about', [AboutController::class, 'index'])->name('index');
+Route::get('services', [ServicesController::class, 'index'])->name('index');
+Route::get('products', [ProductsController::class, 'index'])->name('index');
+Route::get('partnerships', [PartnershipsController::class, 'index'])->name('index');
+Route::get('blog', [BlogController::class, 'index'])->name('index');
+Route::get('faq', [FaqController::class, 'index'])->name('index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
+
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 /*
