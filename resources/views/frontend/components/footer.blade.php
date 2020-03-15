@@ -41,14 +41,14 @@
                 <div class="single-footer-widget mail-chimp">
                     <h6 class="mb-20">Instragram Feed</h6>
                     <ul class="instafeed d-flex flex-wrap">
-                        <li><img src="img/i1.jpg" alt=""></li>
-                        <li><img src="img/i2.jpg" alt=""></li>
-                        <li><img src="img/i3.jpg" alt=""></li>
-                        <li><img src="img/i4.jpg" alt=""></li>
-                        <li><img src="img/i5.jpg" alt=""></li>
-                        <li><img src="img/i6.jpg" alt=""></li>
-                        <li><img src="img/i7.jpg" alt=""></li>
-                        <li><img src="img/i8.jpg" alt=""></li>
+                        <li><img src="FrontPage/img/i1.jpg" alt=""></li>
+                        <li><img src="FrontPage/img/i2.jpg" alt=""></li>
+                        <li><img src="FrontPage/img/i3.jpg" alt=""></li>
+                        <li><img src="FrontPage/img/i4.jpg" alt=""></li>
+                        <li><img src="FrontPage/img/i5.jpg" alt=""></li>
+                        <li><img src="FrontPage/img/i6.jpg" alt=""></li>
+                        <li><img src="FrontPage/img/i7.jpg" alt=""></li>
+                        <li><img src="FrontPage/img/i8.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -59,7 +59,7 @@
             <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             <div class="footer-social d-flex align-items-center">
-                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.facebook.com/icovden/" target="_blank"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-dribbble"></i></a>
                 <a href="#"><i class="fa fa-behance"></i></a>
