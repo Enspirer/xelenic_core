@@ -109,16 +109,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="" style="margin-top: 136px;font-size: 70px;line-height: 92px;color: white;font-weight: 600;padding: 10px;">
+                <div class="" style="margin-top: 60px;font-size: 53px;line-height: normal;color: white;font-weight: 600;padding: 10px;">
                     We build your bussinus icon
                 </div>
-                <p>Welcome</p>
+                <p style="color: white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                </p>
+                <a class="btn btn-primary pull-right" style="color: white">Get started</a>
             </div>
             <div class="col-md-6">
                 <div class="" style="background-image: url('FrontPage/img/logo_frame.png');height: 396px;background-repeat: no-repeat;background-position: center;background-size: contain;margin-top: 60px;">
-                    <div class="">
-                        
-                    </div>
+
                 </div>
             </div>
         </div>

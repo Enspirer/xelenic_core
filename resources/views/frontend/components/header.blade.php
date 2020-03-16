@@ -6,7 +6,7 @@
                 <a href="index.html"><img src="FrontPage/img/logo.png" alt="" title="" /></a>
             </div>
             <nav id="nav-menu-container">
-                <ul class="nav-menu">
+                <ul class="nav-menu" style="color: white;">
                     <li class="menu-active"><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/services">Service</a></li>
