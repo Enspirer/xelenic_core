@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\blog;
+use App\Blog;
 
 class BlogController extends Controller
 {

@@ -8,10 +8,10 @@
 
          @if(count($blog_details) >= 0)
              <div class="" style="text-align: center;margin-top: 60px;padding: 40px;">
-                 <h2 style="text-align: center;">Hleome</h2>
-
+                 <div class="" style="background-image: url('FrontPage/img/page_not_found.png');height: 233px;background-size: contain;background-position: center;background-repeat: no-repeat;">
+                 </div>
+                 <h2 style="text-align: center;color: dimgrey">Blog posts not found</h2>
              </div>
-
          @else
             <div class="row">
                 @foreach($blog_details as $blog)

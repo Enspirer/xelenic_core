@@ -82,7 +82,16 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{
+                    active_class(Route::is('admin/blog'))
+                }}" href="{{ route('admin.blog') }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        Blog
+                    </a>
+                </li>
             @endif
+
         </ul>
     </nav>
 
