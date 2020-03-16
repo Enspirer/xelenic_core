@@ -24,6 +24,33 @@ class BlogController extends Controller
 
     public function create (Request $request)
     {
+        $slug = $request->slug;
+        $stripped_slug = str_replace(' ', '', $slug);
+
+        if($request->has('thumbs_img')) {
+            $filenameWithExt = $request->file('thumbs_img')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('thumbs_img')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            $path = $request->file('thumbs_img')->    storeAs('/images/thumbs_img', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+        }
+
+
+
+
+
+
+        $blog = new Blog();
+
+        $blog->blog_title = $request->blog_title;
+        $blog->slug = $stripped_slug;
+        $blog->description = $request->description;
+        $blog->thums_img = $path;
+        $blog->body = $request->blog_body;
+        $blog->user_id = auth()->user()->id;
+        $blog->save();
 
     }
 
