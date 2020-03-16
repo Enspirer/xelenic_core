@@ -28,4 +28,6 @@
     <link rel="stylesheet" href="FrontPage/css/animate.min.css">
     <link rel="stylesheet" href="FrontPage/css/owl.carousel.css">
     <link rel="stylesheet" href="FrontPage/css/main.css">
+    <script src="FrontPage/js/vendor/jquery-2.2.4.min.js"></script>
+
 </head>
