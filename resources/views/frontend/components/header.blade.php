@@ -1,4 +1,4 @@
-<header id="header" id="home">
+<header id="header" id="home" style="background-color: #4d90fe !important">
 
     <div class="container main-menu">
         <div class="row align-items-center justify-content-between d-flex">
