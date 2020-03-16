@@ -98,6 +98,14 @@
                         Pages
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{
+                    active_class(Route::is('admin/partnerships'))
+                }}" href="{{ route('admin.partnerships') }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        Partnerships
+                    </a>
+                </li>
             @endif
 
         </ul>
