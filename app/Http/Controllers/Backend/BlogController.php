@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Blog;
 use Illuminate\Http\Request;
+use DB;
 
 /**
  * Class DashboardController.
@@ -39,9 +40,6 @@ class BlogController extends Controller
 
 
 
-
-
-
         $blog = new Blog();
 
         $blog->blog_title = $request->blog_title;
@@ -72,6 +70,15 @@ class BlogController extends Controller
             @header('Content-type: text/html; charset=utf-8');
             echo $response;
         }
+    }
+
+    public function delete ($id)
+    {
+        DB::table('blog_table')
+            ->where('id',$id)
+            ->delete();
+
+        return back();
     }
 
 }

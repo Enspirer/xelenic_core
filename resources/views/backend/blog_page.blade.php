@@ -31,15 +31,9 @@
                             <a href="http://127.0.0.1:8000/admin/auth/user/1/edit" data-toggle="tooltip" data-placement="top" title="" class="btn btn-primary" data-original-title="Edit">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <div class="btn-group btn-group-sm" role="group">
-                                <button id="userActions" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    More
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="userActions">
-
-                                    <a href="http://127.0.0.1:8000/admin/auth/user/1/password/change" class="dropdown-item">Change Password</a>
-                                </div>
-                            </div>
+                            <a href="{{route('admin.delete',$blog->id)}}" data-toggle="tooltip" data-placement="top" title="" class="btn btn-danger" data-original-title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </a>
                         </div>
                     </td>
                 </tr>
