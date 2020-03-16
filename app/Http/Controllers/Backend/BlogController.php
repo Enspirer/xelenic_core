@@ -22,6 +22,11 @@ class BlogController extends Controller
             ['blogs'=>$blog]);
     }
 
+    public function create (Request $request)
+    {
+
+    }
+
     public function upload_image (Request $request)
     {
         if($request->hasFile('upload')) {

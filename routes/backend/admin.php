@@ -9,3 +9,5 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 
 Route::get('blog', [BlogController::class, 'index'])->name('blog');
 Route::post('blog/upload_images', [BlogController::class, 'upload_image'])->name('upload_images');
+Route::post('blog/insert', [BlogController::class, 'insert'])->name('blog.insert');
+Route::post('blog/edit', [BlogController::class, 'edit'])->name('blog.edit');
