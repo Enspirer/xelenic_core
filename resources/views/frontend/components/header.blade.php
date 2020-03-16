@@ -3,7 +3,7 @@
 </style>
 
 
-<header id="header" id="home" style="background-color: #4d90fe !important;padding-bottom: unset;">
+<header id="header" id="home" style="background-color: rgb(77, 144, 254) !important;padding-bottom: unset;position: fixed;width: -webkit-fill-available;z-index: 3;">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="background-color: #4d90fe !important;">
             <a class="navbar-brand" href="#">Navbar</a>
