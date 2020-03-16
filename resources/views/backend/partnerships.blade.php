@@ -45,7 +45,7 @@
             </tbody>
         </table>
         @if(count($partnerships) == 0)
-            <h2 style="text-align: center;color: #969696;font-size: 23px;padding: 13px;">Pages Data not found</h2>
+            <h2 style="text-align: center;color: #969696;font-size: 23px;padding: 13px;">Partnerships Data not found</h2>
         @else
 
         @endif
