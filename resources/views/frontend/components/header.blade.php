@@ -27,11 +27,24 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content;">
+                            <div class="row" style="padding: 14px;">
+                                <div class="col-md-6" style="font-size: 12px;text-align: center;width: 370px;">
+                                    <div style="background-image: url('FrontPage/img/rocket.jpg');height: 190px;background-size: contain;background-position: center;background-repeat: no-repeat;"></div>
+                                    Lorposi ipsume data mapake Lorposi ipsume data mapakeLorposi ipsume data mapake Lorposi ipsume data mapake
+                                </div>
+                                <div class="col-md-6">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+
                         </div>
                     </li>
                 </ul>
