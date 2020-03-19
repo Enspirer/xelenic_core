@@ -21,11 +21,12 @@ class Service extends Migration
             $table->longText('service_description');
             $table->text('service_url');
             $table->text('service_provider');
-            $table->text('cover_image');
-            $table->text('icon_image');
+            $table->text('cover_image')->nullable();
+            $table->text('icon_image')->nullable();
             $table->integer('status');
             $table->text('service_price')->nullable();
             $table->text('token')->nullable();
+            $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
         });
 

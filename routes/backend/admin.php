@@ -19,3 +19,4 @@ Route::get('pages', [PagesController::class, 'index'])->name('pages');
 Route::get('partnerships', [PartnershipsController::class, 'index'])->name('partnerships');
 
 Route::get('cloud-services', [CloudServiceController::class, 'index'])->name('cloud_service');
+Route::post('cloud-services/insert', [CloudServiceController::class, 'insert'])->name('cloud_service.insert');

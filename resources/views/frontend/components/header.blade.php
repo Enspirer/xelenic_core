@@ -1,7 +1,3 @@
-<style>
-
-</style>
-
 
 <header id="header" id="home" style="background-color: rgb(77, 144, 254) !important;padding-bottom: unset;position: fixed;width: -webkit-fill-available;z-index: 3;">
     <div class="container">

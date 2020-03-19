@@ -13,7 +13,7 @@ class CloudService extends Model
 
     public static function get_all_active_service()
     {
-        $cloude_service = CloudService::where('active', 1)->get;
+        $cloude_service = CloudService::where('status', 1)->get;
 
         return $cloude_service;
     }

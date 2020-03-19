@@ -35,6 +35,41 @@
             </div><!-- container -->
         </div><!-- #app -->
 
+        <style>
+            .mash_menu {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            @media (min-width: 576px) {
+                .mash_menu {
+                    max-width: 540px;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .mash_menu {
+                    max-width: 720px;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .mash_menu {
+                    max-width: 960px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .mash_menu {
+                    max-width: 1140px;
+                }
+            }
+
+        </style>
+
         <!-- Scripts -->
         @stack('before-scripts')
         {!! script(mix('js/manifest.js')) !!}

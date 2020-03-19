@@ -3,42 +3,11 @@
 @section('title', app_name() . ' | ' . __('navs.frontend.dashboard') )
 
 @section('content')
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>dashgrin I CRM Dashboard</title>
-    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/FrontDashboard/favicon.ico">
-    <link rel="icon" href="/FrontDashboard/favicon.ico" type="image/x-icon">
-
-    <!-- vector map CSS -->
-    <link href="/FrontDashboard/vendors/vectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" type="text/css" />
-
-    <!-- Toggles CSS -->
-    <link href="/FrontDashboard/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
-    <link href="/FrontDashboard/vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
-
-    <!-- Morris Charts CSS -->
-    <link href="/FrontDashboard/vendors/morris.js/morris.css" rel="stylesheet" type="text/css" />
-
-    <!-- Toastr CSS -->
-    <link href="/FrontDashboard/vendors/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom CSS -->
-    <link href="/FrontDashboard/dist/css/style.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-
-<!-- HK Wrapper -->
-<div class="hk-wrapper hk-vertical-nav">
-    <!-- Vertical Nav -->
+    @include('frontend.user.dashboard_components.header')
 
     @include('frontend.user.dashboard_components.sidebar')
 
-    <div id="hk_nav_backdrop" class="hk-nav-backdrop"></div>
+
     <!-- /Vertical Nav -->
 
     <!-- Setting Panel -->
@@ -600,34 +569,7 @@
             </div>
         </div>
         <!-- /Container -->
+    @include('frontend.user.dashboard_components.sidebar')
 
-        <!-- Footer -->
-        <div class="hk-footer-wrap container-fluid px-xxl-65 px-xl-20">
-            <footer class="footer">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <p>Pampered by<a href="https://hencework.com/" class="text-dark" target="_blank">Hencework</a> © 2019</p>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <p class="d-inline-block">Follow us</p>
-                        <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-facebook"></i></span></a>
-                        <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-twitter"></i></span></a>
-                        <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-google-plus"></i></span></a>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <!-- /Footer -->
-    </div>
-    <!-- /Main Content -->
-
-</div>
-<!-- /HK Wrapper -->
-
-
-
-</body>
-
-</html>
 
 @endsection
