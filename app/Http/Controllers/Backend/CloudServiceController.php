@@ -23,7 +23,7 @@ class CloudServiceController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('thumbs_img')->getClientOriginalExtension();
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
-            $path = $request->file('thumbs_img')->    storeAs('/images/service_img', $fileNameToStore);
+            $path = $request->file('thumbs_img')->    storeAs('public/service_img', $fileNameToStore);
         } else {
             $fileNameToStore = 'noimage.jpg';
         }
