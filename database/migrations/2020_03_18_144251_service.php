@@ -23,6 +23,7 @@ class Service extends Migration
             $table->text('service_provider');
             $table->text('cover_image');
             $table->text('icon_image');
+            $table->integer('status');
             $table->text('service_price')->nullable();
             $table->text('token')->nullable();
             $table->timestamp('created_at')->useCurrent();
