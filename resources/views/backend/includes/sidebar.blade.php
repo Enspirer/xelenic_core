@@ -94,7 +94,7 @@
                     <a class="nav-link {{
                     active_class(Route::is('admin/pages'))
                 }}" href="{{ route('admin.pages') }}">
-                        <i class="nav-icon fas fa-book"></i>
+                        <i class="nav-icon fas fa-file"></i>
                         Pages
                     </a>
                 </li>
@@ -102,10 +102,21 @@
                     <a class="nav-link {{
                     active_class(Route::is('admin/partnerships'))
                 }}" href="{{ route('admin.partnerships') }}">
-                        <i class="nav-icon fas fa-book"></i>
+                        <i class="nav-icon fas fa-hand-holding"></i>
                         Partnerships
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{
+                    active_class(Route::is('admin/cloud-service'))
+                }}" href="{{ route('admin.cloud_service') }}">
+                        <i class="nav-icon fas fa-cloud"></i>
+                        Cloud Service
+                    </a>
+                </li>
+
+
             @endif
 
         </ul>

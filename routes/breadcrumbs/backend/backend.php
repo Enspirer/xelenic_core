@@ -14,5 +14,10 @@ Breadcrumbs::for('admin.pages', function ($trail) {
 Breadcrumbs::for('admin.partnerships', function ($trail) {
     $trail->push('Partnerships', route('admin.partnerships'));
 });
+
+Breadcrumbs::for('admin.cloud_service', function ($trail) {
+    $trail->push('Cloud Service', route('admin.cloud_service'));
+});
+
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
