@@ -6,6 +6,8 @@ use App\Http\Controllers\PartnershipsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\EventsController;
+
 
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -27,6 +29,7 @@ Route::get('blog', [BlogController::class, 'index'])->name('index');
 Route::get('faq', [FaqController::class, 'index'])->name('index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::get('team', [TeamController::class, 'index'])->name('index');
+Route::get('events', [EventsController::class, 'index'])->name('index');
 
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 

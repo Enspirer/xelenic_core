@@ -71,4 +71,32 @@
     <![endif]-->
     <!-- ending Pages CSS -->
 
+    <!-- Starting Pages2 CSS -->
+    <!-- all css here -->
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="/Pages2/css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="/Pages2/css/animate.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="/Pages2/css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="/Pages2/css/owl.carousel.css">
+    <!-- icofont css -->
+    <link rel="stylesheet" href="/Pages2/css/icofont.css">
+    <!-- Nivo css -->
+    <link rel="stylesheet" href="/Pages2/css/nivo-slider.css">
+    <!-- animaton text css -->
+    <link rel="stylesheet" href="/Pages2/css/animate-text.css">
+    <!-- Metrial iconic fonts css -->
+    <link rel="stylesheet" href="/Pages2/css/material-design-iconic-font.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="/Pages2/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="/Pages2/css/responsive.css">
+    <!-- color css -->
+    <link href="/Pages2/css/color/skin-default.css" rel="stylesheet">
+
+    <!-- modernizr css -->
+    <script src="/Pages2/js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- ending Pages CSS -->
 </head>

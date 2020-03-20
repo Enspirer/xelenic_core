@@ -58,7 +58,7 @@
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Careers</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Events</a>
+                                    <a class="dropdown-item" href="/events">Events</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Community</a>
                                     <div class="dropdown-divider"></div>
