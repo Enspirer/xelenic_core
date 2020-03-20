@@ -1,0 +1,308 @@
+/*
+
+[Theme Color Stylesheet]
+
+Project     : CloudSky - Multipurpose Domain, Hosting and WHMCS Template
+Version     : 1.5
+Author      : ThemeLooks
+Author URI  : https://themeforest.net/user/themelooks
+
+*/
+
+/*------------------------------------*\
+    COLOR
+\*------------------------------------*/
+a,
+a:hover,
+a:focus,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link.active,
+.nav li a:hover,
+.nav li.active > a,
+.nav li.active > a:hover,
+.nav li.active > a:focus,
+.nav li.open > a,
+.nav li.open > a:hover,
+.nav li.open > a:focus,
+.btn-default,
+.btn-default.disabled:hover,
+.btn-default.disabled:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled]:hover,
+.btn-default[disabled]:focus,
+.btn-default[disabled].focus,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:active.focus,
+.btn-primary.active,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary,
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:focus,
+.open > .dropdown-toggle.btn-primary.focus,
+.nav li a.btn-primary:hover,
+.nav li a.btn-primary:focus,
+.nav li.active > a.btn-primary,
+.nav li.open > a.btn-primary,
+.text-c--main,
+.ui-spinner-input,
+.owl-nav > div:hover,
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > li:not(.prev):not(.next) > a:active,
+.pagination > li:not(.prev):not(.next) > a:active:focus,
+.pagination > li.active > a,
+.pagination > li.active > a:hover,
+.pagination > li.active > a:focus,
+.comment--respond .rating .br-widget a.br-selected:after,
+.nav--widget .nav > li > a > span.count,
+.cart--widget .icon .fa,
+.cart--widget a:hover .info .h4,
+.page--header-breadcrumb .breadcrumb li span,
+.domain-search--form .extras span:before,
+.pricing--slider .owl-nav > div,
+.pricing--item:hover .title .h4,
+.pricing--item.active .title .h4,
+.pricing--item .action .btn-default:hover,
+.pricing--item .action .btn-default:hover,
+.pricing--table .table tbody tr th,
+.vps--pricing-slider-wrapper .ui-slider-prev,
+.vps--pricing-slider-wrapper .ui-slider-next,
+.vps--pricing-slider .ui-slider-handle span,
+.vps--pricing-feature .h5,
+.feature--item .icon,
+.product--info .rating .nav > li,
+.product--summery .info .rating,
+.product--summery .instock,
+.product--summery .price,
+.team--members .owl-nav > div,
+.counter--item .count .h1,
+.post--single .post--inner .meta > li > a,
+.coming--soon-content .countdown ul li:first-child,
+.login--form .title .h4 {
+    color: #179ea8;
+}
+
+/*------------------------------------*\
+    BACKGROUND COLOR
+\*------------------------------------*/
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default:active:hover,
+.btn-default:active:focus,
+.btn-default:active.focus,
+.btn-default.active,
+.btn-default.active:hover,
+.btn-default.active:focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default.focus,
+.btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled].focus,
+.bg--c-main,
+.bg--c-main--b:before,
+.bg--c-main--a:after,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li.open > a,
+.dropdown-menu > li.open > a:hover,
+.dropdown-menu > li.open > a:focus,
+.dropdown-menu > li.active > a,
+.dropdown-menu > li.active > a:hover,
+.dropdown-menu > li.active > a:focus,
+.owl-dot,
+#preloader,
+.nav--widget .nav > li > a > span.count:before,
+.tab-nav--widget .nav > li > a:hover,
+.tab-nav--widget .nav > li.active > a,
+.cart--widget a:hover .icon .fa,
+.tagcloud a:before,
+.header--cart-btn a span,
+.page--content-inner .sub-title:before,
+.service--item.style--2:hover .action .btn-primary,
+.pricing--nav .nav > li > a:hover,
+.pricing--nav .nav > li.active > a,
+.pricing--slider .owl-nav > div:hover,
+.pricing--item:hover:before,
+.pricing--item.active:before,
+.pricing--item .title .h4,
+.pricing--table .table tr:hover,
+.vps--pricing-slider-wrapper,
+.vps--pricing-feature .h5:after,
+.feature--item:hover,
+.feature--item .img,
+.portfolio--filter-menu .nav > li:hover,
+.portfolio--filter-menu .nav > li.active,
+.portfolio--item .caption:before,
+.product--img-gallery .owl-nav > div:hover,
+.product--details-nav .nav > li > a:hover,
+.product--details-nav .nav > li.active > a,
+.checkout--title:before,
+.checkout--form .panel-group:before,
+.checkout--form .panel span:after,
+.team--members .owl-nav > div:hover,
+.counter--item .img,
+.affiliate--info-item .icon,
+.affiliate-pricing--item .h3,
+.faq--item .panel-heading a,
+.post--img .date,
+.post--items .post--img .date a,
+.post--footer:before,
+.post--author .info:before,
+.contact--info-item .icon {
+    background-color: #179ea8;
+}
+
+::-moz-selection {
+    background-color: #179ea8;
+}
+
+::selection {
+    background-color: #179ea8;
+}
+
+/*------------------------------------*\
+    BORDER COLOR
+\*------------------------------------*/
+.btn-default,
+.btn-default.disabled:hover,
+.btn-default.disabled:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled]:hover,
+.btn-default[disabled]:focus,
+.btn-default[disabled].focus,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default:active:hover,
+.btn-default:active:focus,
+.btn-default:active.focus,
+.btn-default.active,
+.btn-default.active:hover,
+.btn-default.active:focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default.focus,
+.btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled].focus,
+.form-control:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li.open > a,
+.dropdown-menu > li.open > a:hover,
+.dropdown-menu > li.open > a:focus,
+.dropdown-menu > li.active > a,
+.dropdown-menu > li.active > a:hover,
+.dropdown-menu > li.active > a:focus,
+.pagination > li > a:before,
+.comment--item .info:before,
+.comment--respond .form--inner:before,
+.comment--respond .form-group:before,
+.post--items + .comment--respond .form-control:focus,
+.search--widget .form-control,
+.tab-nav--widget .nav > li > a:before,
+.portfolio-info--widget:before,
+.portfolio--related-widget:before,
+.domain-search--form .input-group input.form-control,
+.service--item.style--2,
+.service--item.style--2:hover .action .btn-primary,
+.services--content .desc blockquote,
+.services--content .desc ul > li:before,
+.pricing--nav .nav > li > a:before,
+.pricing--slider .owl-nav > div,
+.pricing--item:before,
+.pricing--item .features .nav li:before,
+.pricing--table:before,
+.pricing--table .table tbody tr td:before,
+.pricing--table .table tbody tr th:before,
+.pricing--table .table tbody tr td .btn,
+.feature--item .icon:before,
+.portfolio--filter-menu .nav > li:before,
+.portfolio--details blockquote,
+.product--img-gallery .owl-carousel a.current img,
+.product--img-gallery .owl-nav > div:hover,
+.product--details-nav .nav > li > a:before,
+.checkout--form .form-control + span,
+.checkout--form .table tr th:before,
+.checkout--form .table tr td:before,
+.checkout--form .panel span:before,
+.team--member:before,
+.team--members .owl-nav > div,
+.testimonial--item .content:before,
+.affiliate--info-item-inner:before,
+.post--inner:before,
+.client--brand:hover {
+    border-color: #179ea8;
+}
+
+.post--items + .comment--list:before,
+.post--items + .comment--respond:before,
+.pricing--nav .nav > li > a:after,
+.portfolio--filter-menu .nav > li:after,
+.product--details-nav .nav > li > a:after,
+.post--items .post--item:before,
+.post--items + .pagination--nav:before,
+.footer--copyright:before,
+.coming--soon-content .countdown ul li strong:before {
+    border-top-color: #179ea8;
+}
+
+.tab-nav--widget .nav > li > a:after {
+    border-left-color: #179ea8;
+}
+
+.sidebar .widget--title:before,
+.nav--widget .nav > li > a:before,
+.vps--pricing-feature .h4:before,
+.related--products .title:before {
+    border-bottom-color: #179ea8;
+}
+
+/*------------------------------------*\
+    BOX SHADOW
+\*------------------------------------*/
+.service--item.style--2:hover:before,
+.post--item:hover:before {
+    box-shadow: 0 5px 10px #179ea8;
+}
+
+.team--member:hover:before,
+.contact--form:before {
+    box-shadow: 0 0 20px #179ea8;
+}
+
+.testimonial--item .img:before {
+    box-shadow: 0 3px 10px #179ea8;
+}
+
+.client--brand:hover:before {
+    box-shadow: 0 0 10px #179ea8;
+}
+
+.login--form .close {
+    box-shadow: 0 0 1px #179ea8;
+}
