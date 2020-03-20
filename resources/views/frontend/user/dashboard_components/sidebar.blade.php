@@ -3,9 +3,9 @@
     <div class="nicescroll-bar">
         <div class="navbar-nav-wrap">
             <ul class="navbar-nav flex-column">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="{{route('frontend.user.dashboard')}}">
-                        <i class="ion ion-md-analytics"></i>
+                        <i class="ion ion-md-outlet"></i>
                         <span class="nav-link-text">Dashboard</span>
                     </a>
                 </li>
@@ -13,44 +13,48 @@
                     <a class="nav-link link-with-badge" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
                         <i class="ion ion-md-cart"></i>
                         <span class="nav-link-text">Billing</span>
-                        {{--<span class="badge badge-success badge-pill">Hot</span>--}}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link-with-badge" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
                         <i class="ion ion-md-appstore"></i>
-                        <span class="nav-link-text">My Services</span>
-                        {{--<span class="badge badge-success badge-pill">Hot</span>--}}
+                        <span class="nav-link-text">My Service</span>
                     </a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);">
+                        <i class="ion ion-md-document"></i>
+                        <span class="nav-link-text">Pages</span>
+                    </a>
+                </li>
+            </ul>
+
             <hr class="nav-separator">
             <div class="nav-header">
-                <span>Our Services</span>
+                <span>Services</span>
                 <span>UI</span>
             </div>
             <ul class="navbar-nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('frontend.user.cloud_services')}}">
+                    <a  class="nav-link" href="{{route('frontend.user.cloud_services')}}">
                         <i class="ion ion-md-cloud"></i>
-                        <span class="nav-link-text">Cloud Services</span>
+                        <span class="nav-link-text">Services Explorer</span>
                     </a>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#content_drp">
                         <i class="ion ion-md-clipboard"></i>
-                        <span class="nav-link-text">Content</span>
+                        <span class="nav-link-text">Monitors</span>
                     </a>
                     <ul id="content_drp" class="nav flex-column collapse collapse-level-1">
                         <li class="nav-item">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="typography.html">Typography</a>
+                                    <a class="nav-link" href="typography.html">Service Monitor</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="images.html">Images</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="media-object.html">Media Object</a>
+                                    <a class="nav-link" href="images.html">Request Monitor</a>
                                 </li>
                             </ul>
                         </li>
@@ -213,9 +217,9 @@
                         <span class="nav-link-text">Documentation</span>
                     </a>
                 </li>
+
+
             </ul>
         </div>
     </div>
 </nav>
-
-<div id="hk_nav_backdrop" class="hk-nav-backdrop"></div>

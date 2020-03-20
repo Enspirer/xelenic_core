@@ -30,4 +30,11 @@
     <link rel="stylesheet" href="FrontPage/css/main.css">
     <script src="FrontPage/js/vendor/jquery-2.2.4.min.js"></script>
 
+
+    <link href="FrontDashboard/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
+    <link href="FrontDashboard/vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="FrontDashboard/dist/css/style.css" rel="stylesheet" type="text/css">
+
 </head>
