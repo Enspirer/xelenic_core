@@ -1,8 +1,8 @@
-
+<div>
 <header id="header" id="home" style="background-color: rgb(77, 144, 254) !important;padding-bottom: unset;position: fixed;width: -webkit-fill-available;z-index: 3;">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="background-color: #4d90fe !important;">
-            <a class="navbar-brand" href="#">icovden</a>
+            <a class="navbar-brand" href="/">icovden</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,7 +54,7 @@
                                 <div class="col-md-6">
                                     <a class="dropdown-item" href="/about">About</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/about/team">Team</a>
+                                    <a class="dropdown-item" href="/team">Team</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Careers</a>
                                     <div class="dropdown-divider"></div>
@@ -79,10 +79,8 @@
             </div>
         </nav>
     </div>
-
-
-
-</header><!-- #header -->
+</header>
+</div>
 
 <script>
     /* When the user clicks on the button,
