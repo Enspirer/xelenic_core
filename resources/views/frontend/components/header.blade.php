@@ -1,6 +1,5 @@
-<div>
 <header id="header" id="home" style="background-color: rgb(77, 144, 254) !important;padding-bottom: unset;position: fixed;width: -webkit-fill-available;z-index: 3;">
-    <div class="container">
+    <div class="" style="padding-left: 240px;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="background-color: #4d90fe !important;">
             <a class="navbar-brand" href="/">icovden</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +37,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Partners</a>
+                        <a class="nav-link" href="/partnerships">Partners</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -69,7 +68,7 @@
 
                         </div>
                     </li>
-                    
+
 
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
