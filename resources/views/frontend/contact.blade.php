@@ -99,3 +99,5 @@
         @captchaScripts
     @endif
 @endpush
+
+@include('frontend.components.scripts');

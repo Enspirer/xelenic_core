@@ -166,15 +166,15 @@ a:focus,
 .post--footer:before,
 .post--author .info:before,
 .contact--info-item .icon {
-    background-color: #ff5252;
+    background-color: #007bff;
 }
 
 ::-moz-selection {
-    background-color: #ff5252;
+    background-color: #007bff;
 }
 
 ::selection {
-    background-color: #ff5252;
+    background-color: #007bff;
 }
 
 /*------------------------------------*\

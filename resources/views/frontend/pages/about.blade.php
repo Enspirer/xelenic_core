@@ -69,5 +69,6 @@
     <!-- Clients Section End -->
 
 @include('frontend.components.footer');
+@include('frontend.components.scripts');
 </body>
 </html>
