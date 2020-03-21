@@ -45,6 +45,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         Route::get('cloud-service', [CloudServiceController::class, 'index'])->name('cloud_services');
         Route::get('cloud-service/view_service/{id}', [CloudServiceController::class, 'view_service'])->name('cloud_services.view');
+        Route::post('cloud-service/insert_armc', [CloudServiceController::class, 'addservices'])->name('cloud_services.addservices');
 
 
         // User Account Specific

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 use App\CloudService;
+use App\MyService;
 class CloudServiceController extends Controller
 {
     public function index ()
@@ -25,6 +26,13 @@ class CloudServiceController extends Controller
             [
                 'service_details' => $get_service
             ]);
+    }
+
+    public function addservices(Request $request) {
+        $id = $request->service_id;
+
+        MyService::addto_myservice($id);
+        return back();
     }
 
     public function get_cover_img ($id)

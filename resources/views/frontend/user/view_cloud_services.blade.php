@@ -45,7 +45,14 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="button-list">
-                        <a href="#" class="btn btn-dark btn-wth-icon icon-wthot-bg btn-rounded"><span class="btn-text">Add Service</span><span class="icon-label"><i class="icon ion-md-mail"></i> </span></a>
+                        <form action="{{route('frontend.user.cloud_services.addservices')}}" method="post">
+                            {{csrf_field()}}
+                            <input type="hidden" name="service_id" value="{{$service_details->service_id}}">
+                            <button class="btn btn-dark btn-wth-icon icon-wthot-bg btn-rounded">
+                                Message
+                            </button>
+                        </form>
+                        {{--<a href="#" class="btn btn-dark btn-wth-icon icon-wthot-bg btn-rounded"><span class="btn-text">Add Service</span><span class="icon-label"><i class="icon ion-md-mail"></i> </span></a>--}}
                     </div>
                 </div>
             </div>
