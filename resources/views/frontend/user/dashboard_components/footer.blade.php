@@ -22,27 +22,27 @@
 <!-- /HK Wrapper -->
 
 <!-- jQuery -->
-<script src="FrontDashboard/vendors/jquery/dist/jquery.min.js"></script>
+<script src="{{url('/')}}/FrontDashboard/vendors/jquery/dist/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="FrontDashboard/vendors/popper.js/dist/umd/popper.min.js"></script>
-<script src="FrontDashboard/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{url('/')}}/FrontDashboard/vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="{{url('/')}}/FrontDashboard/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Slimscroll JavaScript -->
-<script src="FrontDashboard/dist/js/jquery.slimscroll.js"></script>
+<script src="{{url('/')}}/FrontDashboard/dist/js/jquery.slimscroll.js"></script>
 
 <!-- Fancy Dropdown JS -->
-<script src="FrontDashboard/dist/js/dropdown-bootstrap-extended.js"></script>
+<script src="{{url('/')}}/FrontDashboard/dist/js/dropdown-bootstrap-extended.js"></script>
 
 <!-- Toggles JavaScript -->
-<script src="FrontDashboard/vendors/jquery-toggles/toggles.min.js"></script>
-<script src="FrontDashboard/dist/js/toggle-data.js"></script>
+<script src="{{url('/')}}/FrontDashboard/vendors/jquery-toggles/toggles.min.js"></script>
+<script src="{{url('/')}}/FrontDashboard/dist/js/toggle-data.js"></script>
 
 <!-- FeatherIcons JavaScript -->
-<script src="FrontDashboard/dist/js/feather.min.js"></script>
+<script src="{{url('/')}}/FrontDashboard/dist/js/feather.min.js"></script>
 
 <!-- Init JavaScript -->
-<script src="FrontDashboard/dist/js/init.js"></script>
+<script src="{{url('/')}}/FrontDashboard/dist/js/init.js"></script>
 
 </body>
 

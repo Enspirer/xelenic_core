@@ -19,11 +19,11 @@ License: You must have a valid license purchased only from themeforest to legall
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Toggles CSS -->
-    <link href="FrontDashboard/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
-    <link href="FrontDashboard/vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
+    <link href="{{url('/')}}/FrontDashboard/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
+    <link href="{{url('/')}}/FrontDashboard/vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="FrontDashboard/dist/css/style.css" rel="stylesheet" type="text/css">
+    <link href="{{url('/')}}/FrontDashboard/dist/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

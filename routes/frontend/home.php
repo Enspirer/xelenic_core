@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
         Route::get('cloud-service', [CloudServiceController::class, 'index'])->name('cloud_services');
+        Route::get('cloud-service/view_service/{id}', [CloudServiceController::class, 'view_service'])->name('cloud_services.view');
 
 
         // User Account Specific

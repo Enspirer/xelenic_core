@@ -38,7 +38,7 @@
                             <p style="overflow: hidden;height: 190px;">
                                 {{$get_service->service_description}}
                             </p> <br>
-                            <a href="" class="btn btn-primary btn-rounded pull-right">Read More</a>
+                            <a href="{{route('frontend.user.cloud_services.view',$get_service->service_id)}}" class="btn btn-primary btn-rounded pull-right">Read More</a>
                         </div>
                     </div>
                 </div>
