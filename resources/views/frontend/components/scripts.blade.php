@@ -63,39 +63,8 @@
 <script src="/Pages/js/retina.min.js"></script>
 
 <!-- ==== Google Map API ==== -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK9f7sXWmqQ1E-ufRXV3VpXOn_ifKsDuc"></script>
 
 <!-- ==== Main JavaScript ==== -->
-<script src="/Pages/js/main.js"></script>
 
 //ending of pages scripts
-//pages 2 scripts
-<!--==== all js here====-->
-<!-- jquery latest version -->
-<script src="/Pages2/js/vendor/jquery-3.1.1.min.js"></script>
-<!-- bootstrap js -->
-<script src="js/bootstrap.min.js"></script>
-<!-- owl.carousel js -->
-<script src="/Pages2/js/owl.carousel.min.js"></script>
-<!-- meanmenu js -->
-<script src="/Pages2/js/jquery.meanmenu.js"></script>
-<!-- Nivo js -->
-<script src="/Pages2/js/nivo-slider/jquery.nivo.slider.pack.js"></script>
-<script src="/Pages2/js/nivo-slider/nivo-active.js"></script>
-<!-- wow js -->
-<script src="/Pages2/js/wow.min.js"></script>
-<!-- Youtube Background JS -->
-<script src="/Pages2/js/jquery.mb.YTPlayer.min.js"></script>
-<!-- datepicker js -->
-<script src="/Pages2/js/bootstrap-datepicker.js"></script>
-<!-- waypoint js -->
-<script src="/Pages2/js/waypoints.min.js"></script>
-<!-- onepage nav js -->
-<script src="/Pages2/js/jquery.nav.js"></script>
-<!-- animate text JS -->
-<script src="/Pages2/js/animate-text.js"></script>
-<!-- plugins js -->
-<script src="/Pages2/js/plugins.js"></script>
-<!-- main js -->
-<script src="/Pages2/js/main.js"></script>
-//ending of pages 2 scripts
+/
