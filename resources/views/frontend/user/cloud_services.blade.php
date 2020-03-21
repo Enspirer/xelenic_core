@@ -1,55 +1,51 @@
-@extends('frontend.layouts.app')
+@include('frontend.user.dashboard_components.header')
 
-@section('title', app_name() . ' | ' . __('navs.frontend.dashboard') )
+<!-- Top Navbar -->
+@include('frontend.user.dashboard_components.top_navbar')
+@include('frontend.user.dashboard_components.search_box')
 
-@section('content')
-    @include('frontend.user.dashboard_components.header')
+<!-- /Top Navbar -->
 
-    @include('frontend.user.dashboard_components.sidebar')
+<!-- Vertical Nav -->
+@include('frontend.user.dashboard_components.sidebar')
 
+<div id="hk_nav_backdrop" class="hk-nav-backdrop"></div>
+<!-- /Vertical Nav -->
 
-    <!-- /Vertical Nav -->
+@include('frontend.user.dashboard_components.settings_panel')
 
+<!-- Main Content -->
+<div class="hk-pg-wrapper">
+    <!-- Breadcrumb -->
+    <nav class="hk-breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-light bg-transparent">
+            <li class="breadcrumb-item active"><a href="{{route('frontend.user.cloud_services')}}">Cloud Services</a></li>
+        </ol>
+    </nav>
+    <!-- /Breadcrumb -->
 
+    <!-- Container -->
 
-    <div class="" style="margin-top: 77px;margin-left: 30px;margin-right: 30px;">
-        <div class="">
-            <div class="row">
-                @foreach($get_services as $services)
-                    <div class="col-md-4">
-                        <div class="card" style="padding: 10px;border-radius: 10px;">
-                            <div class="" style="background-image: url('storage/service_img/{{$services->cover_image}}');height: 130px;background-position: center;background-size: cover;background-repeat: no-repeat;border-radius: 10px 10px 0px 0px;"></div>
-                            <br>
-                            <h3 style="text-align: center;">{{$services->service_name}}</h3> <br>
-                            <p style="overflow: hidden;height: 90px;">{{$services->service_description}} </p> <br>
-                            <div class="row">
-                                <div class="col-md-6">
+    <div class="container-fluid px-xxl-65 px-xl-20">
 
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="" class="btn btn-primary pull-right">Free</a>
-                                </div>
-                            </div>
+        <div class="row">
+            @foreach($get_services as $get_service)
+                <div class="col-xl-4">
+                    <div class="card card-lg">
+                        <div style="background-image: url('storage/service_img/{{$get_service->cover_image}}');height: 140px;background-position: center;background-size: cover;background-repeat: no-repeat;"></div>
+                        <div class="card-body">
+                            <h4>{{$get_service->service_name}}</h4> <br>
+                            <p style="overflow: hidden;height: 190px;">
+                                {{$get_service->service_description}}
+                            </p> <br>
+                            <a href="" class="btn btn-primary btn-rounded pull-right">Read More</a>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
+
         </div>
 
     </div>
 
-
-
-
-
-
-
-    <!-- Setting Panel -->
-
-
-
-        <!-- /Container -->
-    @include('frontend.user.dashboard_components.sidebar')
-
-
-@endsection
+@include('frontend.user.dashboard_components.footer')
