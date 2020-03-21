@@ -753,7 +753,7 @@ a.btn-def.bnt-2.big {
 .special-offer-area { background: rgba(0, 0, 0, 0) url("img/bg/special-bg.jpg") no-repeat scroll 0 0 / cover }
 .white-color { color: #fff }
 .brand-area {
-    background: rgba(0, 0, 0, 0) url("img/bg/brand-bg.jpg") no-repeat scroll 0 0 / cover;
+    background: rgba(0, 0, 0, 0) url("..img/bg/brand-bg.jpg") no-repeat scroll 0 0 / cover;
     padding: 40px 0;
 }
 .single-brand {
