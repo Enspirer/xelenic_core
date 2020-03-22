@@ -31,7 +31,15 @@
 
         <div class="row">
 
+            <div class="col-xl-12">
+                <section class="hk-sec-wrapper">
+                    <h5 class="hk-sec-title">{{$service_details->service_name}}</h5>
+                    <p class="mb-30">Use border utilities to add an element’s borders. Choose from all borders or one at a time.</p>
 
+                    @include('frontend.user.service_pages.service_page')
+
+                </section>
+            </div>
         </div>
 
     </div>
