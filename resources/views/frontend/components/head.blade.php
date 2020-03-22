@@ -33,3 +33,6 @@
     <link href="/css/modern-business.css" rel="stylesheet">
     <!-- end of css faq and other -->
     <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Custom styles for blog -->
+    <link href="/css/blog-home.css" rel="stylesheet">
