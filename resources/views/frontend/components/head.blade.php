@@ -30,20 +30,5 @@
     <link rel="stylesheet" href="FrontPage/css/main.css">
     <script src="FrontPage/js/vendor/jquery-2.2.4.min.js"></script>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a0ffdf8... created about page RMLS
-    <!-- Starting Pages CSS -->
-    <!-- ==== Favicons ==== -->
-
-    <!-- ending Pages CSS -->
-
-    <!-- Starting Pages2 CSS -->
-    <!-- all css here -->
-    <!-- bootstrap v3.3.6 css -->
-
-    <!-- color css -->
 
 </head>
