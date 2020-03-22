@@ -29,10 +29,4 @@
     <link rel="stylesheet" href="FrontPage/css/main.css">
     <script src="FrontPage/js/vendor/jquery-2.2.4.min.js"></script>
 
-    <!-- faq and other css start -->
-    <link href="/css/modern-business.css" rel="stylesheet">
-    <!-- end of css faq and other -->
-    <link href="/css/style.css" rel="stylesheet">
 
-    <!-- Custom styles for blog -->
-    <link href="/css/blog-home.css" rel="stylesheet">
