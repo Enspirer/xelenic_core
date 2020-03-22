@@ -16,6 +16,7 @@
     <!-- Site Title -->
     <title>iCovden</title>
 
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!-- CSS ============================================= -->
     <link rel="stylesheet" href="FrontPage/css/linearicons.css">
@@ -31,5 +32,4 @@
     <!-- faq and other css start -->
     <link href="/css/modern-business.css" rel="stylesheet">
     <!-- end of css faq and other -->
-
-</head>
+    <link href="/css/style.css" rel="stylesheet">
