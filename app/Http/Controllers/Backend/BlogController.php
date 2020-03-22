@@ -81,6 +81,13 @@ class BlogController extends Controller
         }
     }
 
+    public function update(Request $request)
+    {
+        App\Flight::where('active', 1)
+            ->where('destination', 'San Diego')
+            ->update(['delayed' => 1]);
+    }
+
     public function delete ($id)
     {
         DB::table('blog_table')

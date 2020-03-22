@@ -4,10 +4,9 @@
 <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 <script>tinymce.init({selector:'textarea'});</script>
 @section('content')
-    <a href="{{route('admin.blog')}}" class="btn btn-primary pull-right">Return Back</a> <br><br>
 
     <div class="card">
-        <form action="{{route('admin.create')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('admin.blog.update')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
             <div class="modal-body">
                 <div class="row">
@@ -41,7 +40,7 @@
                 </div>
 
                 <div class="form-group">
-                    <textarea id="editor" class="form-control" name="blog_body">{{$blog_details->body}}</textarea>
+                    <textarea id="editor" class="form-control" name="blog_body"></textarea>
                 </div>
             </div>
             <div class="modal-footer">

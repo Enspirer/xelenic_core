@@ -12,6 +12,8 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 Route::get('blog', [BlogController::class, 'index'])->name('blog');
 Route::post('blog/upload_images', [BlogController::class, 'upload_image'])->name('upload_images');
 Route::post('blog/insert', [BlogController::class, 'create'])->name('create');
+Route::post('blog/update', [BlogController::class, 'update'])->name('blog.update');
+
 Route::get('blog/edit/{blog_id}', [BlogController::class, 'edit_blog'])->name('edit_blog');
 Route::get('blog/delete/{id}', [BlogController::class, 'delete'])->name('delete');
 
