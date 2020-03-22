@@ -100,4 +100,4 @@
     @endif
 @endpush
 
-@include('frontend.components.scripts');
+@include('frontend.components.scripts')

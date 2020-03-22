@@ -1,96 +1,33 @@
 
-@include('frontend.components.head');
+@include('frontend.components.head')
 <body>
-@include('frontend.components.header');
+@include('frontend.components.header')
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3" style="color: #4d90fe;">About</h1>
 
 
-    <!-- Page Header Section Start -->
-    {{--<section class="page--header--section pt--130 pb--150 bg--overlay" data-bg-img="/Pages/img/page-header-img/bg.jpg">--}}
-        {{--<div class="container">--}}
-            {{--<!-- Page Header Breadcrumb Start -->--}}
-            {{--<div class="page--header-breadcrumb text-uppercase text-center">--}}
-                {{--<ol class="breadcrumb">--}}
-                    {{--<li><a href="index.html" class="btn-link">Home</a></li>--}}
-                    {{--<li class="active"><span>About</span></li>--}}
-                {{--</ol>--}}
-            {{--</div>--}}
-            {{--<!-- Page Header Breadcrumb End -->--}}
-
-            {{--<!-- Page Header Title Start -->--}}
-            {{--<div class="page--header-title text-uppercase text-center">--}}
-                {{--<h2 class="h1">About CloudSky</h2>--}}
-            {{--</div>--}}
-            {{--<!-- Page Header Title End -->--}}
-        {{--</div>--}}
-    {{--</section>--}}
-    <!-- Page Header Section End -->
-
-    <!-- Page Content Section Start -->
-    <section class="page--content--section pt--80 pb--20" style="padding-top: 100px;background-image: url('/imd g/frontend/about/1.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="page--content-img" data-scroll-reveal="left">
-                        <div class="" style="background-image: url('/img/frontend/about/2.jpg');height: 300px;background-size: contain;background-repeat: no-repeat;"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="page--content-inner" data-scroll-reveal="right">
-                        <div class="title">
-                            <h2 class="h1">About us</h2>
-                        </div> <br><br>
-
-                         <br>
-                        <div class="desc">
-                            <h4>Our Mission and Vision</h4><br>
-
-                            <p>
-                                Our mission is to help enterprises accelerate adoption of new technologies,
-                                untangle complex issues that always emerge during digital evolution, and orchestrate ongoing innovation.
-                                Whether it is a consumer-oriented app or a transformative enterprise-class solution, the company
-                                leads the process from ideation and concept to delivery, and provides ongoing support through its IS360 framework.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+    <!-- Intro Content -->
+    <div class="row">
+        <div class="col-lg-6">
+            <img class="img-fluid rounded mb-4" src="/img/frontend/about/2.jpg" alt="">
         </div>
-    </section> <br><br>
-<section class="page--content--section pt--80 pb--20" style="padding-top: 100px;background-image: url('/imd g/frontend/about/1.jpg');">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-6">
-                <div class="page--content-inner" data-scroll-reveal="right">
-                    <div class="title">
-                        <h2 class="h1">About us</h2>
-                    </div> <br><br>
-
-                    <br>
-                    <div class="desc">
-                        <h4>Our Mission and Vision</h4><br>
-
-                        <p>
-                            Our mission is to help enterprises accelerate adoption of new technologies,
-                            untangle complex issues that always emerge during digital evolution, and orchestrate ongoing innovation.
-                            Whether it is a consumer-oriented app or a transformative enterprise-class solution, the company
-                            leads the process from ideation and concept to delivery, and provides ongoing support through its IS360 framework.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="page--content-img" data-scroll-reveal="left">
-                    <div class="" style="background-image: url('/img/frontend/about/2.jpg');height: 300px;background-size: contain;background-repeat: no-repeat;"></div>
-                </div>
-            </div>
+        <div class="col-lg-6">
+            <h2 style="color: #4d90fe;">About Modern Business</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
         </div>
-
-
     </div>
-</section> <br><br>
+    <!-- /.row -->
+
+
+
+</div>
+<!-- /.container -->
 
 <section class="brand-area pt-40">
     <div class="container">
@@ -179,7 +116,7 @@
 </section>
 <!-- End service Area -->
 
-@include('frontend.components.footer');
-@include('frontend.components.scripts');
+@include('frontend.components.footer')
+@include('frontend.components.scripts')
 </body>
 </html>

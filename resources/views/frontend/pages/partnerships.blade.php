@@ -1,6 +1,6 @@
-@include('frontend.components.head');
+@include('frontend.components.head')
 
-@include('frontend.components.scripts');
+@include('frontend.components.scripts')
 
 </body>
 </html>
