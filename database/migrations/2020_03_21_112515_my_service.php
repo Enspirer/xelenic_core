@@ -20,6 +20,7 @@ class MyService extends Migration
             $table->integer('user_id');
             $table->integer('status');
             $table->integer('intence_count');
+            $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
         });
     }

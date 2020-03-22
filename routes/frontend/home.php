@@ -7,14 +7,13 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\EventsController;
-
-
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\CloudServiceController;
+use App\Http\Controllers\Frontend\MyServicesController;
 
 /*
  * Frontend Controllers
@@ -46,6 +45,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('cloud-service', [CloudServiceController::class, 'index'])->name('cloud_services');
         Route::get('cloud-service/view_service/{id}', [CloudServiceController::class, 'view_service'])->name('cloud_services.view');
         Route::post('cloud-service/insert_armc', [CloudServiceController::class, 'addservices'])->name('cloud_services.addservices');
+
+        Route::get('my-services/indexing/', [MyServicesController::class, 'index'])->name('my_service.index');
 
 
         // User Account Specific

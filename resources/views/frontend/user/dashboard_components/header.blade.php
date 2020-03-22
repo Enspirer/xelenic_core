@@ -26,8 +26,35 @@ License: You must have a valid license purchased only from themeforest to legall
     <link href="{{url('/')}}/FrontDashboard/dist/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<style>
+    /* Center the loader */
+    #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
 
+
+
+    }
+
+
+
+
+    #myDiv {
+        display: none;
+        text-align: center;
+    }
+</style>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader">
+    <img src="{{url('/')}}/images/preloader.gif">
+</div>
 
 <!-- HK Wrapper -->
-<div class="hk-wrapper hk-vertical-nav">
+<div class="hk-wrapper hk-vertical-nav" style="display:none;position: relative;" id="myDiv">

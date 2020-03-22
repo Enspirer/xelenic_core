@@ -16,7 +16,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link-with-badge" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
+                    <a class="nav-link link-with-badge" href="{{route('frontend.user.my_service.index')}}">
                         <i class="ion ion-md-appstore"></i>
                         <span class="nav-link-text">My Service</span>
                     </a>

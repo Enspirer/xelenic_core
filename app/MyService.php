@@ -14,6 +14,7 @@ class MyService extends Model
     {
         $get_users = DB::table('my_service')
             ->where('user_id', auth()->user()->id)
+            ->join('cloud_service','my_service.service_id', '=' , 'cloud_service.service_id')
             ->get();
 
         return $get_users;
@@ -23,12 +24,26 @@ class MyService extends Model
         $service_datails = DB::table('cloud_service')
             ->where('service_id', $service_id)
             ->first();
-        $myservices = new MyService();
-        $myservices->service_name = $service_datails->service_name;
-        $myservices->service_id = $service_id;
-        $myservices->user_id = auth()->user()->id;
-        $myservices->status = 1;
-        $myservices->intence_count = 0;
-        $myservices->save();
+
+        $my_service_details = DB::table('my_service')
+            ->where('service_id', $service_id)->first();
+
+
+
+        if ($my_service_details == null)
+        {
+            $myservices = new MyService();
+            $myservices->service_name = $service_datails->service_name;
+            $myservices->service_id = $service_id;
+            $myservices->user_id = auth()->user()->id;
+            $myservices->status = 1;
+            $myservices->intence_count = 0;
+            $myservices->save();
+            return 'This Service added successfully ';
+        }else{
+            return 'This service already added your service list, Check your MyService';
+        }
     }
+
+
 }
