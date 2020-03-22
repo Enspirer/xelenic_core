@@ -8,6 +8,15 @@ Breadcrumbs::for('admin.blog', function ($trail) {
     $trail->push('Blog', route('admin.blog'));
 });
 
+
+Breadcrumbs::for('admin.edit_blog', function ($trail) {
+    $trail->parent('admin.blog');
+    $trail->push('Edit Blog', route('admin.edit_blog',1));
+});
+
+
+
+
 Breadcrumbs::for('admin.pages', function ($trail) {
     $trail->push('Pages', route('admin.pages'));
 });

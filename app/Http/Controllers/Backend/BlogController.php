@@ -25,20 +25,18 @@ class BlogController extends Controller
 
     public function create (Request $request)
     {
+
         $slug = $request->slug;
         $stripped_slug = str_replace(' ', '', $slug);
-
         if($request->has('thumbs_img')) {
             $filenameWithExt = $request->file('thumbs_img')->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('thumbs_img')->getClientOriginalExtension();
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
-            $path = $request->file('thumbs_img')->    storeAs('/images/thumbs_img', $fileNameToStore);
+            $path = $request->file('thumbs_img')->    storeAs('public/blog_thumb', $fileNameToStore);
         } else {
             $fileNameToStore = 'noimage.jpg';
         }
-
-
 
         $blog = new Blog();
 
@@ -51,6 +49,16 @@ class BlogController extends Controller
         $blog->save();
 
         return back();
+    }
+
+    public function edit_blog ($blog_id)
+    {
+        $blog = blog::get_blog_by_id($blog_id);
+
+
+
+        return view('backend.edit_pages.blog_edit',
+            ['blog_details'=>$blog]);
     }
 
     public function upload_image (Request $request)

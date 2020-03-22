@@ -28,7 +28,7 @@
                                 <i class="fas fa-eye"></i>
                             </a>
 
-                            <a href="http://127.0.0.1:8000/admin/auth/user/1/edit" data-toggle="tooltip" data-placement="top" title="" class="btn btn-primary" data-original-title="Edit">
+                            <a href="{{route('admin.edit_blog',$blog->id)}}" data-toggle="tooltip" data-placement="top" title="" class="btn btn-primary" data-original-title="Edit">
                                 <i class="fas fa-edit"></i>
                             </a>
                             <a href="{{route('admin.delete',$blog->id)}}" data-toggle="tooltip" data-placement="top" title="" class="btn btn-danger" data-original-title="Delete">
