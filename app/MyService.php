@@ -54,5 +54,14 @@ class MyService extends Model
         return $service_datails;
     }
 
+    public static function return_open_service($service_id)
+    {
+        $get_service = MyService::get_service_details($service_id);
+        return view('frontend.user.service_pages.my_service_open',
+            [
+                'service_details' => $get_service
+            ]);
+    }
+
 
 }

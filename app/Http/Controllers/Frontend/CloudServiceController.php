@@ -20,6 +20,7 @@ class CloudServiceController extends Controller
 
     public function view_service ($id)
     {
+
         $get_service = CloudService::where('service_id',$id)->first();
 
         return view('frontend.user.view_cloud_services',
