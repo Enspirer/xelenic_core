@@ -47,6 +47,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('cloud-service/insert_armc', [CloudServiceController::class, 'addservices'])->name('cloud_services.addservices');
 
         Route::get('my-services/indexing/', [MyServicesController::class, 'index'])->name('my_service.index');
+        Route::get('my-services/open-service/{service_id}/{service_token}', [MyServicesController::class, 'open_service'])->name('my_service.open_service');
 
 
         // User Account Specific

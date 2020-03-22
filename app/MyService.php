@@ -45,5 +45,14 @@ class MyService extends Model
         }
     }
 
+    public static function get_service_details ($service_id)
+    {
+        $service_datails = DB::table('cloud_service')
+            ->where('service_id', $service_id)
+            ->first();
+
+        return $service_datails;
+    }
+
 
 }

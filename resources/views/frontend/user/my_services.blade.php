@@ -19,14 +19,14 @@
     <!-- Breadcrumb -->
     <nav class="hk-breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-light bg-transparent">
-            <li class="breadcrumb-item active"><a href="{{route('frontend.user.cloud_services')}}">Cloud Services</a></li>
+            <li class="breadcrumb-item active"><a href="{{route('frontend.user.my_service.index')}}">My Service</a></li>
         </ol>
     </nav>
     <!-- /Breadcrumb -->
 
     <!-- Container -->
 
-    <div class="container-fluid px-xxl-65 px-xl-20">
+    <div class="container-fluid px-xxl-65 px-xl-20" style="text-align: left;">
 
         <div class="row">
             @foreach($get_services as $get_service)
@@ -43,7 +43,7 @@
                                 <p><b>API Key:</b> {{$get_service->token}}</p>
                             </div><br>
 
-                            <a href="{{route('frontend.user.cloud_services.view',$get_service->service_id)}}" class="btn btn-primary btn-rounded pull-right">Open Service</a>
+                            <a href="{{route('frontend.user.my_service.open_service',[$get_service->service_id,$get_service->token])}}" class="btn btn-primary btn-rounded pull-right">Open Service</a>
                         </div>
                     </div>
                 </div>

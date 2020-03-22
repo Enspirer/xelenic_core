@@ -20,4 +20,15 @@ class MyServicesController extends Controller
                 'get_services' => $get_service
             ]);
     }
+
+    public function open_service ($service_id,$service_token)
+    {
+        $get_service = MyService::get_service_details($service_id);
+
+
+          return view('frontend.user.service_pages.my_service_open',
+              [
+                  'service_details' => $get_service
+              ]);
+    }
 }
