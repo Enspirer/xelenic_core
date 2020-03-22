@@ -32,6 +32,7 @@ class Apibuilder extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('cloud_api_builder');
+
     }
 }

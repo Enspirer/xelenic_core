@@ -80,7 +80,7 @@
                                 <div class="col-md-6">
                                     <a class="dropdown-item" href="/about">About</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/team">Team</a>
+                                    <a class="dropdown-item" href="/blog">Blog</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Careers</a>
                                     <div class="dropdown-divider"></div>

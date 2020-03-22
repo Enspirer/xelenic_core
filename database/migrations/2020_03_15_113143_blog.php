@@ -19,7 +19,7 @@ class Blog extends Migration
             $table->longText('body')->nullable();
             $table->string('thums_img');
             $table->string('user_id');
-            $table->string('description');
+            $table->longText('description');
             $table->string('slug');
             $table->timestamps();
             $table->softDeletes();
