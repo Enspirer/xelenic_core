@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="form-group">
-                    <textarea id="editor" class="form-control" name="blog_body"></textarea>
+                    <textarea id="editor" class="form-control" name="blog_body">{{$blog_details->body}}</textarea>
                 </div>
             </div>
             <div class="modal-footer">

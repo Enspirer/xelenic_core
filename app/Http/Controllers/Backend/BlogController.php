@@ -51,12 +51,49 @@ class BlogController extends Controller
         return back();
     }
 
+    public function update(Request $request)
+    {
+        $slug = $request->slug;
+        $id = $request->blog_id;
+        $stripped_slug = str_replace(' ', '', $slug);
+        if($request->has('thumbs_img')) {
+            $filenameWithExt = $request->file('thumbs_img')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('thumbs_img')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            $path = $request->file('thumbs_img')->    storeAs('public/blog_thumb', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+            $path = null;
+        }
+
+        if ($path == null)
+        {
+            Blog::where('id', $id)
+                ->update([
+                    'blog_title' => $request->blog_title,
+                    'slug' => $stripped_slug,
+                    'description' => $request->description,
+                    'body' => $request->blog_body,
+                    'user_id' => auth()->user()->id,
+                ]);
+        }else{
+            Blog::where('id', $id)
+                ->update([
+                    'blog_title' => $request->blog_title,
+                    'slug' => $stripped_slug,
+                    'description' => $request->description,
+                    'thums_img' => $path,
+                    'body' => $request->blog_body,
+                    'user_id' => auth()->user()->id,
+                ]);
+        }
+        return back();
+    }
+
     public function edit_blog ($blog_id)
     {
         $blog = blog::get_blog_by_id($blog_id);
-
-
-
         return view('backend.edit_pages.blog_edit',
             ['blog_details'=>$blog]);
     }
@@ -68,25 +105,17 @@ class BlogController extends Controller
             $fileName = pathinfo($originName, PATHINFO_FILENAME);
             $extension = $request->file('upload')->getClientOriginalExtension();
             $fileName = $fileName.'_'.time().'.'.$extension;
-
             $request->file('upload')->move(public_path('images'), $fileName);
-
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
             $url = asset('images/'.$fileName);
             $msg = 'Image uploaded successfully';
             $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
-
             @header('Content-type: text/html; charset=utf-8');
             echo $response;
         }
     }
 
-    public function update(Request $request)
-    {
-        App\Flight::where('active', 1)
-            ->where('destination', 'San Diego')
-            ->update(['delayed' => 1]);
-    }
+
 
     public function delete ($id)
     {
