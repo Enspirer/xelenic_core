@@ -50,6 +50,7 @@ class BlogController extends Controller
         $blog->user_id = auth()->user()->id;
         $blog->save();
 
+        return back();
     }
 
     public function upload_image (Request $request)

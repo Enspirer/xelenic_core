@@ -35,13 +35,40 @@
 
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content;">
+                            <div class="row" style="padding: 14px;">
+                                <div class="col-md-6" style="font-size: 12px;text-align: center;width: 370px;">
+                                    <div style="background-image: url('FrontPage/img/rocket.jpg');height: 190px;background-size: contain;background-position: center;background-repeat: no-repeat;"></div>
+                                    Lorposi ipsume data mapake Lorposi ipsume data mapakeLorposi ipsume data mapake Lorposi ipsume data mapake
+                                </div>
+                                <div class="col-md-6">
+                                    <a class="dropdown-item" href="/about">Animtrap</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/about/team">Quilint</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Engaller</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Feedbird</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">CMonitor</a>
+                                    <div class="dropdown-divider">ProdMov</div>
+                                    <a class="dropdown-item" href="#">Pentoa Server</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/partnerships">Partners</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a data-hover="dropdown" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Company
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content;">
@@ -68,6 +95,7 @@
 
                         </div>
                     </li>
+
 
 
                 </ul>

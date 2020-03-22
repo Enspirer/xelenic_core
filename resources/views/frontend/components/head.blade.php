@@ -16,10 +16,9 @@
     <!-- Site Title -->
     <title>iCovden</title>
 
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-    CSS
-    ============================================= -->
+    <!-- CSS ============================================= -->
     <link rel="stylesheet" href="FrontPage/css/linearicons.css">
     <link rel="stylesheet" href="FrontPage/css/font-awesome.min.css">
     <link rel="stylesheet" href="FrontPage/css/bootstrap.css">
@@ -30,20 +29,10 @@
     <link rel="stylesheet" href="FrontPage/css/main.css">
     <script src="FrontPage/js/vendor/jquery-2.2.4.min.js"></script>
 
-<<<<<<< HEAD
-=======
+    <!-- faq and other css start -->
+    <link href="/css/modern-business.css" rel="stylesheet">
+    <!-- end of css faq and other -->
+    <link href="/css/style.css" rel="stylesheet">
 
-
->>>>>>> a0ffdf8... created about page RMLS
-    <!-- Starting Pages CSS -->
-    <!-- ==== Favicons ==== -->
-
-    <!-- ending Pages CSS -->
-
-    <!-- Starting Pages2 CSS -->
-    <!-- all css here -->
-    <!-- bootstrap v3.3.6 css -->
-
-    <!-- color css -->
-
-</head>
+    <!-- Custom styles for blog -->
+    <link href="/css/blog-home.css" rel="stylesheet">

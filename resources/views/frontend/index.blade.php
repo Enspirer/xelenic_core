@@ -1,8 +1,8 @@
 
-@include('frontend.components.head');
+@include('frontend.components.head')
 <body>
-@include('frontend.components.header');
-@include('frontend.components.banner');
+@include('frontend.components.header')
+@include('frontend.components.banner')
 
 
 
@@ -373,8 +373,8 @@
 
 
 
-@include('frontend.components.footer');
-@include('frontend.components.scripts');
+@include('frontend.components.footer')
+@include('frontend.components.scripts')
 </body>
 </html>
 
