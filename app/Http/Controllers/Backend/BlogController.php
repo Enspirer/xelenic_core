@@ -43,7 +43,7 @@ class BlogController extends Controller
         $blog->blog_title = $request->blog_title;
         $blog->slug = $stripped_slug;
         $blog->description = $request->description;
-        $blog->thums_img = $path;
+        $blog->thums_img = $fileNameToStore;
         $blog->body = $request->blog_body;
         $blog->user_id = auth()->user()->id;
         $blog->save();
@@ -63,11 +63,11 @@ class BlogController extends Controller
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             $path = $request->file('thumbs_img')->    storeAs('public/blog_thumb', $fileNameToStore);
         } else {
-            $fileNameToStore = 'noimage.jpg';
-            $path = null;
+            $fileNameToStore = null;
+
         }
 
-        if ($path == null)
+        if ($fileNameToStore == null)
         {
             Blog::where('id', $id)
                 ->update([
@@ -83,7 +83,7 @@ class BlogController extends Controller
                     'blog_title' => $request->blog_title,
                     'slug' => $stripped_slug,
                     'description' => $request->description,
-                    'thums_img' => $path,
+                    'thums_img' => $fileNameToStore,
                     'body' => $request->blog_body,
                     'user_id' => auth()->user()->id,
                 ]);
