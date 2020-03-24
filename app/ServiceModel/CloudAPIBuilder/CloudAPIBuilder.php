@@ -48,6 +48,7 @@ class CloudAPIBuilder extends Model
     {
         $get_apps =DB::table('cloud_api_builder')
                     ->where('status',$status)
+                    ->where('user_id',auth()->user()->id)
                     ->get();
 
         return $get_apps;
@@ -55,6 +56,8 @@ class CloudAPIBuilder extends Model
 
     public static function get_next_app_order_id()
     {
-        $get_apps =DB::table('cloud_api_builder')->get();
+        $get_apps =DB::table('cloud_api_builder')
+            ->where('user_id',auth()->user()->id)
+            ->get();
     }
 }

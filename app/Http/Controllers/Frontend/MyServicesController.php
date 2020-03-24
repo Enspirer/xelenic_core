@@ -26,6 +26,7 @@ class MyServicesController extends Controller
     {
         $get_service = MyService::get_service_details($service_id);
         $service_manager = ServiceManager::main_function($service_id);
+
         return view('frontend.user.service_pages.my_service_open',
             [
                 'service_manager' => $service_manager,
