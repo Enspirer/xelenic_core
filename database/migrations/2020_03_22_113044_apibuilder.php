@@ -30,7 +30,7 @@ class Apibuilder extends Migration
             $table->integer('user_id');
             $table->text('key');
             $table->integer('ab_id');
-            $table->integer('status');
+            $table->text('status');
             $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
         });
@@ -41,7 +41,17 @@ class Apibuilder extends Migration
             $table->text('type');
             $table->text('key');
             $table->integer('ab_id');
-            $table->integer('status');
+            $table->integer('table_id');
+            $table->integer('order');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->useCurrent();
+        });
+        Schema::create('cloud_api_data_entry', function (Blueprint $table) {
+            $table->bigIncrements('entry_id');
+            $table->longText('data');
+            $table->text('type');
+            $table->integer('order');
+            $table->text('is_delete');
             $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
         });
@@ -55,6 +65,9 @@ class Apibuilder extends Migration
     public function down()
     {
         Schema::dropIfExists('cloud_api_builder');
+        Schema::dropIfExists('cloud_api_data_field');
+        Schema::dropIfExists('cloud_api_data_table');
+        Schema::dropIfExists('cloud_api_data_entry');
 
     }
 }
