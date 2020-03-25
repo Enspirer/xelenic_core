@@ -15,6 +15,8 @@ use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\CloudServiceController;
 use App\Http\Controllers\Frontend\MyServicesController;
 
+use App\Http\Controllers\Frontend\CloudServices\Services\APIManager;
+
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
@@ -42,13 +44,19 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         // User Dashboard Specific
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+        //Cloud Service Controller
         Route::get('cloud-service', [CloudServiceController::class, 'index'])->name('cloud_services');
         Route::get('cloud-service/view_service/{id}', [CloudServiceController::class, 'view_service'])->name('cloud_services.view');
         Route::post('cloud-service/insert_armc', [CloudServiceController::class, 'addservices'])->name('cloud_services.addservices');
 
+        //API Builder (API Manager Controller)
+        Route::post('cloud-service/api_builder/create_app', [APIManager::class, 'create_app'])->name('api_builder.create_app');
+        Route::get('cloud-service/api_builder/{app_id}/{api_key}/user-relnetworkQtemd0092/{user_id}/{service_id}', [APIManager::class, 'view_app_page'])->name('api_builder.view_app_page');
+
+
+        //My Service Common Function
         Route::get('my-services/indexing/', [MyServicesController::class, 'index'])->name('my_service.index');
         Route::get('my-services/open-service/{service_id}/{service_token}', [MyServicesController::class, 'open_service'])->name('my_service.open_service');
-
 
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
