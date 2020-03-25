@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <label>App Name</label>
                             <input type="text" name="app_name" placeholder="App name" class="form-control">
-                            <input type="text" name="service_id" placeholder="App name" class="form-control" value="{{$service_manager['service_id']}}">
+                            <input type="hidden" name="service_id" placeholder="App name" class="form-control" value="{{$service_manager['service_id']}}">
                         </div>
                     </div>
                 </div>
