@@ -33,17 +33,27 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="card card-lg">
-                    <h6 class="card-header">
-                        This Week
-                    </h6>
                     <div class="card-body">
                         <div class="row">
+                            <div class="col-md-12">
+                                <h4>Select API Type</h4> <br>
+                                <p style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et tortor lobortis,
+                                    aliquam justo eu, egestas diam. Suspendisse dolor ante, efficitur ut tincidunt sed,
+                                    ullamcorper nec est. Nullam non efficitur libero. Suspendisse orci ipsum, tempus ut nibh sed,
+                                    suscipit convallis nibh. Vivamus scelerisque er</p>
+                                <br><br>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
                             <div class="col-md-3">
-                                <div class="card">
+                                <div class="card" >
                                     <br>
                                     <div class="" style="text-align: center">
                                         <div class="" style="background-image:url('{{url('/')}}/images/icon/plug.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
                                         <h4 style="color: #888888;font-size: 20px;">Plug API</h4><br>
+                                        
                                     </div>
                                 </div>
                             </div>
