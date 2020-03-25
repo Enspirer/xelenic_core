@@ -3,118 +3,53 @@
 <body>
 @include('frontend.components.header')
 
-<!-- Page Content -->
-<div class="container">
+<!-- Header -->
+<header class="w3-container  w3-center" style="padding:128px 16px; background-color: #4d90fe ">
+    <h1 class="w3-margin w3-jumbo">ABOUT</h1>
+    <p class="w3-xlarge" style="color: white;">We Believe in Icons</p>
+{{--    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>--}}
+</header>
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3" style="color: #4d90fe;">About</h1>
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content" >
+        <div class="w3-twothird"style="padding-top: 100px">
+            <h1>We Believe in Icons</h1>
+            <h5 class="w3-padding-32">iCovden  is a Sri Lankan startup mindset providing next level IT solution and business consulting for clients to become
+                an icon in the local and global IT and business world.
+                </h5>
 
-
-    <!-- Intro Content -->
-    <div class="row">
-        <div class="col-lg-6">
-            <img class="img-fluid rounded mb-4" src="/img/frontend/about/2.jpg" alt="">
+            <p class="w3-text-grey">With our expertise and out of the box thinking mind in IT and business consulting we are able to give a life for your business idea.
+                Delivering the best, quality and high-level services for your business journey we will be your successor by creating a business idea, consulting, guiding technical supporting and promoting the business using next-level marketing strategies.</p>
         </div>
-        <div class="col-lg-6">
-            <h2 style="color: #4d90fe;">About Modern Business</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+
+        <div class="w3-third w3-center">
+            <img src="/img/frontend/about/3.jpg" height="550px" width="450px" alt="image" style="padding-left: 30px">
         </div>
     </div>
-    <!-- /.row -->
-
-
-
 </div>
-<!-- /.container -->
 
-<section class="brand-area pt-40">
-    <div class="container">
-        <div class="row logo-wrap">
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l1.png" alt="">
-            </a>
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l2.png" alt="">
-            </a>
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l3.png" alt="">
-            </a>
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l4.png" alt="">
-            </a>
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l5.png" alt="">
-            </a>
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-third w3-center">
+            <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+        </div>
+
+        <div class="w3-twothird">
+            <h1>Lorem Ipsum</h1>
+            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
     </div>
-</section>
+</div>
 
-<!-- Start service Area -->
-<section class="service-area section-gap" id="service">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-8 pb-40 header-text">
-                <h1>Some Features that Made us Unique</h1>
-                <p>
-                    Who are in extremely love with eco friendly system.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service">
-                    <h4><span class="lnr lnr-user"></span>Expert Technicians</h4>
-                    <p>
-                        Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service">
-                    <h4><span class="lnr lnr-license"></span>Professional Service</h4>
-                    <p>
-                        Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service">
-                    <h4><span class="lnr lnr-phone"></span>Great Support</h4>
-                    <p>
-                        Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service">
-                    <h4><span class="lnr lnr-rocket"></span>Technical Skills</h4>
-                    <p>
-                        Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service">
-                    <h4><span class="lnr lnr-diamond"></span>Highly Recomended</h4>
-                    <p>
-                        Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service">
-                    <h4><span class="lnr lnr-bubble"></span>Positive Reviews</h4>
-                    <p>
-                        Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End service Area -->
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
 
 @include('frontend.components.footer')
 @include('frontend.components.scripts')
