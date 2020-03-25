@@ -24,6 +24,18 @@ class CloudAPIBuilder extends Model
                 ]
             );
 
+        $get_all_services = DB::table('cloud_api_builder')
+            ->where('user_id', auth()->user()->id)
+            ->get();
+        $get_service_count = count($get_all_services);
+
+        DB::table('my_service')
+            ->where('service_id',1 )
+            ->where('user_id', auth()->user()->id)
+            ->update(
+                ['intence_count' => $get_service_count]
+            );
+
         return $get_app_id ;
 
     }
@@ -59,5 +71,18 @@ class CloudAPIBuilder extends Model
         $get_apps =DB::table('cloud_api_builder')
             ->where('user_id',auth()->user()->id)
             ->get();
+    }
+
+    public static function get_app_details_by_id ($id)
+    {
+        $get_app_details = DB::table('cloud_api_builder')
+            ->where('ab_id',$id)
+            ->where('user_id',auth()->user()->id)
+            ->first();
+
+
+
+
+        return $get_app_details;
     }
 }
