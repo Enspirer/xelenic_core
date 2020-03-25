@@ -31,10 +31,55 @@
     <div class="container-fluid px-xxl-65 px-xl-20" style="text-align: left;">
 
         <div class="row">
-           <h2>Welcome to my app</h2>
+            <div class="col-xl-12">
+                <div class="card card-lg">
+                    <h6 class="card-header">
+                        This Week
+                    </h6>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <br>
+                                    <div class="" style="text-align: center">
+                                        <div class="" style="background-image:url('{{url('/')}}/images/icon/plug.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+                                        <h4 style="color: #888888;font-size: 20px;">Plug API</h4><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <br>
+                                    <div class="" style="text-align: center">
+                                        <div class="" style="background-image:url('{{url('/')}}/images/icon/game.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+                                        <h4 style="color: #888888;font-size: 20px;">Game Service</h4><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <br>
+                                    <div class="" style="text-align: center">
+                                        <div class="" style="background-image:url('{{url('/')}}/images/icon/iot.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+                                        <h4 style="color: #888888;font-size: 20px;">IOT Service</h4><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <br>
+                                    <div class="" style="text-align: center">
+                                        <div class="" style="background-image:url('{{url('/')}}/images/icon/app.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+                                        <h4 style="color: #888888;font-size: 20px;">Mobile App Service</h4><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
 
 @include('frontend.user.dashboard_components.footer')

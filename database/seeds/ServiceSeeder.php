@@ -1,19 +1,21 @@
 <?php
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use DB;
 
-class DatabaseSeeder extends Seeder
+class ServiceSeeder extends Seeder
 {
-    use TruncateTable;
-
     /**
-     * Seed the application's database.
+     * Run the database seeds.
+     *
+     * @return void
      */
+
+
+
     public function run()
     {
-
-        $service_description =  'From API Builder V4.0.0 onward, you can now create your independent
+       $service_description =  'From API Builder V4.0.0 onward, you can now create your independent
          services for containerization and deployment on your container platform of choice.this first version, 
          you will be able to install the API Builder CLI, create a new project, and run it from the command line, 
          all without the need to create a user account or host your project on the Axway platform.API Builder lets
@@ -28,7 +30,6 @@ class DatabaseSeeder extends Seeder
             [
                 'service_name' => 'API Builder',
                 'payment_status' => '1',
-                'service_author' => 'Sanjaya Senevirathne',
                 'service_description' => $service_description,
                 'service_url' => 'http://icovden.com/cloud-service/api-builder',
                 'service_provider' => 'SourceWallet Dev',
@@ -39,25 +40,5 @@ class DatabaseSeeder extends Seeder
                 'token' => 'GMTLE767252GMEL87252GLEK66275',
             ]
         );
-
-
-
-        Model::unguard();
-
-        $this->truncateMultiple([
-            'cache',
-            'failed_jobs',
-            'ledgers',
-            'jobs',
-            'sessions',
-        ]);
-
-        $this->call(
-            [
-                AuthTableSeeder::class,
-            ]
-        );
-
-        Model::reguard();
     }
 }
