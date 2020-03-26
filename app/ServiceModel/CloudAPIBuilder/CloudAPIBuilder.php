@@ -40,6 +40,16 @@ class CloudAPIBuilder extends Model
 
     }
 
+    public static function change_app_type ($ab_id,$app_type)
+    {
+        DB::table('cloud_api_builder')
+            ->where('ab_id',$ab_id)
+            ->update(
+                ['app_type' => $app_type]
+            );
+        return 'Change app type success';
+    }
+
     public static function update_app ($app_id,$app_name,$app_type,$status,$key)
     {
         DB::table('cloud_api_builder')
