@@ -42,10 +42,34 @@ class APIManager extends Controller
         return redirect()->route('frontend.user.api_builder.view_app_page',[$app_id,$api_key,$user_id,$service_id]);
     }
 
+    public function change_app_type (Request $request)
+    {
+
+        $app_type = $request->api_type;
+        $api_key = $request->api_key;
+        $ab_id = $request->ab_id;
+        $service_id = $request->service_id;
+        $user_id = auth()->user()->id;
+
+        $get_details = CloudAPIBuilder::get_app_details_by_id($ab_id);
+
+
+        CloudAPIBuilder::change_app_type($ab_id,$app_type);
+
+        return redirect()->route('frontend.user.api_builder.dashboard',[$ab_id,$api_key,$user_id,$service_id]);
+
+
+    }
+
+    public function api_dashboard($app_id,$api_key,$user_id,$service_id)
+    {
+
+        return view('frontend.user.service_pages.APIBuilder.pages.builder');
+    }
+
     public function view_app_page ($app_id,$api_key,$user_id,$service_id)
     {
         $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
-
         $service_details =  MyService::get_service_details($service_id);
 
 
@@ -54,6 +78,7 @@ class APIManager extends Controller
         [
             'get_app_details' => $get_app_details,
             'service_details' => $service_details,
+            'service_id' => $service_id,
         ]);
     }
 }
