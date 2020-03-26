@@ -13,6 +13,7 @@
 <!-- /Vertical Nav -->
 
 @include('frontend.user.dashboard_components.settings_panel')
+@include('frontend.user.service_pages.APIBuilder.dialogs.select_api_type_dialog')
 
 <!-- Main Content -->
 <div class="hk-pg-wrapper">
@@ -48,12 +49,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="card" >
+                                <div class="card"  data-toggle="modal" data-target="#plug_api">
                                     <br>
                                     <div class="" style="text-align: center">
                                         <div class="" style="background-image:url('{{url('/')}}/images/icon/plug.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
                                         <h4 style="color: #888888;font-size: 20px;">Plug API</h4><br>
-                                        
+
                                     </div>
                                 </div>
                             </div>
