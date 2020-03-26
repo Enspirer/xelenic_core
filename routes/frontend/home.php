@@ -52,6 +52,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         //API Builder (API Manager Controller)
         Route::post('cloud-service/api_builder/create_app', [APIManager::class, 'create_app'])->name('api_builder.create_app');
         Route::get('cloud-service/api_builder/{app_id}/{api_key}/user-relnetworkQtemd0092/{user_id}/{service_id}', [APIManager::class, 'view_app_page'])->name('api_builder.view_app_page');
+        Route::post('cloud-service/api_builder-erts/change_app_type', [APIManager::class, 'change_app_type'])->name('api_builder.change_app_type');
+        Route::get('cloud-service/api_builder-erts/dashboard/{app_id}/{api_key}/aws-gpis/{user_id}/{service_id}', [APIManager::class, 'api_dashboard'])->name('api_builder.dashboard');
+
+
 
 
         //My Service Common Function
