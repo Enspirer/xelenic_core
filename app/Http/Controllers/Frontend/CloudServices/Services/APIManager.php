@@ -10,6 +10,7 @@ use App\Http\Controllers\CommonFunctions\Entrosement;
 use App\ServiceModel\CloudAPIBuilder\CloudAPIBuilder;
 use App\MyService;
 use DB;
+use App\ServiceModel\CloudAPIBuilder\CloudAPIDataTable;
 
 class APIManager extends Controller
 {
@@ -63,8 +64,24 @@ class APIManager extends Controller
 
     public function api_dashboard($app_id,$api_key,$user_id,$service_id)
     {
+        $service_details =  MyService::get_service_details($service_id);
+        $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
 
-        return view('frontend.user.service_pages.APIBuilder.pages.builder');
+
+
+        if ($get_app_details->app_type == 0)
+        {
+            return redirect()->route('frontend.user.api_builder.view_app_page',[$app_id,$api_key,$user_id,$service_id]);
+        }else{
+            return view('frontend.user.service_pages.APIBuilder.pages.builder',
+                [
+                    'service_details' => $service_details,
+                    'get_app_details' => $get_app_details,
+                ]);
+        }
+
+
+
     }
 
     public function view_app_page ($app_id,$api_key,$user_id,$service_id)

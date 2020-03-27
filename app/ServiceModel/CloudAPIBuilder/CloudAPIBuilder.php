@@ -89,10 +89,6 @@ class CloudAPIBuilder extends Model
             ->where('ab_id',$id)
             ->where('user_id',auth()->user()->id)
             ->first();
-
-
-
-
         return $get_app_details;
     }
 }
