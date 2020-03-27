@@ -1,4 +1,4 @@
-<div id="builder_dashboard" class="tab-pane active show">
+<div id="builder_dashboard" class="tab-pane">
     <div class="row">
         <div class="col-xl-12">
             <section class="hk-sec-wrapper">

@@ -31,7 +31,7 @@
         <div class="bg-white shadow-bottom">
             <div class="container-fluid px-xxl-65 px-xl-20">
                 <ul class="nav nav-light nav-tabs" role="tablist">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a data-toggle="tab" href="#builder_dashboard" class="d-flex h-60p align-items-center nav-link active">Dashboard</a>
                     </li>
                     <li class="nav-item">
@@ -61,4 +61,11 @@
         </div>
 
 
+
+
+
 @include('frontend.user.dashboard_components.footer')
+
+    <script>
+        $('.nav-tabs a[href="#builder_table"]').tab('show')
+    </script>

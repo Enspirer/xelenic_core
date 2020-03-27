@@ -5,7 +5,7 @@
 </nav>
 
 
-<div id="builder_table" class="tab-pane fade in active ">
+<div id="builder_table" class="tab-pane">
     <br><br>
     <div class="row">
         <div class="col-md-3">
