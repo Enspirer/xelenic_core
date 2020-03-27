@@ -32,11 +32,18 @@
         <div id="menu2" class="tab-pane fade in active">
             <div class="row">
                 @foreach($service_manager['get_unpublished_app'] as $service_manager_r)
-                    <div class="col-md-3">
-                        <div class="card" style="text-align: center;height: 220px;padding-top: 59px;">
-                            <div class="" style="background-image:url('{{url('/')}}/images/server.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;filter:grayscale(1);"></div>
-                            {{$service_manager_r->app_name}}</div>
-                    </div>
+                        <div class="col-md-3">
+                            <a href="{{route('frontend.user.api_builder.dashboard',[$service_manager_r->ab_id,$service_manager_r->key,auth()->user()->id,$service_details->service_id])}}">
+
+                            <div class="card" style="text-align: center;height: 220px;padding-top: 59px;">
+                                <div class="" style="background-image:url('{{url('/')}}/images/server.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;filter:grayscale(1);"></div>
+                                {{$service_manager_r->app_name}}
+                            </div>
+                            </a>
+
+                        </div>
+
+
                 @endforeach
             </div>
         </div>
