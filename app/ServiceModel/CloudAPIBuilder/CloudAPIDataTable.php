@@ -38,6 +38,21 @@ class CloudAPIDataTable extends Model
         return $get_table;
     }
 
+    public static function delete_table_permenant ($table_id)
+    {
+        DB::table('cloud_api_data_table')
+            ->where('table_id', $table_id)
+            ->delete();
+
+        DB::table('cloud_api_data_field')
+            ->where('table_id', $table_id)
+            ->delete();
+
+
+
+    }
+
+
     public static function get_tables_by_user ($user_id)
     {
         $get_table = DB::table('cloud_api_data_table')

@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <p>Pampered by<a href="https://hencework.com/" class="text-dark" target="_blank">Hencework</a> © 2019</p>
+                <p>Pampered by<a href="https://hencework.com/" class="text-dark" target="_blank">Xelenic PVT (LTD)</a> © 2019</p>
             </div>
             <div class="col-md-6 col-sm-12">
                 <p class="d-inline-block">Follow us</p>

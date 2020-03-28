@@ -93,6 +93,7 @@ class APIManager extends Controller
 
     }
 
+
     public function view_app_page ($app_id,$api_key,$user_id,$service_id)
     {
         $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
