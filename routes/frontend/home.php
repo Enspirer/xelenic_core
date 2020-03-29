@@ -31,7 +31,6 @@ Route::get('faq', [FaqController::class, 'index'])->name('index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::get('team', [TeamController::class, 'index'])->name('index');
 Route::get('events', [EventsController::class, 'index'])->name('index');
-
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 /*
@@ -55,7 +54,11 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('cloud-service/api_builder-erts/change_app_type', [APIManager::class, 'change_app_type'])->name('api_builder.change_app_type');
         Route::get('cloud-service/api_builder-erts/dashboard/{app_id}/{api_key}/aws-gpis/{user_id}/{service_id}', [APIManager::class, 'api_dashboard'])->name('api_builder.dashboard');
         Route::post('cloud-service/api_builder-erts/insert_table', [APIManager::class, 'create_table'])->name('api_builder.create_table');
+        Route::get('cloud-service/api_builder-erts/delete_table/{table_id}', [APIManager::class, 'delete_table'])->name('api_builder.delete_table_permenent');
 
+        Route::get('cloud-service/api_builder-erts/edit-table/{table_id}/{table_key}/{service_id}/{app_id}', [APIManager::class, 'table_edit_page'])->name('table_edit_page');
+
+        Route::post('cloud-service/api_builder-erts/insert_data_field', [APIManager::class, 'insert_data_field'])->name('api_builder.insert_data_field');
 
 
 
