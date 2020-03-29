@@ -42,6 +42,7 @@ class Apibuilder extends Migration
             $table->text('key');
             $table->integer('ab_id');
             $table->integer('table_id');
+            $table->integer('user_id');
             $table->integer('order');
             $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
