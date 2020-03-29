@@ -22,10 +22,34 @@
         @foreach($get_cloud_table as $tables)
             <div class="col-md-3">
                 <a href="http://localhost:8000/cloud-service/api_builder-erts/dashboard/1/5qFsH5IJuxZlhc1hWxY5su1fjU6unGAU4k5MW8Sp/aws-gpis/1/1">
+
                     <div class="card" style="text-align: center;height: 220px;/* padding-top: 59px; */">
+                        <div class="btn-group pull-right">
+                            <div class="dropdown">
+                                <a aria-expanded="false" data-toggle="dropdown" class="btn btn-link dropdown-toggle btn-icon-dropdown">
+                                    <i class="fa fa-list"></i><br>
+                                </a>
+
+                                <div role="menu" class="dropdown-menu" style="will-change: transform;">
+                                    <a class="dropdown-item" href="#">View Data Entry</a>
+                                    <a class="dropdown-item" href="{{route('frontend.user.table_edit_page',[$tables->table_id,$tables->key,$service_details->service_id,$get_app_details->ab_id])}}">Edit Table</a>
+                                    <a class="dropdown-item" href="#">End Points</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item dark" href="{{route('frontend.user.api_builder.delete_table_permenent',$tables->table_id)}}" style="color: red;">Permanent Delete</a>
+                                </div>
+                            </div>
+                        </div>
                         <br><br>
                         <div class="" style="background-image:url('http://localhost:8000/images/table_icon.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
-                        {{$tables->table_name}}
+                        <div class="container">
+                            <p> {{$tables->table_name}} </p>
+                        </div><br>
+
+                        <div class="card-footer">
+                            <div class="" style="font-size: 10px;text-align: left"><b>Key:</b> {{$tables->key}}</div>
+
+                        </div>
+
                     </div>
                 </a>
             </div>
