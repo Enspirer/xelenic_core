@@ -48,7 +48,9 @@ class CloudAPIDataTable extends Model
             ->where('table_id', $table_id)
             ->delete();
 
-
+        DB::table('cloud_api_data_entry')
+            ->where('table_id', $table_id)
+            ->delete();
 
     }
 

@@ -7,10 +7,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CommonFunctions\Entrosement;
 
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
+
 use App\ServiceModel\CloudAPIBuilder\CloudAPIBuilder;
 use App\MyService;
 use DB;
 use App\ServiceModel\CloudAPIBuilder\CloudAPIDataTable;
+use App\ServiceModel\CloudAPIBuilder\CloudAPIDataField;
 
 class APIManager extends Controller
 {
@@ -18,15 +22,11 @@ class APIManager extends Controller
     {
         $get_published_app = CloudAPIBuilder::get_apps('published');
         $get_unplushed_app = CloudAPIBuilder::get_apps('unpublished');
-
         $tanle = [
             'get_published_app' => $get_published_app,
             'get_unpublished_app' => $get_unplushed_app,
             'service_id' => $service_id
         ];
-
-
-
         return $tanle;
     }
 
@@ -39,27 +39,19 @@ class APIManager extends Controller
         $api_key = Entrosement::generate_APIKey(40);
         $user_id = auth()->user()->id;
         $app_id = CloudAPIBuilder::create_app($app_name,0,'unpublished',$api_key);
-
         return redirect()->route('frontend.user.api_builder.view_app_page',[$app_id,$api_key,$user_id,$service_id]);
     }
 
     public function change_app_type (Request $request)
     {
-
         $app_type = $request->api_type;
         $api_key = $request->api_key;
         $ab_id = $request->ab_id;
         $service_id = $request->service_id;
         $user_id = auth()->user()->id;
-
         $get_details = CloudAPIBuilder::get_app_details_by_id($ab_id);
-
-
         CloudAPIBuilder::change_app_type($ab_id,$app_type);
-
         return redirect()->route('frontend.user.api_builder.dashboard',[$ab_id,$api_key,$user_id,$service_id]);
-
-
     }
 
     public function api_dashboard($app_id,$api_key,$user_id,$service_id)
@@ -89,8 +81,12 @@ class APIManager extends Controller
         $user_id = auth()->user()->id;
         CloudAPIDataTable::create_table($table_name,$ab_id,'1');
         return redirect()->route('frontend.user.api_builder.dashboard',[$ab_id,$api_key,$user_id,$service_id,'#builder_table']);
+    }
 
-
+    public function delete_table ($table_id)
+    {
+        CloudAPIDataTable::delete_table_permenant($table_id);
+        return Redirect::to(URL::previous() . "#builder_table");
     }
 
 
@@ -105,4 +101,26 @@ class APIManager extends Controller
             'service_id' => $service_id,
         ]);
     }
+
+    public function table_edit_page ($table_id,$table_key,$service_id,$app_id)
+    {
+        $service_details =  MyService::get_service_details($service_id);
+        $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
+        $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id);
+        $get_table_details = CloudAPIDataTable::get_table_by_id($table_id);
+        $test = CloudAPIDataField::get_next_field($table_id);
+        return view('frontend.user.service_pages.APIBuilder.pages.phaster_views.data_fied_creator',
+            [
+                'service_details' => $service_details,
+                'get_app_details' => $get_app_details,
+                'get_cloud_table' => $get_cloud_table,
+                'table_details' =>$get_table_details
+            ]);
+    }
+
+    public function insert_data_field (Request $request)
+    {
+        dd($request);
+    }
+
 }
