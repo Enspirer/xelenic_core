@@ -4,17 +4,27 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="" style="background-image:url('{{url('/')}}/images/create_table.jpg');height: 260px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 style="text-align: initial;padding-bottom: 10px;padding-top: 30px;">Create Table</h4>
+                    <div class="col-md-12">
+                        <h4 style="text-align: initial;padding-bottom: 10px;padding-top: 30px;">Add Data Field</h4>
                         <p style="text-align: left;font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus nisl vitae sollicitudin placerat. Proin quis viverra purus, et fringilla neque.
                             Morbi at nisi sit amet urna sodales congue et at massa.</p> <br><br>
                         <form action="{{route('frontend.user.api_builder.insert_data_field')}}" method="post">
                             {{csrf_field()}}
                             <div class="form-group">
-
+                                <label>Field Name</label>
+                                <input type="text" class="form-control" name="field_name" required>
+                                <input type="hidden" class="form-control" name="service_id" value="{{$service_details->service_id}}" required>
+                                <input type="hidden" class="form-control" name="ab_id" value="{{$get_app_details->ab_id}}" required>
+                                <input type="hidden" class="form-control" name="table_id" value="{{$table_details->table_id}}" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Data Type</label>
+                                <select class="form-control" name="data_type">
+                                    <option value="text">Text</option>
+                                    <option value="number">Number</option>
+                                    <option value="long_text">Long Text</option>
+                                    <option value="hash">Hash</option>
+                                </select>
                             </div>
                     </div>
                 </div>

@@ -31,9 +31,9 @@
                                 </a>
 
                                 <div role="menu" class="dropdown-menu" style="will-change: transform;">
-                                    <a class="dropdown-item" href="#">View Data Entry</a>
+                                    <a class="dropdown-item" href="{{route('frontend.user.view_data_entry',[$tables->table_id,$tables->key,$service_details->service_id,$get_app_details->ab_id])}}">View Data Entry</a>
                                     <a class="dropdown-item" href="{{route('frontend.user.table_edit_page',[$tables->table_id,$tables->key,$service_details->service_id,$get_app_details->ab_id])}}">Edit Table</a>
-                                    <a class="dropdown-item" href="#">End Points</a>
+                                    <a class="dropdown-item" href="">End Points</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item dark" href="{{route('frontend.user.api_builder.delete_table_permenent',$tables->table_id)}}" style="color: red;">Permanent Delete</a>
                                 </div>
