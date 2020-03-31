@@ -108,19 +108,57 @@ class APIManager extends Controller
         $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
         $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id);
         $get_table_details = CloudAPIDataTable::get_table_by_id($table_id);
-        $test = CloudAPIDataField::get_next_field($table_id);
+        $get_table_field = CloudAPIDataField::get_data_fields($table_id);
+
         return view('frontend.user.service_pages.APIBuilder.pages.phaster_views.data_fied_creator',
             [
                 'service_details' => $service_details,
                 'get_app_details' => $get_app_details,
                 'get_cloud_table' => $get_cloud_table,
-                'table_details' =>$get_table_details
+                'table_details' =>$get_table_details,
+                'get_table_field' =>$get_table_field
             ]);
     }
 
     public function insert_data_field (Request $request)
     {
-        dd($request);
+        $field_name =  $request->field_name;
+        $service_id =  $request->service_id;
+        $ab_id =  $request->ab_id;
+        $table_id =  $request->table_id;
+        $data_type =  $request->data_type;
+        $order = CloudAPIDataField::get_next_field($table_id);
+        $key = Entrosement::generate_APIKey(40);
+
+
+        CloudAPIDataField::create_field($field_name,$data_type,$key,$ab_id,$table_id,$order);
+
+        return back();
+    }
+
+    public function delete_data_field ($field_id,$table_id)
+    {
+       $response = CloudAPIDataField::delete_data_field($table_id,$field_id);
+
+       return back();
+    }
+
+    public function view_data_entry ($table_id,$table_key,$service_id,$app_id)
+    {
+        $service_details =  MyService::get_service_details($service_id);
+        $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
+        $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id);
+        $get_table_details = CloudAPIDataTable::get_table_by_id($table_id);
+        $get_table_field = CloudAPIDataField::get_data_fields($table_id);
+
+        return view('frontend.user.service_pages.APIBuilder.pages.phaster_views.view_data_entry',
+            [
+                'service_details' => $service_details,
+                'get_app_details' => $get_app_details,
+                'get_cloud_table' => $get_cloud_table,
+                'table_details' =>$get_table_details,
+                'get_table_field' =>$get_table_field
+            ]);
     }
 
 }

@@ -4,6 +4,7 @@ namespace App\ServiceModel\CloudAPIBuilder;
 
 use Illuminate\Database\Eloquent\Model;
 use DB;
+use PharIo\Manifest\ManifestDocumentMapperTest;
 
 class CloudAPIDataField extends Model
 {
@@ -12,7 +13,7 @@ class CloudAPIDataField extends Model
 
     public static function create_field ($field_name,$type,$key,$ab_id,$table_id,$order_id)
     {
-        $id = DB::table('cloud_api_data_table')
+        $id = DB::table('cloud_api_data_field')
             ->insertGetId ([
                'field_name' =>  $field_name,
                'type' =>  $type,
@@ -41,6 +42,37 @@ class CloudAPIDataField extends Model
         $get_data_fields = DB::Table('cloud_api_data_field')
             ->where('table_id',$table_id)
             ->get();
+
+        return $get_data_fields;
+    }
+
+    public static function delete_data_field ($table_id,$field_id)
+    {
+        DB::table('cloud_api_data_field')
+            ->where('data_field_id',$field_id)
+            ->delete();
+
+        $get_field_order = DB::table('cloud_api_data_field')
+            ->where('table_id',$table_id)
+            ->orderBy('order','ASC')
+            ->get();
+
+        $number_count = 0;
+
+        foreach ($get_field_order as $data_field_id)
+        {
+
+            $number_count +=  1;
+
+            $get_order = DB::table('cloud_api_data_field')
+                ->where('data_field_id',$data_field_id->data_field_id)
+                ->update([
+                   'order' => $number_count
+                ]);
+
+        }
+
+        return $number_count;
     }
 
 
