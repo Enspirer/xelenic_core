@@ -49,6 +49,7 @@
                                     <table class="table table-sm mb-0">
                                         <thead>
                                         <tr>
+                                            <th>Order ID</th>
                                             <th>Field Name</th>
                                             <th>Data Type</th>
                                             <th>Key</th>
@@ -56,15 +57,19 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($get_table_field as $field)
                                             <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Text</td>
-                                                <td>KSLESDFSDFKSDF87983279</td>
+                                                <td>{{$field->order}}</td>
+                                                <td>{{$field->field_name}}</td>
+                                                <td>{{$field->type}}</td>
+                                                <td>{{$field->key}}</td>
                                                 <td>
                                                     <a href="#" class="mr-25" data-toggle="tooltip" data-original-title="Edit"> <i class="icon-pencil"></i> </a>
-                                                    <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="icon-trash txt-danger"></i> </a>
+                                                    <a href="{{route('frontend.user.api_builder.delete_id',[$field->data_field_id, $field->table_id])}}" data-toggle="tooltip" data-original-title="Delete"> <i class="icon-trash txt-danger"></i> </a>
                                                 </td>
                                             </tr>
+                                        @endforeach
+
 
                                         </tbody>
                                     </table>
