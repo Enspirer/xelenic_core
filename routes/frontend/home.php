@@ -58,6 +58,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         Route::get('cloud-service/api_builder-erts/edit-table/{table_id}/{table_key}/{service_id}/{app_id}', [APIManager::class, 'table_edit_page'])->name('table_edit_page');
         Route::get('cloud-service/api_builder-erts/view-data-entry/{table_id}/{table_key}/{service_id}/{app_id}', [APIManager::class, 'view_data_entry'])->name('view_data_entry');
+        Route::post('cloud-service/api_builder-erts/insert_record', [APIManager::class, 'insert_record'])->name('api_builder.insert_record');
 
         Route::post('cloud-service/api_builder-erts/insert_data_field', [APIManager::class, 'insert_data_field'])->name('api_builder.insert_data_field');
         Route::get('cloud-service/api_builder-erts/delete/{field_id}/{table_id}', [APIManager::class, 'delete_data_field'])->name('api_builder.delete_id');

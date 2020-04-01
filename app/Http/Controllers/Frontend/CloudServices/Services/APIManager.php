@@ -166,4 +166,8 @@ class APIManager extends Controller
             ]);
     }
 
+    public function insert_record ( Request $request)
+    {
+        dd($request);
+    }
 }
