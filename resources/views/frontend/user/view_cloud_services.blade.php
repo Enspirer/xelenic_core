@@ -49,7 +49,7 @@
                             {{csrf_field()}}
                             <input type="hidden" name="service_id" value="{{$service_details->service_id}}">
                             <button class="btn btn-dark btn-wth-icon icon-wthot-bg btn-rounded">
-                                Message
+                                Add to My Service
                             </button>
                         </form>
                         {{--<a href="#" class="btn btn-dark btn-wth-icon icon-wthot-bg btn-rounded"><span class="btn-text">Add Service</span><span class="icon-label"><i class="icon ion-md-mail"></i> </span></a>--}}
@@ -81,8 +81,8 @@
         <div class="row">
             <div class="col-xl-12">
                 <section class="hk-sec-wrapper">
-                    <h5 class="hk-sec-title">Description</h5>
-                    <p class="mb-25">{{$service_details->service_description}}</p>
+                    <h5 class="hk-sec-title" style="text-align: left">Description</h5>
+                    <p class="mb-25" style="text-align: left;">{{$service_details->service_description}}</p>
                     <div class="row">
                         <div class="col-sm">
                             <div class="accordion" id="accordion_1">
