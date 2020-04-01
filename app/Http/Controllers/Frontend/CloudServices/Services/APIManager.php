@@ -15,6 +15,7 @@ use App\MyService;
 use DB;
 use App\ServiceModel\CloudAPIBuilder\CloudAPIDataTable;
 use App\ServiceModel\CloudAPIBuilder\CloudAPIDataField;
+use App\ServiceModel\CloudAPIBuilder\CloudAPIDataEntry;
 
 class APIManager extends Controller
 {
@@ -58,7 +59,7 @@ class APIManager extends Controller
     {
         $service_details =  MyService::get_service_details($service_id);
         $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
-        $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id);
+        $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id,$app_id);
         if ($get_app_details->app_type == 0)
         {
             return redirect()->route('frontend.user.api_builder.view_app_page',[$app_id,$api_key,$user_id,$service_id]);
@@ -106,7 +107,7 @@ class APIManager extends Controller
     {
         $service_details =  MyService::get_service_details($service_id);
         $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
-        $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id);
+        $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id,$app_id);
         $get_table_details = CloudAPIDataTable::get_table_by_id($table_id);
         $get_table_field = CloudAPIDataField::get_data_fields($table_id);
 
@@ -147,9 +148,12 @@ class APIManager extends Controller
     {
         $service_details =  MyService::get_service_details($service_id);
         $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
-        $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id);
+        $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id,$app_id);
         $get_table_details = CloudAPIDataTable::get_table_by_id($table_id);
         $get_table_field = CloudAPIDataField::get_data_fields($table_id);
+
+        $get_entry_data = CloudAPIDataEntry::get_data_record($app_id,$table_id);
+
 
         return view('frontend.user.service_pages.APIBuilder.pages.phaster_views.view_data_entry',
             [
@@ -157,7 +161,8 @@ class APIManager extends Controller
                 'get_app_details' => $get_app_details,
                 'get_cloud_table' => $get_cloud_table,
                 'table_details' =>$get_table_details,
-                'get_table_field' =>$get_table_field
+                'get_table_field' =>$get_table_field,
+                'data_entry' => $get_entry_data
             ]);
     }
 

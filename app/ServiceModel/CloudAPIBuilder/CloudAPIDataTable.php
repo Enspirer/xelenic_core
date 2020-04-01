@@ -55,10 +55,11 @@ class CloudAPIDataTable extends Model
     }
 
 
-    public static function get_tables_by_user ($user_id)
+    public static function get_tables_by_user ($user_id,$app_id)
     {
         $get_table = DB::table('cloud_api_data_table')
             ->where('user_id',$user_id)
+            ->where('ab_id',$app_id)
             ->get();
 
         return $get_table;
