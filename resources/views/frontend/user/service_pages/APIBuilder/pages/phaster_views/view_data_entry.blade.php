@@ -29,7 +29,7 @@
 
     @include('frontend.user.service_pages.APIBuilder.pages.components.lock_main_tab_menu')
 
-    @include('frontend.user.service_pages.APIBuilder.dialogs.create_data_field')
+    @include('frontend.user.service_pages.APIBuilder.dialogs.add_data_record')
 
     <div class="tab-content">
         <nav class="hk-breadcrumb" aria-label="breadcrumb">
@@ -38,7 +38,7 @@
                 <li class="breadcrumb-item active"><a href="">{{$table_details->table_name}} View Data Entry </a></li>
             </ol>
         </nav>
-        <button type="button" data-toggle="modal" data-target="#insert_data_field"  class="btn btn-primary btn-rounded">Add Field</button> <br><br>
+        <button type="button" data-toggle="modal" data-target="#add_data_record"  class="btn btn-primary btn-rounded">Add Record</button> <br><br>
 
         <div id="builder_table" class="tab-pane active">
             <section class="hk-sec-wrapper">
@@ -83,13 +83,15 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            @foreach($data_entry as $data_enty)
                                                 <tr role="row" class="odd">
-                                                    <td tabindex="0" class="">Airi Satou</td>
-                                                    <td>Accountant</td>
-                                                    <td class="sorting_1">Tokyo</td>
-                                                    <td>33</td>
-                                                    <td>2008/11/28</td>
+                                                    @foreach($data_enty as $heck)
+                                                        <td tabindex="0" class="">{{$heck->data}}</td>
+                                                    @endforeach
+
                                                 </tr>
+                                            @endforeach
+
                                            </tbody>
                                         </table>
                                     </div>
