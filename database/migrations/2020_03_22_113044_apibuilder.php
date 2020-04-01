@@ -56,6 +56,7 @@ class Apibuilder extends Migration
             $table->integer('table_id');
             $table->integer('ab_id');
             $table->integer('field_id');
+            $table->integer('row_number');
             $table->text('is_delete');
             $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
