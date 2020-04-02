@@ -10,6 +10,8 @@
                             Morbi at nisi sit amet urna sodales congue et at massa.</p> <br><br>
                         <form action="{{route('frontend.user.api_builder.insert_record')}}" method="post">
                             {{csrf_field()}}
+                            <input type="hidden" name="app_id" value="{{$get_app_details->ab_id}}">
+                            <input type="hidden" name="table_id" value="{{$table_details->table_id}}">
                             @foreach($get_table_field as $insert_item)
                                 <div class="form-group">
                                     <label>{{$insert_item->field_name}}</label>

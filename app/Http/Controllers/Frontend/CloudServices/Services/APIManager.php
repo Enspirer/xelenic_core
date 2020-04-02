@@ -155,6 +155,8 @@ class APIManager extends Controller
         $get_entry_data = CloudAPIDataEntry::get_data_record($app_id,$table_id);
 
 
+
+
         return view('frontend.user.service_pages.APIBuilder.pages.phaster_views.view_data_entry',
             [
                 'service_details' => $service_details,
@@ -168,6 +170,23 @@ class APIManager extends Controller
 
     public function insert_record ( Request $request)
     {
-        dd($request);
+        $app_id = $request->app_id;
+        $table_id = $request->table_id;
+        $data = $request->data;
+        $get_row_number = CloudAPIDataEntry::get_next_row($app_id,$table_id);
+
+
+
+        $get_feid_number = 0;
+
+        foreach ($data as $dat)
+        {
+             $get_feid_number += 1;
+
+           CloudAPIDataEntry::insert_data_static($dat,'text',$get_feid_number,auth()->user()->id,$table_id,$app_id,$get_feid_number,$get_row_number);
+
+        }
+
+        return back();
     }
 }

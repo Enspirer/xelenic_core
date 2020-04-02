@@ -64,6 +64,7 @@
                                 </text>
 
                                 <path fill="none" stroke="#22af47" d="M45.359375,216.66666666666666L227.38303000912825,155.33333333333331L409.4066850182565,193.66666666666666L591.9290349726152,201.33333333333331L773.9526899817434,117L955.9763449908717,174.5L1138,63.333333333333314" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+
                                 <circle cx="45.359375" cy="216.66666666666666" r="3" fill="#ffffff" stroke="#22af47" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
                                 <circle cx="227.38303000912825" cy="155.33333333333331" r="3" fill="#ffffff" stroke="#22af47" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
                                 <circle cx="409.4066850182565" cy="193.66666666666666" r="3" fill="#ffffff" stroke="#22af47" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>

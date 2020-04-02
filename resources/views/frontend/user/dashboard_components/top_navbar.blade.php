@@ -20,7 +20,7 @@
                         <div class="media">
                             <div class="media-img-wrap">
                                 <div class="avatar avatar-sm">
-                                    <img src="dist/img/avatar1.jpg" alt="user" class="avatar-img rounded-circle">
+                                    <img src="{{url('/')}}/FrontDashboard/dist/img/avatar1.jpg" alt="user" class="avatar-img rounded-circle">
                                 </div>
                             </div>
                             <div class="media-body">
@@ -36,7 +36,7 @@
                         <div class="media">
                             <div class="media-img-wrap">
                                 <div class="avatar avatar-sm">
-                                    <img src="dist/img/avatar2.jpg" alt="user" class="avatar-img rounded-circle">
+                                    <img src="{{url('/')}}/FrontDashboard/dist/img/avatar1.jpg" alt="user" class="avatar-img rounded-circle">
                                 </div>
                             </div>
                             <div class="media-body">
@@ -109,17 +109,17 @@
                 <div class="media">
                     <div class="media-img-wrap">
                         <div class="avatar">
-                            <img src="dist/img/avatar12.jpg" alt="user" class="avatar-img rounded-circle">
+                            <img src="{{url('/')}}/FrontDashboard/dist/img/avatar1.jpg" alt="user" class="avatar-img rounded-circle">
                         </div>
                         <span class="badge badge-success badge-indicator"></span>
                     </div>
                     <div class="media-body">
-                        <span>Madelyn Shane<i class="zmdi zmdi-chevron-down"></i></span>
+                        <span>{{auth()->user()->name}}<i class="zmdi zmdi-chevron-down"></i></span>
                     </div>
                 </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
-                <a class="dropdown-item" href="profile.html"><i class="dropdown-icon zmdi zmdi-account"></i><span>Profile</span></a>
+                <a class="dropdown-item" href="{{route('frontend.user.account')}}"><i class="dropdown-icon zmdi zmdi-account"></i><span>Profile</span></a>
                 <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-card"></i><span>My balance</span></a>
                 <a class="dropdown-item" href="inbox.html"><i class="dropdown-icon zmdi zmdi-email"></i><span>Inbox</span></a>
                 <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-settings"></i><span>Settings</span></a>
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-power"></i><span>Log out</span></a>
+                <a class="dropdown-item" href="{{route('frontend.auth.logout')}}"><i class="dropdown-icon zmdi zmdi-power"></i><span>Log out</span></a>
             </div>
         </li>
     </ul>
