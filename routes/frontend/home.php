@@ -33,6 +33,12 @@ Route::get('team', [TeamController::class, 'index'])->name('index');
 Route::get('events', [EventsController::class, 'index'])->name('index');
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 
+
+//API Builder API Endpoints
+Route::get('api/get-table-data/{app_key}/{table_id}/{user_id}', [APIManager::class, 'api_get_table_data'])->name('api_get_table_data');
+
+
+
 /*
  * These frontend controllers require the user to be logged in
  * All route names are prefixed with 'frontend.'
@@ -62,6 +68,10 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         Route::post('cloud-service/api_builder-erts/insert_data_field', [APIManager::class, 'insert_data_field'])->name('api_builder.insert_data_field');
         Route::get('cloud-service/api_builder-erts/delete/{field_id}/{table_id}', [APIManager::class, 'delete_data_field'])->name('api_builder.delete_id');
+
+
+        //API Builder (API Endpoints)
+
 
 
 

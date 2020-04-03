@@ -189,4 +189,9 @@ class APIManager extends Controller
 
         return back();
     }
+
+    public function api_get_table_data ($app_key,$table_key,$user_id)
+    {
+        print_r($app_key);
+    }
 }
