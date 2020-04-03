@@ -15,6 +15,7 @@
         "altek/eventually": "^1.0",
         "arcanedev/log-viewer": "^5.0",
         "creativeorange/gravatar": "~1.0",
+        "darthsoup/laravel-whmcs": "^0.2.5",
         "davejamesmiller/laravel-breadcrumbs": "^5.0",
         "facade/ignition": "^1.11",
         "fideloper/proxy": "^4.0",
