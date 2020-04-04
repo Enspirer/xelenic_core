@@ -18,6 +18,29 @@ class CloudAPIDataEntry extends Model
         return $get_data;
     }
 
+    public static function api_get_data_records($table_key,$auth_key)
+    {
+        $get_user_details = DB::table('users')
+            ->where('user_key',$auth_key)
+            ->first();
+
+
+
+        $get_table_details = DB::table('cloud_api_data_table')
+            ->where('key',$table_key)
+            ->first();
+
+        $thing = DB::table('cloud_api_data_entry')
+            ->where('user_id',$get_user_details->id)
+            ->where('table_id',$get_table_details->table_id)
+            ->get();
+
+        $get_data = $thing->groupBy('row_number');
+
+        return $get_data;
+
+    }
+
     public static function get_next_row ($ab_id,$table_id)
     {
         $get_lastest_record = DB::table('cloud_api_data_entry')

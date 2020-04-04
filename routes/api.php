@@ -25,5 +25,8 @@ Route::group(['middleware' => ['aut_key']], function () {
     //Get Table Fields
     Route::get('cloud_service/get_tables/{app_key}/{table_key}/get-fields', [APIManager::class, 'api_get_table_fields'])->name('api_builder.get_tables.fields');
 
+    //Get Table Records
+    Route::get('cloud_service/get_tables/{app_key}/{table_key}/get-data-records', [APIManager::class, 'api_get_table_records'])->name('api_builder.get_table.records');
+
 });
 

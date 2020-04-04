@@ -196,11 +196,16 @@ class APIManager extends Controller
     public function api_get_table_fields (Request $request,$app_key,$table_key)
     {
         $auth_key = $request->header('AUTH_KEY');
-
         $get_table_details = CloudAPIDataField::api_data_table_fields($table_key,$auth_key);
+        return $get_table_details;
 
+    }
 
-        return [$get_table_details];
+    public function api_get_table_records (Request $request,$app_key,$table_key)
+    {
+        $auth_key = $request->header('AUTH_KEY');
+        $get_table_records = CloudAPIDataEntry::api_get_data_records($table_key,$auth_key);
+        return $get_table_records;
 
     }
 }
