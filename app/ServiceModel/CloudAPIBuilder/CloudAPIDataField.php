@@ -76,4 +76,24 @@ class CloudAPIDataField extends Model
     }
 
 
+    public static function api_data_table_fields($table_key,$auth_key)
+    {
+        $get_user_details = DB::table('users')
+            ->where('user_key',$auth_key)
+            ->first();
+
+        $get_table_details = DB::table('cloud_api_data_table')
+            ->where('key',$table_key)
+            ->first();
+
+        $get_fields_data = DB::table('cloud_api_data_field')
+            ->where('table_id',$get_table_details->table_id)
+            ->where('user_id',$get_user_details->id)
+            ->select('field_name','data_field_id','order','type')
+            ->get();
+
+        return $get_fields_data;
+    }
+
+
 }

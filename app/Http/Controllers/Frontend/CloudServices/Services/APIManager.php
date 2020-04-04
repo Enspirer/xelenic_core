@@ -174,15 +174,10 @@ class APIManager extends Controller
         $table_id = $request->table_id;
         $data = $request->data;
         $get_row_number = CloudAPIDataEntry::get_next_row($app_id,$table_id);
-
-
-
         $get_feid_number = 0;
-
         foreach ($data as $dat)
         {
              $get_feid_number += 1;
-
            CloudAPIDataEntry::insert_data_static($dat,'text',$get_feid_number,auth()->user()->id,$table_id,$app_id,$get_feid_number,$get_row_number);
 
         }
@@ -190,8 +185,22 @@ class APIManager extends Controller
         return back();
     }
 
-    public function api_get_table_data ($app_key,$table_key,$user_id)
+    public function api_get_table_details (Request $request,$app_key,$table_key)
     {
-        print_r($app_key);
+        $auth_key = $request->header('AUTH_KEY');
+        //This is Table Details_Only
+        $get_table_details = CloudAPIDataTable::ger_table_details_table_key($auth_key,$app_key,$table_key);
+       return $get_table_details;
+    }
+
+    public function api_get_table_fields (Request $request,$app_key,$table_key)
+    {
+        $auth_key = $request->header('AUTH_KEY');
+
+        $get_table_details = CloudAPIDataField::api_data_table_fields($table_key,$auth_key);
+
+
+        return [$get_table_details];
+
     }
 }

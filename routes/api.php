@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Frontend\CloudServices\Services\APIManager;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,16 @@ use Illuminate\Http\Request;
 |
 */
 
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return 'apple';
+});
+
+Route::group(['middleware' => ['aut_key']], function () {
+    //Get Table Details
+    Route::get('cloud_service/get_tables/{app_key}/{table_key}', [APIManager::class, 'api_get_table_details'])->name('api_builder.get_table_details');
+
+    //Get Table Fields
+    Route::get('cloud_service/get_tables/{app_key}/{table_key}/get-fields', [APIManager::class, 'api_get_table_fields'])->name('api_builder.get_tables.fields');
+
+});
+

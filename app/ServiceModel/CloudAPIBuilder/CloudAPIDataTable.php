@@ -65,5 +65,33 @@ class CloudAPIDataTable extends Model
         return $get_table;
     }
 
+    public static function ger_table_details_table_key ($auth_key,$app_key,$table_key)
+    {
+        $get_user_details = DB::table('users')
+            ->where('user_key',$auth_key)
+            ->first();
+        $get_app_details = DB::table('cloud_api_builder')->where('key',$app_key)->first();
+
+//
+        $get_table_details = DB::table('cloud_api_data_table')
+            ->where('user_id',$get_user_details->id)
+            ->where('key',$table_key)
+            ->where('ab_id',$get_app_details->ab_id)
+            ->first();
+
+        $table_details = [
+                            'table_name'=> $get_table_details->table_name,
+                            'table_key'=> $get_table_details->key,
+                            'created_at'=> $get_table_details->created_at,
+                        ];
+
+        return $table_details;
+    }
+
+    public static function key_to_id ($table_id)
+    {
+
+    }
+
 
 }
