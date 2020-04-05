@@ -22,5 +22,29 @@ class AutFactor extends Controller
     public static function main_activity($service_id)
     {
 
+
+
+    }
+
+    public function activate_auth_factor(Request $request)
+    {
+        $auth_key = Entrosement::generate_APIKey(30);
+        DB::table('users')
+            ->where('id',auth()->user()->id)
+            ->update(
+                ['user_key' => $auth_key ]
+            );
+        return back();
+    }
+
+    public function deactivate_auth_factor (Request $request)
+    {
+        DB::table('users')
+            ->where('id',auth()->user()->id)
+            ->update(
+                ['user_key' => null ]
+            );
+
+        return back();
     }
 }

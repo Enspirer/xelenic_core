@@ -26,7 +26,9 @@ class MyService extends Model
             ->first();
 
         $my_service_details = DB::table('my_service')
-            ->where('service_id', $service_id)->first();
+            ->where('service_id', $service_id)
+            ->where('user_id', auth()->user()->id)
+            ->first();
 
 
 
