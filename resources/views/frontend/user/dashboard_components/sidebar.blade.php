@@ -40,13 +40,25 @@
                         <i class="ion ion-md-cloud"></i>
                         <span class="nav-link-text">Services Explorer</span>
                     </a>
-
                 </li>
+
+                @foreach($my_courses_r as $mycourse)
+                    @if ($mycourse->my_service_id == 2)
+                        <li class="nav-item">
+                            <a  class="nav-link" href="{{route('frontend.user.cloud_services')}}">
+                                <i class="ion ion-md-lock"></i>
+                                <span class="nav-link-text">{{$mycourse->service_name}}</span>
+                            </a>
+                        </li>
+                    @else
+
+                    @endif
+
+                @endforeach
+
+
+
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#content_drp">
-                        <i class="ion ion-md-clipboard"></i>
-                        <span class="nav-link-text">Monitors</span>
-                    </a>
                     <ul id="content_drp" class="nav flex-column collapse collapse-level-1">
                         <li class="nav-item">
                             <ul class="nav flex-column">
