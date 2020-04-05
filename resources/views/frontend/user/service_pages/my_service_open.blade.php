@@ -45,3 +45,20 @@
     </div>
 
 @include('frontend.user.dashboard_components.footer')
+    <script>
+        function location_changer(hash_code) {
+            location.hash = hash_code;
+        }
+
+    </script>
+
+    <script>
+        $(function(){
+            var hash = window.location.hash;
+            if(hash == '#canvas'){
+                $('.nav-tabs a[href="#canvas"]').tab('show')
+            }else {
+                $('.nav-tabs a[href="#settings_authfactor"]').tab('show')
+            }
+        });
+    </script>
