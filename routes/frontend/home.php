@@ -22,15 +22,15 @@ use App\Http\Controllers\Frontend\CloudServices\Services\APIManager;
  * All route names are prefixed with 'frontend.'.
  */
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('about', [AboutController::class, 'index'])->name('index');
-Route::get('services', [ServicesController::class, 'index'])->name('index');
-Route::get('products', [ProductsController::class, 'index'])->name('index');
-Route::get('partnerships', [PartnershipsController::class, 'index'])->name('index');
-Route::get('blog', [BlogController::class, 'index'])->name('index');
-Route::get('faq', [FaqController::class, 'index'])->name('index');
-Route::get('contact', [ContactController::class, 'index'])->name('contact');
-Route::get('team', [TeamController::class, 'index'])->name('index');
-Route::get('events', [EventsController::class, 'index'])->name('index');
+Route::get('about', [AboutController::class, 'index'])->name('frontend.about');
+Route::get('services', [ServicesController::class, 'index'])->name('frontend.services');
+Route::get('products', [ProductsController::class, 'index'])->name('frontend.products');
+Route::get('partnerships', [PartnershipsController::class, 'index'])->name('frontend.partnerships');
+Route::get('blog', [BlogController::class, 'index'])->name('frontend.blog');
+Route::get('faq', [FaqController::class, 'index'])->name('frontend.faq');
+Route::get('contact', [ContactController::class, 'index'])->name('frontend.contact');
+Route::get('team', [TeamController::class, 'index'])->name('frontend.team');
+Route::get('events', [EventsController::class, 'index'])->name('frontend.events');
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 
