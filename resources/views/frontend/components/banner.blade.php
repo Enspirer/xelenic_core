@@ -105,7 +105,7 @@
 </style>
 
 <!-- start banner Area -->
-<section class="" id="home" style="background: #4d90fe;">
+<section class="" id="home" style="background: #4d90fe;padding-top: 50px;">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

@@ -1,5 +1,5 @@
 <header id="header" id="home" style="background-color: rgb(77, 144, 254) !important;padding-bottom: unset;position: fixed;width: -webkit-fill-available;z-index: 3;">
-    <div class="" style="padding-left: 240px;">
+    <div class="container" style="">
         <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="background-color: #4d90fe !important;">
             <a class="navbar-brand" href="/">icovden</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,17 +92,44 @@
                                     <a class="dropdown-item" href="#">Research</a>
                                 </div>
                             </div>
-
                         </div>
                     </li>
 
-
-
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 15px;background: #2c59ff;border-color: #4d90fe;color: white;">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" style="border-radius: 15px;background: #2c59ff;border-color: #4d90fe;color: white;">
+                    <button class="btn btn-primary" style="color: white;" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </form>
+
+                @auth
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown pull-right">
+                        <a data-hover="dropdown" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #007bff;border-radius: 7px;margin-left: 15px;color: white;padding-left: 20px;padding-right: 20px;">
+                            {{auth()->user()->name}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content;">
+
+                            <a class="dropdown-item" href="{{route('frontend.user.dashboard')}}">Dashboard</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{route('frontend.user.account')}}">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="{{route('frontend.auth.logout')}}">Logout</a>
+
+
+                        </div>
+                    </li>
+                </ul>
+                @else
+                    <a href="{{route('frontend.auth.login')}}" class="btn btn-primary" style="background: #007bff;border-radius: 7px;margin-left: 15px;color: white;padding-left: 20px;padding-right: 20px;">
+                        Sign In
+                    </a>
+                    <a href="{{route('frontend.auth.register')}}" class="btn btn-primary"  style="background: #dc3545;border-radius: 7px;margin-left: 15px;color: white;padding-left: 20px;padding-right: 20px;">
+                        Create a Account
+                    </a>
+                @endauth
+
             </div>
         </nav>
     </div>
