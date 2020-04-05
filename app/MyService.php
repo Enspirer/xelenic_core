@@ -47,6 +47,16 @@ class MyService extends Model
         }
     }
 
+    public static function get_service_details_by_user($service_id)
+    {
+        $service_datails = DB::table('my_service')
+            ->where('user_id', auth()->user()->id )
+            ->where('service_id', $service_id)
+            ->first();
+
+        return $service_datails;
+    }
+
     public static function get_service_details ($service_id)
     {
         $service_datails = DB::table('cloud_service')

@@ -41,7 +41,7 @@
                         <a data-toggle="tab" href="#builder_api_logs" class="d-flex h-60p align-items-center nav-link">API Logs</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#builder_api_endpoints" class="d-flex h-60p align-items-center nav-link">Endpoints</a>
+                        <a data-toggle="tab"  onclick="location_changer('builder_api_endpoints')"  href="#builder_api_endpoints" class="d-flex h-60p align-items-center nav-link">Endpoints</a>
                     </li>
                     <li class="nav-item">
                         <a data-toggle="tab" href="#builder_api_records" class="d-flex h-60p align-items-center nav-link">Records</a>
@@ -57,6 +57,7 @@
             <div class="tab-content">
                 @include('frontend.user.service_pages.APIBuilder.pages.components.builder_dashboard')
                 @include('frontend.user.service_pages.APIBuilder.pages.components.table_creator')
+                @include('frontend.user.service_pages.APIBuilder.pages.components.endpoints')
             </div>
         </div>
 
@@ -78,6 +79,8 @@
             var hash = window.location.hash;
             if(hash == '#builder_table'){
                 $('.nav-tabs a[href="#builder_table"]').tab('show')
+            }else if(hash =='#builder_api_endpoints'){
+                $('.nav-tabs a[href="#builder_api_endpoints"]').tab('show')
             }else {
                 $('.nav-tabs a[href="#builder_dashboard"]').tab('show')
             }
