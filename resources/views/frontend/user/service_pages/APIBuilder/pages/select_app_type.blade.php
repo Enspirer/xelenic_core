@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="card">
+                                <div class="card" data-toggle="modal" data-target="#game_service">
                                     <br>
                                     <div class="" style="text-align: center">
                                         <div class="" style="background-image:url('{{url('/')}}/images/icon/game.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="card">
+                                <div class="card" data-toggle="modal" data-target="#iot_service">
                                     <br>
                                     <div class="" style="text-align: center">
                                         <div class="" style="background-image:url('{{url('/')}}/images/icon/iot.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>

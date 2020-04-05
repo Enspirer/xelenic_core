@@ -17,7 +17,10 @@
         <div id="menu1" class="tab-pane fade in active show">
             <div class="row">
                 <div class="col-md-3">
-                    <div style="border-radius: 5px;height: 220px;border-width: 1px;border-style: dashed;padding: 10px;border-color: #c8c8c8;text-align: center;" data-toggle="modal" data-target=".bd-example-modal-lg">OpenScrime</div>
+                    <div style="border-radius: 5px;height: 220px;border-width: 1px;border-style: dashed;padding: 10px;border-color: #c8c8c8;text-align: center;" data-toggle="modal" data-target=".bd-example-modal-lg">
+                        <i class="fa fa-plus" style="font-size: 45px;padding-top: 30%;cursor: hand;"></i>
+                        <p>Create a APP</p>
+                    </div>
                 </div>
                 @foreach($service_manager['get_published_app'] as $service_manager_r)
                     <div class="col-md-3">
