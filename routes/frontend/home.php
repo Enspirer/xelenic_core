@@ -14,7 +14,7 @@ use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\CloudServiceController;
 use App\Http\Controllers\Frontend\MyServicesController;
-
+use App\Http\Controllers\Frontend\CloudServices\Services\AutFactor;
 use App\Http\Controllers\Frontend\CloudServices\Services\APIManager;
 
 /*
@@ -61,28 +61,34 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('cloud-service/api_builder-erts/dashboard/{app_id}/{api_key}/aws-gpis/{user_id}/{service_id}', [APIManager::class, 'api_dashboard'])->name('api_builder.dashboard');
         Route::post('cloud-service/api_builder-erts/insert_table', [APIManager::class, 'create_table'])->name('api_builder.create_table');
         Route::get('cloud-service/api_builder-erts/delete_table/{table_id}', [APIManager::class, 'delete_table'])->name('api_builder.delete_table_permenent');
-
         Route::get('cloud-service/api_builder-erts/edit-table/{table_id}/{table_key}/{service_id}/{app_id}', [APIManager::class, 'table_edit_page'])->name('table_edit_page');
         Route::get('cloud-service/api_builder-erts/view-data-entry/{table_id}/{table_key}/{service_id}/{app_id}', [APIManager::class, 'view_data_entry'])->name('view_data_entry');
         Route::post('cloud-service/api_builder-erts/insert_record', [APIManager::class, 'insert_record'])->name('api_builder.insert_record');
-
         Route::post('cloud-service/api_builder-erts/insert_data_field', [APIManager::class, 'insert_data_field'])->name('api_builder.insert_data_field');
         Route::get('cloud-service/api_builder-erts/delete/{field_id}/{table_id}', [APIManager::class, 'delete_data_field'])->name('api_builder.delete_id');
 
 
         //API Builder (API Endpoints)
-
-
-
-
         //My Service Common Function
         Route::get('my-services/indexing/', [MyServicesController::class, 'index'])->name('my_service.index');
         Route::get('my-services/open-service/{service_id}/{service_token}', [MyServicesController::class, 'open_service'])->name('my_service.open_service');
 
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
-
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+
+
+
+
+        //Auth Factor
+        Route::post('activat-auth-factor/activate_auth-factor-erts/activate', [AutFactor::class, 'activate_auth_factor'])->name('api_builder.activate_auth_factor');
+        Route::post('activat-auth-factor/activate_auth-factor-erts/deactivate', [AutFactor::class, 'deactivate_auth_factor'])->name('api_builder.deactivate_auth_factor');
+
+
+
+
+
     });
 });
