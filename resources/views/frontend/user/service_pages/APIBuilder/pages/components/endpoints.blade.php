@@ -15,7 +15,23 @@
                         Dashgrin - HTML template and Admin UI kit can be used for any type of web application: CRM, Project Management, Statistics, Analytics or any custom admin dashboard.
                         This documentation will guide you through installing the template and exploring the various components that are bundled with the template.</p><br><br>
 
-                    <h5 class="hk-sec-title">API Endpoints</h5>
+                    <h5 class="hk-sec-title">API Endpoints Authentication with AuthFactor<span style="font-size: 11px;">®</span></h5>
+
+                    <p>Dashgrin is a Bootstrap 4.X.X &amp; Sass based solid core framework that works well for all screen sizes and modern browsers.  HTML5 validated clean code is focused - keeping it simple and orderly. With Dashgrin's UI components library, you can actually get more time on building stuff, rather than editing pixel distances.
+                        Dashgrin - HTML template and Admin UI kit can be used for any type of web application: CRM, Project Management, Statistics, Analytics or any custom admin dashboard.
+                        This documentation will guide you through installing the template and exploring the various components that are bundled with the template.</p><br>
+                    <p>Dashgrin is a Bootstrap 4.X.X &amp; Sass based solid core framework that works well for all screen sizes and modern browsers.  HTML5 validated clean code is focused - keeping it simple and orderly. With Dashgrin's UI components library, you can actually get more time on building stuff, rather than editing pixel distances.
+                        Dashgrin - HTML template and Admin UI kit can be used for any type of web application: CRM, Project Management, Statistics, Analytics or any custom admin dashboard.
+                        This documentation will guide you through installing the template and exploring the various components that are bundled with the template. HTML5 validated clean code is focused - keeping it simple and orderly. With Dashgrin's UI components library, you can actually get more time on building stuff, rather than editing pixel distances.
+                        Dashgrin - HTML template and Admin UI kit can be used for any type of web application: CRM, Project Management, Statistics, Analytics or any custom admin dashboard.
+                        This documentation will guide you through installing the template and exploring the various components that are bundled with the template</p><br><br>
+
+                    <h5>Example</h5> <br>
+
+                    <pre class="bg-violet-dark-5 pt-25" style="color: white;">
+                        &lt;!-- Lightgallery CSS --&gt;
+                        &lt;link href="../HTML/vendors/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet" type="text/css"&gt;
+                    </pre>
 
                 </section>
            @endif
