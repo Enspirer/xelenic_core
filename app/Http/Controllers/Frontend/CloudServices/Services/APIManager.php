@@ -62,6 +62,8 @@ class APIManager extends Controller
         $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
         $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id,$app_id);
         $authfaction = MyService::get_service_details_by_user(2);
+        $getdata_field_app = CloudAPIDataField::get_all_fields($app_id);
+
 
         if ($get_app_details->app_type == 0)
         {
@@ -71,6 +73,7 @@ class APIManager extends Controller
                 [
                     'service_details' => $service_details,
                     'get_app_details' => $get_app_details,
+                    'getdata_field_app' => $getdata_field_app,
                     'get_cloud_table' => $get_cloud_table,
                     'authfaction' => $authfaction
                 ]);

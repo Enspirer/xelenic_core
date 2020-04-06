@@ -37,6 +37,15 @@ class CloudAPIDataField extends Model
         return $next_field_number;
     }
 
+    public static function get_all_fields($app_id)
+    {
+        $get_data_fields = DB::Table('cloud_api_data_field')
+           ->where('ab_id',$app_id)
+            ->get();
+
+        return $get_data_fields;
+    }
+
     public static function get_data_fields ($table_id)
     {
         $get_data_fields = DB::Table('cloud_api_data_field')
