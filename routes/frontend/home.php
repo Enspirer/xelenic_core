@@ -16,7 +16,7 @@ use App\Http\Controllers\Frontend\CloudServiceController;
 use App\Http\Controllers\Frontend\MyServicesController;
 use App\Http\Controllers\Frontend\CloudServices\Services\AutFactor;
 use App\Http\Controllers\Frontend\CloudServices\Services\APIManager;
-
+use App\Http\Controllers\Frontend\CloudServices\Services\WebsiteBuilder;
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
@@ -73,6 +73,18 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('my-services/indexing/', [MyServicesController::class, 'index'])->name('my_service.index');
         Route::get('my-services/open-service/{service_id}/{service_token}', [MyServicesController::class, 'open_service'])->name('my_service.open_service');
 
+
+        //Auth Factor
+        Route::post('activat-auth-factor/activate_auth-factor-erts/activate', [AutFactor::class, 'activate_auth_factor'])->name('api_builder.activate_auth_factor');
+        Route::post('activat-auth-factor/activate_auth-factor-erts/deactivate', [AutFactor::class, 'deactivate_auth_factor'])->name('api_builder.deactivate_auth_factor');
+
+
+        //QulintWebsite Builder
+//        Route::get('qulint-builder/website-builder', [WebsiteBuilder::class, 'auth_factor'])->name('api_builder.activate');
+
+
+
+
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
         // User Profile Specific
@@ -82,9 +94,6 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
 
 
-        //Auth Factor
-        Route::post('activat-auth-factor/activate_auth-factor-erts/activate', [AutFactor::class, 'activate_auth_factor'])->name('api_builder.activate_auth_factor');
-        Route::post('activat-auth-factor/activate_auth-factor-erts/deactivate', [AutFactor::class, 'deactivate_auth_factor'])->name('api_builder.deactivate_auth_factor');
 
 
 
