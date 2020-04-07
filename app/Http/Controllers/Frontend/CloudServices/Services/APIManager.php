@@ -215,4 +215,47 @@ class APIManager extends Controller
         return $get_table_records;
 
     }
+
+    public function api_insert_data_records(Request $request,$app_key,$table_key)
+    {
+        $auth_key = $request->header('AUTH_KEY');
+        $data = $request->fields;
+
+
+        $get_user_details = DB::table('users')->where('user_key',$auth_key)->first();
+
+
+        $get_table_details = DB::table('cloud_api_data_table')
+            ->where('key',$table_key)
+            ->first();
+
+        $get_app_details = DB::table('cloud_api_builder')
+            ->where('key',$app_key)
+            ->first();
+
+
+        $get_field_data= DB::table('cloud_api_data_field')
+            ->where('table_id',$get_table_details->table_id)
+            ->get();
+
+        if (count($data) == count($get_field_data))
+        {
+            $get_row_number = CloudAPIDataEntry::get_next_row($get_app_details->ab_id,$get_table_details->table_id);
+            $get_feid_number = 0;
+            foreach ($data as $dat)
+            {
+
+                $get_feid_number += 1;
+                CloudAPIDataEntry::insert_data_static($dat,'text',$get_feid_number,$get_user_details->id,$get_table_details->table_id,$get_app_details->ab_id,$get_feid_number,$get_row_number);
+            }
+            return 'Created Sucess';
+        }else{
+            return 'Data Field Count Overload';
+        }
+
+
+
+
+
+    }
 }

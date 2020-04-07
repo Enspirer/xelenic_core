@@ -123,11 +123,15 @@
                                             <h4 style="font-size: 15px;">GET Fields Endpoint</h4> <br>
                                             <div class="" style="background: darkslategray;color: yellow;padding: 20px;">
                                                 {{url('/')}}/api/cloud_service/get_tables/{{$get_app_details->key}}}/{{$tables_q->key}}/get-data-records
+                                            </div><br>
+
+                                            <h4 style="font-size: 15px;">POST Data Record</h4> <br>
+                                            <div class="" style="background: darkslategray;color: yellow;padding: 20px;">
+                                                {{url('/')}}/api/cloud_service/insert-record/{{$get_app_details->key}}/{{$tables_q->key}}
                                             </div>
 
+
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
