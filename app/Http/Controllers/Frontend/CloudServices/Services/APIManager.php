@@ -218,8 +218,11 @@ class APIManager extends Controller
 
     public function api_insert_data_records(Request $request,$app_key,$table_key)
     {
+
         $auth_key = $request->header('AUTH_KEY');
         $data = $request->fields;
+
+
 
 
         $get_user_details = DB::table('users')->where('user_key',$auth_key)->first();
