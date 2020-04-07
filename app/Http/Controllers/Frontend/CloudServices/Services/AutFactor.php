@@ -23,7 +23,7 @@ class AutFactor extends Controller
     {
 
 
-
+        return $service_id;
     }
 
     public function activate_auth_factor(Request $request)

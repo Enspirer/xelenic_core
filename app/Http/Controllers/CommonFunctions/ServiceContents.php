@@ -38,4 +38,18 @@ class ServiceContents extends Controller
 
         return $service_description;
     }
+
+    public static function qulint_service_content()
+    {
+        $service_description =  'Qulint is cloud based web development service.It allows uses create HTML5 Websites 
+        and mobile sites throug the use of online drag and drop tools.A powerful web design tool for creating responsive websites
+         using the Bootstrap ... and powerful interface, which is built around the simplicity of drag and drop.For information
+          about the components, see the sections belowNode.js  application that runs as a service and is comprised of several 
+          components. You can either define the components using JavaScript or JSON files placed in specific directories, which are 
+            automatically loaded when creating an API Builder instance or programmatically create components after initializing 
+            an API Builder instance. For information about the components, see the sections below';
+
+
+        return $service_description;
+    }
 }

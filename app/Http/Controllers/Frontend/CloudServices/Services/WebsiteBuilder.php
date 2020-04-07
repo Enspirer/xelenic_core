@@ -21,8 +21,10 @@ class WebsiteBuilder extends Controller
 {
     public static function main_activity($service_id)
     {
-
+        return $service_id;
     }
+
+
 
 
 
