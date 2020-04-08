@@ -24,8 +24,6 @@ class CloudAPIDataEntry extends Model
             ->where('user_key',$auth_key)
             ->first();
 
-
-
         $get_table_details = DB::table('cloud_api_data_table')
             ->where('key',$table_key)
             ->first();
