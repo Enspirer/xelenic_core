@@ -381,7 +381,7 @@
     Vvveb.Components.add("components/product", {
         name: "Product",
         classes: ["component_product"],
-        image: "{{url('/')}}/QulintMaster/libs/builder/icons/product.svg",
+        image: "icons/product.svg",
         html: '<div class="form-group"><label>Your response:</label><textarea class="form-control"></textarea></div>',
         properties: [{
             name: "asdasdad",

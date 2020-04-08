@@ -48,5 +48,17 @@ class QulintPage extends Model
         return $get_page_id;
     }
 
+    public static function save_page ($q_id,$html)
+    {
+        $get_page_id =  DB::table('qulint_pages')
+            ->where('q_id',$q_id)
+            ->where('user_id',auth()->user()->id)
+            ->update([
+               'body' =>$html
+            ]);
+
+        return 'Secess';
+    }
+
 
 }

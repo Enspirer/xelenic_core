@@ -91,28 +91,7 @@
 
                 <div id="left-panel">
 
-                    <div id="filemanager">
-                        <div class="header">
-                            <a href="#" class="text-secondary">Pages</a>
 
-                            <div class="btn-group responsive-btns mr-4 float-right" role="group">
-                                <button class="btn btn-link btn-sm" title="New file" id="new-file-btn" data-vvveb-action="newPage" data-vvveb-shortcut="">
-                                    <i class="la la-file"></i> <small>New page</small>
-                                </button>
-
-                                <!--  &ensp;
-                                <button class="btn btn-link text-dark p-0"  title="Delete file" id="delete-file-btn" data-vvveb-action="deletePage" data-vvveb-shortcut="">
-                                    <i class="la la-trash"></i> <small>Delete</small>
-                                </button> -->
-                            </div>
-
-                        </div>
-
-                        <div class="tree">
-                            <ol>
-                            </ol>
-                        </div>
-                    </div>
 
 
                     <div class="drag-elements">
@@ -143,7 +122,7 @@
                                     <div class="drag-elements-sidepane sidepane">
                                         <div>
 
-                                            <ul class="components-list clearfix" data-type="leftpanel">
+                                            <ul class="components-list clearfix" data-type="leftpanel" style="height: 100%;overflow: scroll">
                                             </ul>
 
                                         </div>
@@ -906,8 +885,8 @@
             <script src="{{url('/')}}/QulintMaster/js/bootstrap.min.js"></script>
 
             <!-- builder code-->
-            <script src="{{url('/')}}/QulintMaster/libs/builder/builder.js"></script>
             <!-- undo manager-->
+            @include('frontend.user.service_pages.QulintBuilder.QulintJs.builder_script')
             <script src="{{url('/')}}/QulintMaster/libs/builder/undo.js"></script>
             <!-- inputs-->
             <script src="{{url('/')}}/QulintMaster/libs/builder/inputs.js"></script>

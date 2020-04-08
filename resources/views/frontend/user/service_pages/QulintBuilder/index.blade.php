@@ -44,6 +44,8 @@
                                     <div class="" style="background-image:url('{{url('/')}}/images/server.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
 
                                 </a>
+                                <a href="{{route('frontend.user.qulint_builder.preview_qulint',$service_manager_q->q_id)}}">View Panel</a>
+                            </div>
 
                         </div>
                     @endforeach

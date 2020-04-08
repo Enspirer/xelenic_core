@@ -14,20 +14,20 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>iCovden</title>
+    <title>{{env('APP_NAME')}}</title>
 
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!-- CSS ============================================= -->
-    <link rel="stylesheet" href="FrontPage/css/linearicons.css">
-    <link rel="stylesheet" href="FrontPage/css/font-awesome.min.css">
-    <link rel="stylesheet" href="FrontPage/css/bootstrap.css">
-    <link rel="stylesheet" href="FrontPage/css/magnific-popup.css">
-    <link rel="stylesheet" href="FrontPage/css/nice-select.css">
-    <link rel="stylesheet" href="FrontPage/css/animate.min.css">
-    <link rel="stylesheet" href="FrontPage/css/owl.carousel.css">
-    <link rel="stylesheet" href="FrontPage/css/main.css">
-    <script src="FrontPage/js/vendor/jquery-2.2.4.min.js"></script>
+    <link rel="stylesheet" href="{{url('/')}}/FrontPage/css/linearicons.css">
+    <link rel="stylesheet" href="{{url('/')}}/FrontPage/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url('/')}}/FrontPage/css/bootstrap.css">
+    <link rel="stylesheet" href="{{url('/')}}/FrontPage/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{url('/')}}/FrontPage/css/nice-select.css">
+    <link rel="stylesheet" href="{{url('/')}}/FrontPage/css/animate.min.css">
+    <link rel="stylesheet" href="{{url('/')}}/FrontPage/css/owl.carousel.css">
+    <link rel="stylesheet" href="{{url('/')}}/FrontPage/css/main.css">
+    <script src="{{url('/')}}/FrontPage/js/vendor/jquery-2.2.4.min.js"></script>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">

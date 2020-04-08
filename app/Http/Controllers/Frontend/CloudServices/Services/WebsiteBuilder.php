@@ -44,7 +44,33 @@ class WebsiteBuilder extends Controller
     public function builder_panel ($q_id,$service_id)
     {
 
-        return view('frontend.user.service_pages.QulintBuilder.pages.builder');
+        return view('frontend.user.service_pages.QulintBuilder.pages.builder',
+            [
+                'service_id'=> $service_id,
+                'q_id'=> $q_id,
+            ]
+            );
+    }
+
+    public function save_page (Request $request)
+    {
+        $q_id = $request->q_id;
+        $html = $request->html;
+
+        QulintPage::save_page($q_id,$html);
+
+
+    }
+
+
+    public function preview_qulint ($q_id)
+    {
+       $get_qulint = DB::table('qulint_pages')
+           ->where('q_id',$q_id)
+           ->where('user_id',auth()->user()->id)
+           ->first();
+
+       return view('frontend.user.service_pages.QulintBuilder.pages.page_preview',['get_qulint'=>$get_qulint]);
     }
 
 
