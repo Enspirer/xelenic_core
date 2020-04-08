@@ -23,14 +23,32 @@
                         <p>Create a APP</p>
                     </div>
                 </div>
+                @foreach($service_manager['get_pages_published'] as $service_manager_r)
+                    <div class="col-md-3">
+                        <div class="card" style="text-align: center;height: 220px;padding-top: 59px;">
+                            <div class="" style="background-image:url('{{url('/')}}/images/server.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+
+                    </div>
+                @endforeach
 
             </div>
         </div>
 
         <div id="menu2" class="tab-pane fade in active">
-            <div class="row">
 
-            </div>
+                <div class="row">
+                    @foreach($service_manager['get_pages_unpublished'] as $service_manager_q)
+                        <div class="col-md-3">
+                            <div class="card" style="text-align: center;height: 220px;padding-top: 59px;">
+                                <a href="{{route('frontend.user.qulint_builder.builder_panel',[ $service_manager_q->q_id,$service_manager['service_id']])}}">
+                                    <div class="" style="background-image:url('{{url('/')}}/images/server.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+
+                                </a>
+
+                        </div>
+                    @endforeach
+                </div>
+
         </div>
 
     </div>

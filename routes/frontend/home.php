@@ -80,7 +80,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
 
         //QulintWebsite Builder
-//        Route::get('qulint-builder/website-builder', [WebsiteBuilder::class, 'auth_factor'])->name('api_builder.activate');
+        Route::get('qulint-builder/website-builder/{q_id}/{service_id}', [WebsiteBuilder::class, 'builder_panel'])->name('qulint_builder.builder_panel');
+        Route::post('qulint-builder/website-builder/insert_page', [WebsiteBuilder::class, 'insert_page'])->name('qulint_builder.insert_page');
 
 
 

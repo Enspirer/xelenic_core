@@ -3,9 +3,9 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                Create App
+                Create Page
             </div> <br><br>
-            <form method="post" action="{{route('frontend.user.api_builder.create_app')}}">
+            <form method="post" action="{{route('frontend.user.qulint_builder.insert_page')}}">
                 {{csrf_field()}}
                 <div class="row">
                     <div class="col-md-6">
@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="container">
-                            <h4>Web Page Creator</h4><br>
+                            <h4>Page Creator</h4><br>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim urna id n
                                 isi volutpat fringilla. Morbi sagittis feugiat congue. Fusce tincidunt ante tempor leo
                                 laoreet, non iaculis massa congue. Etiam eget est tellus. Donec id consectetur neque,
@@ -25,16 +25,26 @@
                 </div>
 
                 <div class="row" style="padding: 20px;">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label>App Name</label>
-                            <input type="text" name="app_name" placeholder="App name" class="form-control">
-                            <input type="hidden" name="service_id" placeholder="App name" class="form-control" value="">
+                            <label>Page Title</label>
+                            <input type="text" name="page_title" placeholder="Page Title" class="form-control">
+                            <input type="hidden" name="service_id" placeholder="" class="form-control" value="{{$service_manager['service_id']}}">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Page Type</label>
+                            <select type="text" name="page_type" class="form-control">
+                                <option value="single_page">Single Page</option>
+                                <option value="multi_page">Multi Page</option>
+                                <option value="product_page">Product Page</option>
+                            </select>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary btn-rounded pull-right">Make APP</button>
+                    <button type="submit" class="btn btn-primary btn-rounded pull-right">Create Page</button>
                 </div>
             </form>
         </div>
