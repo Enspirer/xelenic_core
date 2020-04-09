@@ -66,9 +66,13 @@
                             <i class="la la-save"></i>
                         </button>
 
-                        <button class="btn btn-light" title="Download" id="download-btn" data-vvveb-action="download" data-download="index.html">
-                            <i class="la la-download"></i>
-                        </button>
+                        {{--<button class="btn btn-light" title="Download" id="download-btn" data-vvveb-action="download" data-download="index.html">--}}
+                            {{--<i class="la la-download"></i>--}}
+                        {{--</button>--}}
+
+                        <a href="{{route('frontend.user.my_service.open_service',[$service_id,$get_service_details->token])}}" class="btn btn-light" title="Back to Dashboard"  style="font-size: 12px;">
+                            Back
+                        </a>
                     </div>
 
 
@@ -85,8 +89,17 @@
                             <i class="la la-laptop"></i>
                         </button>
 
-                    </div>
 
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 16px;margin-right: 30px;">
+                               {{auth()->user()->name}}
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="z-index: 100">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
                 </div>
 
                 <div id="left-panel">
@@ -355,6 +368,7 @@
 
                     </div>
                 </div>
+
 
                 <div id="bottom-panel">
 
