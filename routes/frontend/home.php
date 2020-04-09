@@ -83,6 +83,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('qulint-builder/website-builder/{q_id}/{service_id}', [WebsiteBuilder::class, 'builder_panel'])->name('qulint_builder.builder_panel');
         Route::post('qulint-builder/website-builder/insert_page', [WebsiteBuilder::class, 'insert_page'])->name('qulint_builder.insert_page');
         Route::post('qulint-builder/website-builder/save-qulint', [WebsiteBuilder::class, 'save_page'])->name('qulint_builder.save_page');
+        Route::post('qulint-builder/website-builder/website', [WebsiteBuilder::class, 'save_website'])->name('qulint_builder.save_website');
 
         Route::get('qulint-builder/preview/{q_id}', [WebsiteBuilder::class, 'preview_qulint'])->name('qulint_builder.preview_qulint');
 
