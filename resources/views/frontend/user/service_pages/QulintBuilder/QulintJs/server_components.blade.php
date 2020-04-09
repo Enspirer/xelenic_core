@@ -7,7 +7,7 @@
         name: "Product",
         attributes: ["data-component-product"],
 
-        image: "{{url('/')}}/QulintMaster/libs/builder/icons/map.svg",
+        image: "icons/map.svg",
         html: '<iframe frameborder="0" src="https://maps.google.com/maps?&z=1&t=q&output=embed"></iframe>',
 
         properties: [
@@ -63,7 +63,7 @@
         name: "Products",
         attributes: ["data-component-products"],
 
-        image: "{{url('/')}}/QulintMaster/libs/builder/icons/products.svg",
+        image: "icons/products.svg",
         html: '<div class="form-group"><label>Your response:</label><textarea class="form-control"></textarea></div>',
 
         init: function (node)
@@ -216,7 +216,7 @@
     Vvveb.Components.add("components/manufacturers", {
         name: "Manufacturers",
         classes: ["component_manufacturers"],
-        image: "icons/categories.svg",
+        image: "icons/manufatures.svg",
         html: '<div class="form-group"><label>Your response:</label><textarea class="form-control"></textarea></div>',
         properties: [{
             nolabel:false,
@@ -237,7 +237,7 @@
     Vvveb.Components.add("components/categories", {
         name: "Categories",
         classes: ["component_categories"],
-        image: "QulintMaster/libs/builder/icons/categories.svg",
+        image: "icons/categories.svg",
         html: '<div class="form-group"><label>Your response:</label><textarea class="form-control"></textarea></div>',
         properties: [{
             name: "Name",
