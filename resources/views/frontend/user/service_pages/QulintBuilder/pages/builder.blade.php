@@ -212,7 +212,7 @@
                                     <a id="link-btn" href="" title="Create link"><strong>a</strong></a>
                                 </div>
 
-                                <div id="select-actions">
+                                <div id="select-actions" style="">
                                     <a id="drag-btn" href="" title="Drag element"><i class="la la-arrows"></i></a>
                                     <a id="parent-btn" href="" title="Select parent"><i class="la la-level-down la-rotate-180"></i></a>
 
@@ -224,7 +224,7 @@
                             </div>
 
                             <!-- add section box -->
-                            <div id="add-section-box" class="drag-elements">
+                            <div id="add-section-box" class="drag-elements" style="">
 
                                 <div class="header">
                                     <ul class="nav nav-tabs" id="box-elements-tabs" role="tablist">
