@@ -14,16 +14,18 @@ use App\ServiceModel\CloudAPIBuilder\CloudAPIBuilder;
 use App\MyService;
 use DB;
 use App\ServiceModel\QulintBuilder\QulintPage;
+use App\ServiceModel\QulintBuilder\Website;
+
 class WebsiteBuilder extends Controller
 {
     public static function main_activity($service_id)
     {
-        $get_pages_published = QulintPage::get_published_pages();
-        $get_pages_unpublished = QulintPage::get_unpublished_pages();
+        $get_website_publsied = Website::get_websites(1);
+        $get_website_unpublsied = Website::get_websites(0);
 
         $tanle = [
-            'get_pages_published' => $get_pages_published,
-            'get_pages_unpublished' => $get_pages_unpublished,
+            'get_website_published' => $get_website_publsied,
+            'get_website_unpublished' => $get_website_unpublsied,
             'service_id' => $service_id
         ];
 
@@ -44,9 +46,21 @@ class WebsiteBuilder extends Controller
     public function builder_panel ($q_id,$service_id)
     {
 
+        $get_q_details = DB::table('qulint_pages')
+            ->where('q_id',$q_id)
+            ->where('user_id',auth()->user()->id)
+            ->first();
+
+        $get_service_details = DB::table('cloud_service')
+            ->where('service_id',$service_id)
+            ->first();
+
+
         return view('frontend.user.service_pages.QulintBuilder.pages.builder',
             [
                 'service_id'=> $service_id,
+                'get_service_details'=> $get_service_details,
+                'q_details'=> $get_q_details,
                 'q_id'=> $q_id,
             ]
             );
@@ -71,6 +85,11 @@ class WebsiteBuilder extends Controller
            ->first();
 
        return view('frontend.user.service_pages.QulintBuilder.pages.page_preview',['get_qulint'=>$get_qulint]);
+    }
+
+    public function save_website (Request $request)
+    {
+        dd($request);
     }
 
 
