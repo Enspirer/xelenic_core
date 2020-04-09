@@ -64,7 +64,8 @@
         attributes: ["data-component-products"],
 
         image: "icons/products.svg",
-        html: '<div class="form-group"><label>Your response:</label><textarea class="form-control"></textarea></div>',
+        html: '' +
+        '<div class="form-group"><label>Your response:</label><textarea class="form-control"></textarea></div>',
 
         init: function (node)
         {
