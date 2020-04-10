@@ -1,5 +1,6 @@
 @if ($service_details->service_id == 3)
 
+    @include('frontend.user.service_pages.QulintBuilder.dialogs.website_creator')
     <div class="bg-white shadow-bottom">
         <div class="container-fluid px-xxl-65 px-xl-20">
             <ul class="nav nav-light nav-tabs" role="tablist">
