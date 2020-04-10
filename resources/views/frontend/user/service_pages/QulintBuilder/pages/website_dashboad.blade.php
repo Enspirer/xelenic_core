@@ -80,7 +80,9 @@
 
                                                 @foreach($get_qulint_pages_published as $qulits_page)
                                                     <tr>
-                                                        <th scope="row">1</th>
+                                                        <th scope="row">
+                                                            <div class="" style="background-image: url('{{url('/')}}/images/qulint_page.svg');height: 43px;background-size: contain;background-repeat: no-repeat;background-position: left;"></div>
+                                                        </th>
                                                         <td>{{$qulits_page->title}}</td>
                                                         <td>{{$qulits_page->status}}</td>
                                                         <td>{{$qulits_page->type}}</td>
