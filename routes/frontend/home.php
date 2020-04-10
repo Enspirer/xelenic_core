@@ -88,6 +88,9 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::get('qulint-builder/preview/{q_id}', [WebsiteBuilder::class, 'preview_qulint'])->name('qulint_builder.preview_qulint');
 
 
+        Route::get('qulint-builder/website-dashboard/{website_id}/{website_key}', [WebsiteBuilder::class, 'website_dashboard'])->name('qulint_builder.website_dashboard');
+
+
 
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
