@@ -34,7 +34,7 @@ class QulintPage extends Model
         $get_qulint_pages = DB::table('qulint_pages')
             ->where('user_id',auth()->user()->id)
             ->where('website_id',$website_id)
-            ->select('type','status','title')
+            ->select('type','status','title','q_id')
             ->get();
 
         return $get_qulint_pages;
