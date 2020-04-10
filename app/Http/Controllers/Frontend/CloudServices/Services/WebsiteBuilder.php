@@ -139,7 +139,7 @@ class WebsiteBuilder extends Controller
             ->where('user_id',auth()->user()->id)
             ->first();
 
-        $get_qulint_page = QulintPage::get_unpublished_pages();
+        $get_qulint_page = QulintPage::all_qulint_pages($website_id);
 
         return view('frontend.user.service_pages.QulintBuilder.pages.website_dashboad',
             [
