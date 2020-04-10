@@ -5,6 +5,8 @@
 <!-- Vertical Nav -->
 <title>Qulint Page Builder</title>
 
+@include('frontend.user.service_pages.QulintBuilder.dialogs.template_selector')
+
 
 <link href="{{url('/')}}/QulintMaster/css/editor.css" rel="stylesheet" type="text/css">
 <link href="{{url('/')}}/QulintMaster/css/line-awesome.css" rel="stylesheet" type="text/css">
@@ -36,6 +38,10 @@
                     </div>
 
                     <div class="btn-group mr-3" role="group">
+                        <button class="btn btn-light" title="Select Tempalte"  data-toggle="modal" data-target="#exampleModal">
+                            <i class="la la-file"></i>
+                        </button>
+
                         <button class="btn btn-light" title="Undo (Ctrl/Cmd + Z)" id="undo-btn" data-vvveb-action="undo" data-vvveb-shortcut="ctrl+z">
                             <i class="la la-undo"></i>
                         </button>
@@ -59,6 +65,8 @@
                             <i class="la la-arrows"></i>
                         </button>
 
+
+
                     </div>
 
                     <div class="btn-group mr-3" role="group">
@@ -71,7 +79,7 @@
                         {{--</button>--}}
 
                         <a href="{{route('frontend.user.my_service.open_service',[$service_id,$get_service_details->token])}}" class="btn btn-light" title="Back to Dashboard"  style="font-size: 12px;">
-                            Back
+                            Back to Dashboard
                         </a>
                     </div>
 
@@ -963,7 +971,7 @@
                     Vvveb.FileManager.init();
                     Vvveb.FileManager.addPages(
                         [
-                            {name:"narrow-jumbotron", title:"Homepage",  url: "{{url('/')}}", assets: ['{{url('/')}}']},
+                            {name:"narrow-jumbotron", title:"Homepage",  url: "{{route('frontend.user.qulint_builder.preview_qulint',$q_id)}}", assets: ['{{url('/')}}']},
                             {name:"landing-page", title:"Landing page",  url: "demo/startbootstrap-landing-page/index.html", assets: ['demo/startbootstrap-landing-page/css/landing-page.min.css']},
                             {name:"album", title:"Album",  url: "demo/album/index.html", folder:"content", assets: ['demo/album/album.css']},
                             {name:"blog", title:"Blog",  url: "demo/blog/index.html", folder:"content", assets: ['demo/blog/blog.css']},
