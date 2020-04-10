@@ -65,9 +65,10 @@ class WebsiteBuilder extends Controller
         $page_title = $request->page_title;
         $service_id = $request->service_id;
         $page_type = $request->page_type;
+        $website_id = $request->website_id;
 
 
-        $get_page_id = QulintPage::create_qulint_pages($page_title,$service_id,$page_type,0,null,null,null);
+        $get_page_id = QulintPage::create_qulint_pages($page_title,$website_id,$service_id,$page_type,0,null,null,null);
 
         return back();
     }
@@ -138,7 +139,13 @@ class WebsiteBuilder extends Controller
             ->where('user_id',auth()->user()->id)
             ->first();
 
-        return view('frontend.user.service_pages.QulintBuilder.pages.website_dashboad',['website_details'=>$get_website_details]);
+        $get_qulint_page = QulintPage::get_unpublished_pages();
+
+        return view('frontend.user.service_pages.QulintBuilder.pages.website_dashboad',
+            [
+                'website_details'=>$get_website_details,
+                'get_qulint_pages_published'=>$get_qulint_page,
+            ]);
     }
 
 
