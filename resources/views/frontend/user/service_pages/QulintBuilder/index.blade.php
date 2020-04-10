@@ -60,7 +60,7 @@
                                 </a>
                                 <div role="menu" class="dropdown-menu" style="will-change: transform;">
                                     <a class="dropdown-item" href="">Visit Website</a>
-                                    <a class="dropdown-item" href="">Edit Website</a>
+                                    <a class="dropdown-item" href="{{route('frontend.user.qulint_builder.website_dashboard',[ $service_manager_q->website_id,$service_manager_q->key])}}">Edit Website</a>
                                     <a class="dropdown-item" href="">Delete Website</a>
                                 </div>
                                 <div class="" style="background-image:url('{{url('/')}}/images/website.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
