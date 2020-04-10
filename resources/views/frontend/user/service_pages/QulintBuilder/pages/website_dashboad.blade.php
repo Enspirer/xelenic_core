@@ -22,6 +22,8 @@
     <nav class="hk-breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-light bg-transparent">
             <li class="breadcrumb-item "><a href="{{route('frontend.user.my_service.index')}}">My Service</a></li>
+            <li class="breadcrumb-item "><a href="{{route('frontend.user.my_service.open_service',[$get_service_details->service_id,$get_service_details->token])}}">Qulint Builder</a></li>
+            <li class="breadcrumb-item "><a href="#">{{$website_details->website_name}}</a></li>
         </ol>
     </nav>
     <!-- /Breadcrumb -->
@@ -83,6 +85,7 @@
                                                         <td>{{$qulits_page->status}}</td>
                                                         <td>{{$qulits_page->type}}</td>
                                                         <td>
+                                                            <a href="{{route('frontend.user.qulint_builder.preview_qulint',$qulits_page->q_id)}}" target="_blank" class="mr-25" data-toggle="tooltip" data-original-title="Preview Page"> <i class="icon-eye"></i> </a>
                                                             <a href="{{route('frontend.user.qulint_builder.builder_panel',[$qulits_page->q_id,$website_details->service_id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit"> <i class="icon-pencil"></i> </a>
                                                             <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="icon-trash txt-danger"></i> </a>
                                                         </td>

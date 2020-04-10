@@ -139,11 +139,16 @@ class WebsiteBuilder extends Controller
             ->where('user_id',auth()->user()->id)
             ->first();
 
+        $my_service_details = MyService::get_service_details($get_website_details->service_id);
+
+
+
         $get_qulint_page = QulintPage::all_qulint_pages($website_id);
 
         return view('frontend.user.service_pages.QulintBuilder.pages.website_dashboad',
             [
                 'website_details'=>$get_website_details,
+                'get_service_details' => $my_service_details,
                 'get_qulint_pages_published'=>$get_qulint_page,
             ]);
     }
