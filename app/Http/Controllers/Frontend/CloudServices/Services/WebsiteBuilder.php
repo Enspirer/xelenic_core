@@ -131,6 +131,16 @@ class WebsiteBuilder extends Controller
 
     }
 
+    public function website_dashboard ($website_id,$website_key)
+    {
+        $get_website_details = DB::table('websites')
+            ->where('website_id',$website_id)
+            ->where('user_id',auth()->user()->id)
+            ->first();
+
+        return view('frontend.user.service_pages.QulintBuilder.pages.website_dashboad',['website_details'=>$get_website_details]);
+    }
+
 
 
 
