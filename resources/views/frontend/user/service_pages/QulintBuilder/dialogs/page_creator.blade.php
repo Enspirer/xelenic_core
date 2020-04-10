@@ -29,7 +29,8 @@
                         <div class="form-group">
                             <label>Page Title</label>
                             <input type="text" name="page_title" placeholder="Page Title" class="form-control">
-                            <input type="hidden" name="service_id" placeholder="" class="form-control" value="{{$service_manager['service_id']}}">
+                            <input type="hidden" name="service_id" placeholder="" class="form-control" value="{{$website_details->service_id}}">
+                            <input type="hidden" name="website_id" placeholder="" class="form-control" value="{{$website_details->website_id}}">
                         </div>
                     </div>
                     <div class="col-md-6">

@@ -14,6 +14,8 @@
 
 @include('frontend.user.dashboard_components.settings_panel')
 
+@include('frontend.user.service_pages.QulintBuilder.dialogs.page_creator')
+
 <!-- Main Content -->
 <div class="hk-pg-wrapper">
     <!-- Breadcrumb -->
@@ -57,6 +59,8 @@
 
                         <div id="menu2" class="tab-pane fade in active show">
 
+                            <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Qulint Page</button> <br>
+
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="table-wrap">
@@ -71,12 +75,16 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+
+                                                @foreach($get_qulint_pages_published as $qulits_page)
                                                     <tr>
                                                         <th scope="row">1</th>
-                                                        <td>Milk Powder</td>
-                                                        <td>Milk Powder</td>
-                                                        <td>Milk Powder</td>
+                                                        <td>{{$qulits_page->title}}</td>
+                                                        <td>{{$qulits_page->status}}</td>
+                                                        <td>{{$qulits_page->type}}</td>
                                                     </tr>
+                                                @endforeach
+
 
                                                 </tbody>
                                             </table>

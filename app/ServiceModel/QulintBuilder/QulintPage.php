@@ -29,7 +29,18 @@ class QulintPage extends Model
         return $get_unpublsiehd_pages;
     }
 
-    public static function create_qulint_pages($title,$service_id,$type,$status,$custom_script_up,$custom_script_down,$body)
+    public static function all_qulint_pages ($website_id)
+    {
+        $get_qulint_pages = DB::table('qulint_pages')
+            ->where('user_id',auth()->user()->id)
+            ->where('website_id',$website_id)
+            ->select('type','status','title')
+            ->get();
+
+        return $get_qulint_pages;
+    }
+
+    public static function create_qulint_pages($title,$website_id,$service_id,$type,$status,$custom_script_up,$custom_script_down,$body)
     {
         $get_page_id =  DB::table('qulint_pages')
             ->InsertGetId(
@@ -37,6 +48,7 @@ class QulintPage extends Model
                   'title'=>$title,
                   'service_id'=>$service_id,
                   'type'=>$type,
+                  'website_id'=>$website_id,
                   'status'=>$status,
                   'user_id'=>auth()->user()->id,
                   'custom_script_up'=>$custom_script_up,
