@@ -28,8 +28,19 @@
                 </div>
                 @foreach($service_manager['get_website_published'] as $service_manager_r)
                     <div class="col-md-3">
-                        <div class="card" style="text-align: center;height: 220px;padding-top: 59px;">
-                            <div class="" style="background-image:url('{{url('/')}}/images/server.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+
+                        <div class="card" style="">
+                            <a aria-expanded="false" data-toggle="dropdown" class="btn btn-link dropdown-toggle btn-icon-dropdown pull-right">
+                                <i class="fa fa-list"></i><br>
+                            </a>
+                            <div role="menu" class="dropdown-menu" style="will-change: transform;">
+                                <a class="dropdown-item" href="">Visit Website</a>
+                                <a class="dropdown-item" href="">Edit Website</a>
+                                <a class="dropdown-item" href="">Delete Website</a>
+                            </div>
+                            <div class="" style="background-image:url('{{url('/')}}/images/website.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+                            <p style="text-align: center">{{$service_manager_r->website_name}}</p> <br>
+                        </div>
 
                     </div>
                 @endforeach
@@ -42,8 +53,18 @@
                 <div class="row">
                     @foreach($service_manager['get_website_unpublished'] as $service_manager_q)
                         <div class="col-md-3">
-                            <div class="card" style="text-align: center;height: 220px;padding-top: 59px;">
 
+                            <div class="card" style="">
+                                <a aria-expanded="false" data-toggle="dropdown" class="btn btn-link dropdown-toggle btn-icon-dropdown pull-right">
+                                    <i class="fa fa-list"></i><br>
+                                </a>
+                                <div role="menu" class="dropdown-menu" style="will-change: transform;">
+                                    <a class="dropdown-item" href="">Visit Website</a>
+                                    <a class="dropdown-item" href="">Edit Website</a>
+                                    <a class="dropdown-item" href="">Delete Website</a>
+                                </div>
+                                <div class="" style="background-image:url('{{url('/')}}/images/website.svg');height: 80px;background-position: center;background-size: contain;background-repeat: no-repeat;margin-bottom: 20px;"></div>
+                                <p style="text-align: center">{{$service_manager_q->website_name}}</p> <br>
                             </div>
 
                         </div>
