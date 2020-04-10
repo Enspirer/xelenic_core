@@ -23,11 +23,39 @@ class WebsiteBuilder extends Controller
         $get_website_publsied = Website::get_websites(1);
         $get_website_unpublsied = Website::get_websites(0);
 
-        $tanle = [
-            'get_website_published' => $get_website_publsied,
-            'get_website_unpublished' => $get_website_unpublsied,
-            'service_id' => $service_id
-        ];
+        $api_builder_details = MyService::get_service_details_by_user(1);
+
+        if ($api_builder_details == null)
+        {
+
+
+            $tanle = [
+                'get_website_published' => $get_website_publsied,
+                'get_website_unpublished' => $get_website_unpublsied,
+                'service_id' => $service_id,
+                'api_apps' => null
+            ];
+
+        }else {
+
+            $get_apps = CloudAPIBuilder::get_apps('published');
+
+
+
+            $tanle = [
+                'get_website_published' => $get_website_publsied,
+                'get_website_unpublished' => $get_website_unpublsied,
+                'service_id' => $service_id,
+                'api_apps' => $get_apps
+            ];
+        }
+
+
+
+
+
+
+
 
         return $tanle;
     }
@@ -37,6 +65,7 @@ class WebsiteBuilder extends Controller
         $page_title = $request->page_title;
         $service_id = $request->service_id;
         $page_type = $request->page_type;
+
 
         $get_page_id = QulintPage::create_qulint_pages($page_title,$service_id,$page_type,0,null,null,null);
 
@@ -89,7 +118,17 @@ class WebsiteBuilder extends Controller
 
     public function save_website (Request $request)
     {
-        dd($request);
+        $app_id = $request->app_id;
+        $description = $request->description;
+        $website_type = $request->website_type;
+        $service_id = $request->service_id;
+        $website_name = $request->website_name;
+
+        Website::create_website($website_name,$service_id,$website_type,$app_id,$description,null);
+
+        return back();
+
+
     }
 
 
