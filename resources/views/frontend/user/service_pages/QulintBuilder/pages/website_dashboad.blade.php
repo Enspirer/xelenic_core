@@ -82,6 +82,10 @@
                                                         <td>{{$qulits_page->title}}</td>
                                                         <td>{{$qulits_page->status}}</td>
                                                         <td>{{$qulits_page->type}}</td>
+                                                        <td>
+                                                            <a href="{{route('frontend.user.qulint_builder.builder_panel',[$qulits_page->q_id,$website_details->service_id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit"> <i class="icon-pencil"></i> </a>
+                                                            <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="icon-trash txt-danger"></i> </a>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
 
