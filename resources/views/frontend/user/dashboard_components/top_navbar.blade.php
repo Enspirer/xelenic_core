@@ -140,7 +140,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-0">
             <li class="nav-item">
-                <a href="#" class="nav-link active">Marketing</a>
+                <a href="#" class="nav-link active">Tutorial</a>
             </li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sales</a>

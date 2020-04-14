@@ -128,7 +128,8 @@ var LinkInput = $.extend({}, TextInput, {
     events: [
         ["change", "onChange", "input"],
 	 ],
-	
+
+
 	init: function(data) {
 		return this.render("textinput", data);
 	},
