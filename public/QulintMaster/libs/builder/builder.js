@@ -475,7 +475,8 @@ Vvveb.WysiwygEditor = {
 	
 	init: function(doc) {
 		this.doc = doc;
-		
+
+
 		$("#bold-btn").on("click", function (e) {
 				doc.execCommand('bold',false,null);
 				e.preventDefault();
@@ -785,7 +786,6 @@ Vvveb.Builder = {
 	
 	selectNode:  function(node) {
 		var self = this;
-		
 		if (!node)
 		{
 			jQuery("#select-box").hide();
@@ -794,6 +794,7 @@ Vvveb.Builder = {
 		
 		if (self.texteditEl && self.selectedEl.get(0) != node) 
 		{
+
 			Vvveb.WysiwygEditor.destroy(self.texteditEl);
 			jQuery("#select-box").removeClass("text-edit").find("#select-actions").show();
 			self.texteditEl = null;
@@ -807,6 +808,8 @@ Vvveb.Builder = {
 
 			try {
 				var offset = target.offset();
+
+
 					
 				jQuery("#select-box").css(
 					{"top": offset.top - self.frameDoc.scrollTop() , 
