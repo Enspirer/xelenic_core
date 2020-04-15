@@ -85,12 +85,16 @@ class WebsiteBuilder extends Controller
             ->where('service_id',$service_id)
             ->first();
 
+        $get_website_page = QulintPage::all_qulint_pages($get_q_details->website_id);
+
+
 
         return view('frontend.user.service_pages.QulintBuilder.pages.builder',
             [
                 'service_id'=> $service_id,
                 'get_service_details'=> $get_service_details,
                 'q_details'=> $get_q_details,
+                'get_pages'=> $get_website_page,
                 'q_id'=> $q_id,
             ]
             );
