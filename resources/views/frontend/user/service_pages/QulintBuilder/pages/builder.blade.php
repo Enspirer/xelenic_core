@@ -6,6 +6,7 @@
 <title>Qulint Page Builder</title>
 
 @include('frontend.user.service_pages.QulintBuilder.dialogs.template_selector')
+@include('frontend.user.service_pages.QulintBuilder.dialogs.add_page_link')
 
 
 <link href="{{url('/')}}/QulintMaster/css/editor.css" rel="stylesheet" type="text/css">
@@ -40,6 +41,10 @@
                     <div class="btn-group mr-3" role="group">
                         <button class="btn btn-light" title="Select Tempalte"  data-toggle="modal" data-target="#exampleModal">
                             <i class="la la-file"></i>
+                        </button>
+
+                        <button class="btn btn-light" title="Select Tempalte" id="page_link_select_page" data-toggle="modal" data-target="#select_pages" disabled>
+                            <i class="la la-link"></i>
                         </button>
 
                         <button class="btn btn-light" title="Undo (Ctrl/Cmd + Z)" id="undo-btn" data-vvveb-action="undo" data-vvveb-shortcut="ctrl+z">

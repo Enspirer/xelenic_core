@@ -770,6 +770,9 @@
         selectNode:  function(node) {
             var self = this;
 
+            //Page Selectio Function Enebled Disabled
+
+
             if (!node)
             {
                 jQuery("#select-box").hide();
@@ -966,15 +969,26 @@
                     {
                         //if component properties is loaded in left panel tab instead of right panel show tab
                         if ($(".component-properties-tab").is(":visible"))//if properites tab is enabled/visible
+
                             $('.component-properties-tab a').show().tab('show');
 
                         self.selectNode(event.target);
                         self.loadNodeComponent(event.target);
+                        //Page Model Eneble Disable Function
+                        var sarman =  $("input[name='href']").val();
+
+                        if (typeof sarman === "undefined") {
+                            $("#page_link_select_page").prop('disabled', true);
+                        }else{
+                            $("#page_link_select_page").prop('disabled', false);
+                        }
+
+                       }
                     }
 
                     event.preventDefault();
                     return false;
-                }
+
 
             });
 
