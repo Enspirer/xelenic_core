@@ -57,6 +57,24 @@ class QulintBuilder extends Migration
             $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
         });
+
+        Schema::create('qulint_templates', function (Blueprint $table) {
+            $table->bigIncrements('template_id');
+            $table->integer('template_name');
+            $table->text('description');
+            $table->integer('user_id');
+            $table->integer('service_id');
+            $table->text('script_header')->nullable();
+            $table->text('script_footer')->nullable();
+            $table->longText('body')->nullable();
+            $table->text('key');
+            $table->text('type');
+            $table->string('category');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->useCurrent();
+        });
+
+
     }
 
     /**
