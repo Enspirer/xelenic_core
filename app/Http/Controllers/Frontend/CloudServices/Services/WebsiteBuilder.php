@@ -157,6 +157,11 @@ class WebsiteBuilder extends Controller
             ]);
     }
 
+    public function create_template (Request $request)
+    {
+        dd($request);
+    }
+
 
 
 
