@@ -25,11 +25,20 @@ class Template extends Model
                   'script_header' => null,
                   'script_footer' => null,
                   'body' => null,
-                  'typo' => $type
+                  'type' => $type
                 ]
             );
 
        return $id;
+    }
+
+    public static function get_templates_by_user ()
+    {
+        $get_templates = DB::table('qulint_templates')
+            ->where('user_id',auth()->user()->id)
+            ->get();
+
+        return $get_templates;
     }
 
     public static function save_template ($template_id,$body)

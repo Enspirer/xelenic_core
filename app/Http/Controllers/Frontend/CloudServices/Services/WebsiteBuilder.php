@@ -15,13 +15,14 @@ use App\MyService;
 use DB;
 use App\ServiceModel\QulintBuilder\QulintPage;
 use App\ServiceModel\QulintBuilder\Website;
-
+use App\ServiceModel\QulintBuilder\Template;
 class WebsiteBuilder extends Controller
 {
     public static function main_activity($service_id)
     {
         $get_website_publsied = Website::get_websites(1);
         $get_website_unpublsied = Website::get_websites(0);
+        $get_user_template = Template::get_templates_by_user();
 
         $api_builder_details = MyService::get_service_details_by_user(1);
 
@@ -32,6 +33,7 @@ class WebsiteBuilder extends Controller
             $tanle = [
                 'get_website_published' => $get_website_publsied,
                 'get_website_unpublished' => $get_website_unpublsied,
+                'get_user_templates' => $get_user_template,
                 'service_id' => $service_id,
                 'api_apps' => null
             ];
@@ -159,7 +161,27 @@ class WebsiteBuilder extends Controller
 
     public function create_template (Request $request)
     {
-        dd($request);
+        $template_name = $request->template_name;
+        $description = $request->description;
+        $template_type = $request->template_type;
+        $category = $request->category;
+        $service_id = $request->service_id;
+
+        $key = Entrosement::generate_APIKey(20);
+
+      $get_template_id = Template::create_template($template_name,$description,$service_id,$key,$template_type,$category);
+
+      return back();
+    }
+
+    public function edit_template ($template_id)
+    {
+        dd($template_id);
+    }
+
+    public function view_template ($template_id)
+    {
+        dd('View Tempalte'.$template_id);
     }
 
 
