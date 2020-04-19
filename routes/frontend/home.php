@@ -17,6 +17,7 @@ use App\Http\Controllers\Frontend\MyServicesController;
 use App\Http\Controllers\Frontend\CloudServices\Services\AutFactor;
 use App\Http\Controllers\Frontend\CloudServices\Services\APIManager;
 use App\Http\Controllers\Frontend\CloudServices\Services\WebsiteBuilder;
+use App\Http\Controllers\Frontend\CloudServices\FileManagerContoller;
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
@@ -84,18 +85,19 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         Route::post('qulint-builder/website-builder/insert_page', [WebsiteBuilder::class, 'insert_page'])->name('qulint_builder.insert_page');
         Route::post('qulint-builder/website-builder/save-qulint', [WebsiteBuilder::class, 'save_page'])->name('qulint_builder.save_page');
         Route::post('qulint-builder/website-builder/website', [WebsiteBuilder::class, 'save_website'])->name('qulint_builder.save_website');
-
         Route::get('qulint-builder/preview/{q_id}', [WebsiteBuilder::class, 'preview_qulint'])->name('qulint_builder.preview_qulint');
-
-
         Route::get('qulint-builder/website-dashboard/{website_id}/{website_key}', [WebsiteBuilder::class, 'website_dashboard'])->name('qulint_builder.website_dashboard');
 
-
+        Route::post('qulint-builder/create-template', [WebsiteBuilder::class, 'create_template'])->name('qulint_builder.create_template');
+        Route::get('qulint-builder/template-edit/{template_id}', [WebsiteBuilder::class, 'edit_template'])->name('qulint_builder.edit_template');
+        Route::get('qulint-builder/template-view/{template_id}', [WebsiteBuilder::class, 'view_template'])->name('qulint_builder.view_template');
 
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+        Route::Resource('file-manager',[FileManagerContoller::class]);
 
 
 
