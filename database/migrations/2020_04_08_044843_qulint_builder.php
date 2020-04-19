@@ -60,7 +60,7 @@ class QulintBuilder extends Migration
 
         Schema::create('qulint_templates', function (Blueprint $table) {
             $table->bigIncrements('template_id');
-            $table->integer('template_name');
+            $table->text('template_name');
             $table->text('description');
             $table->integer('user_id');
             $table->integer('service_id');
@@ -86,5 +86,7 @@ class QulintBuilder extends Migration
     {
         Schema::dropIfExists('qulint_pages');
         Schema::dropIfExists('scripts');
+        Schema::dropIfExists('websites');
+        Schema::dropIfExists('qulint_templates');
     }
 }
