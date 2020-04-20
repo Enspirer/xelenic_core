@@ -42,6 +42,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a  class="nav-link" href="{{route('frontend.user.filemanager')}}">
+                        <i class="ion ion-md-folder"></i>
+                        <span class="nav-link-text">File Manager</span>
+                    </a>
+                </li>
+
                 @foreach($my_courses_r as $mycourse)
                     @if ($mycourse->my_service_id == 2)
                         <li class="nav-item">

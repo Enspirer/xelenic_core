@@ -7,8 +7,24 @@ use Illuminate\Http\Request;
 
 class FileManagerContoller extends Controller
 {
+
     public function index()
     {
         dd('apple');
+    }
+
+    public function filemanager()
+    {
+        dd('filemanger');
+    }
+
+    public function edit($id)
+    {
+
+    }
+
+    public function create()
+    {
+
     }
 }
