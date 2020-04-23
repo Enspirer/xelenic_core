@@ -6,7 +6,7 @@
                 <p class="mb-40">A lightweight open source library that provides drag’n’drop file uploads with image previews.</p>
                 <div  class="row">
                     <div class="col-sm">
-                        <form action="#" class="dropzone" id="remove_link">
+                        <form action="#" class="dropzone" id="remove_link" style="border-style:dashed">
                             <div class="fallback">
                                 <input name="file" type="file" multiple />
                             </div>
