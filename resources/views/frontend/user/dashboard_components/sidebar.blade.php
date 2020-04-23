@@ -43,7 +43,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a  class="nav-link" href="{{route('frontend.user.filemanager')}}">
+                    <a  class="nav-link" href="{{route('frontend.user.file_manager')}}">
                         <i class="ion ion-md-folder"></i>
                         <span class="nav-link-text">File Manager</span>
                     </a>

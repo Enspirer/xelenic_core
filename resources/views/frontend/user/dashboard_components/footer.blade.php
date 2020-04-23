@@ -38,6 +38,10 @@
 
 <!-- jQuery -->
 <script src="{{url('/')}}/FrontDashboard/vendors/jquery/dist/jquery.min.js"></script>
+<script src="{{url('/')}}/FrontDashboard/vendors/lightgallery/dist/js/lightgallery-all.min.js"></script>
+
+<script src="{{url('/')}}/FrontDashboard/dist/js/froogaloop2.min.js"></script>
+<script src="{{url('/')}}/FrontDashboard/dist/js/gallery-data.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{url('/')}}/FrontDashboard/vendors/popper.js/dist/umd/popper.min.js"></script>
