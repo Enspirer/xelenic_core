@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\CloudService;
+use App\ServiceModel\FileManager\FileManager;
 
 
 class FileManagerContoller extends Controller
@@ -12,9 +13,9 @@ class FileManagerContoller extends Controller
 
     public function index()
     {
-        $services = CloudService::all();
+       $get_files = FileManager::get_files();
 
-        return view('frontend.user.filemanager.index',['services_fuck' => $services  ]);
+        return view('frontend.user.filemanager.index',['get_files' => $get_files  ]);
     }
 
     public function filemanager()
@@ -24,13 +25,12 @@ class FileManagerContoller extends Controller
 
     public function store(Request $request)
     {
-        if($request->has('thumbs_img')) {
-            $filenameWithExt = $request->file('thumbs_img')->getClientOriginalName();
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            $extension = $request->file('thumbs_img')->getClientOriginalExtension();
-            $fileNameToStore = $filename.'_'.time().'.'.$extension;
-            $path = $request->file('thumbs_img')->    storeAs('public/service_img', $fileNameToStore);
+        if($request->has('file')) {
+            $file = $request->file('file');
 
+            FileManager::add_file($file,'Appiine','roma');
+
+            return 'Done';
 
 
         } else {
