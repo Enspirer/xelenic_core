@@ -19,6 +19,7 @@ class FileManager extends Migration
             $table->integer('user_id');
             $table->text('size');
             $table->text('file_type');
+            $table->text('file_path');
             $table->text('description')->nullable();
             $table->text('tag')->nullable();
             $table->timestamp('updated_at');
