@@ -19,32 +19,40 @@
 <!-- Main Content -->
 <div class="hk-pg-wrapper">
 
-    <div class="row">
-        <div class="col-xl-12">
-            <section class="hk-sec-wrapper hk-gallery-wrap">
-                <ul class="nav nav-light nav-tabs" role="tablist">
-                    <li class="nav-item active">
-                        <a data-toggle="tab" onclick="location_changer('upload')" href="#upload" class="d-flex h-60p align-items-center nav-link">Upload</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-toggle="tab"  onclick="location_changer('file')" href="#file" class="d-flex h-60p align-items-center nav-link">File</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-toggle="tab"  onclick="location_changer('photos')" href="#photos" class="d-flex h-60p align-items-center nav-link">Photos</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                @include('frontend.user.filemanager.pages.file_upload')
-                @include('frontend.user.filemanager.pages.photos')
-                </div>
+    <div class="container-fluid px-xxl-65 px-xl-20" style="text-align: left;">
 
-            </section>
+        <div class="row">
+
+            <div class="col-xl-12">
+                <section class="hk-sec-wrapper">
+                    <h5 class="hk-sec-title">File Manager</h5>
+                    <p class="mb-30">Use border utilities to add an element’s borders. Choose from all borders or one at a time.</p>
+                    <div class="bg-white shadow-bottom">
+                        <div class="container-fluid px-xxl-65 px-xl-20">
+                            <ul class="nav nav-light nav-tabs" role="tablist">
+                                <li class="nav-item active">
+                                    <a data-toggle="tab" href="#upload" class="d-flex h-60p align-items-center nav-link active">Upload</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-toggle="tab" href="#photos" class="d-flex h-60p align-items-center nav-link">Photos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <br><br>
+
+                    <div class="tab-content">
+                        @include('frontend.user.filemanager.pages.file_upload')
+                        @include('frontend.user.filemanager.pages.photos')
+
+
+                </section>
+            </div>
         </div>
-    </div>
 
+    </div>
 
 </div>
 
-<script src="{{url('/')}}/FrontDashboard/vendors/dropzone/dist/dropzone.js"></script>
+
 
 @include('frontend.user.dashboard_components.footer')

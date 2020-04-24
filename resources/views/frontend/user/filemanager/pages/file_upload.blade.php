@@ -6,10 +6,8 @@
                 <p class="mb-40">A lightweight open source library that provides drag’n’drop file uploads with image previews.</p>
                 <div  class="row">
                     <div class="col-sm">
-                        <form action="#" class="dropzone" id="remove_link" style="border-style:dashed">
-                            <div class="fallback">
-                                <input name="file" type="file" multiple />
-                            </div>
+                        <form method="post" action="{{route('frontend.user.file_manager.save')}}" enctype="multipart/form-data" class="dropzone" id="dropzone">
+                            {{csrf_field()}}
                         </form>
                     </div>
                 </div>
@@ -17,3 +15,27 @@
         </div>
     </div>
 </div>
+
+
+<script src="{{url('/')}}/FrontDashboard/vendors/dropzone/dist/dropzone.js"></script>
+
+<script type="text/javascript">
+    Dropzone.options.dropzone =
+        {
+            maxFilesize: 12,
+            renameFile: function(file) {
+                var dt = new Date();
+                var time = dt.getTime();
+                return time+file.name;
+            },
+            timeout: 5000,
+            success: function(file, response)
+            {
+                console.log(response);
+            },
+            error: function(file, response)
+            {
+                return false;
+            }
+        };
+</script>
