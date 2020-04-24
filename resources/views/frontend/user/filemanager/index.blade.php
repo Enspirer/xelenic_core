@@ -34,7 +34,7 @@
                                     <a data-toggle="tab" href="#upload" class="d-flex h-60p align-items-center nav-link active">Upload</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a data-toggle="tab" href="#photos" class="d-flex h-60p align-items-center nav-link">Photos</a>
+                                    <a data-toggle="tab" href="#files" class="d-flex h-60p align-items-center nav-link">Files</a>
                                 </li>
                             </ul>
                         </div>
@@ -42,7 +42,7 @@
 
                     <div class="tab-content">
                         @include('frontend.user.filemanager.pages.file_upload')
-                        @include('frontend.user.filemanager.pages.photos')
+                        @include('frontend.user.filemanager.pages.files')
 
 
                 </section>
