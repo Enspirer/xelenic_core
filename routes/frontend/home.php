@@ -97,7 +97,13 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
-        Route::Resource('file_manager','FileManagerContoller')->names(['index'=>'file_manager']);
+        Route::Resource('file_manager','FileManagerContoller')
+            ->names(
+                [
+                    'index'=>'file_manager',
+                    'store'=>'file_manager.save',
+                ]
+            );
 
 
 
