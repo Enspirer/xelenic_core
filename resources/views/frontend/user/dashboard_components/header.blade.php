@@ -17,6 +17,7 @@ License: You must have a valid license purchased only from themeforest to legall
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="_token" content="{{csrf_token()}}" />
 
     <!-- Toggles CSS -->
     <link href="{{url('/')}}/FrontDashboard/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
