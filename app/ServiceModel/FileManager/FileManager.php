@@ -4,6 +4,8 @@ namespace App\ServiceModel\FileManager;
 
 use Illuminate\Database\Eloquent\Model;
 use DB;
+use Response;
+use File;
 
 class FileManager extends Model
 {
@@ -18,7 +20,7 @@ class FileManager extends Model
         $file_id = DB::table('file_manager')
             ->InsertGetId(
                 [
-                    'file_name' => $filename,
+                    'file_name' => $fileNameToStore,
                     'user_id' => auth()->user()->id,
                     'size' => $size,
                     'file_path' => $path,
@@ -28,6 +30,8 @@ class FileManager extends Model
                 ]
             );
     }
+
+
 
     public static function get_files()
     {
