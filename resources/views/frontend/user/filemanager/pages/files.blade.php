@@ -18,7 +18,7 @@
                             @foreach($get_files as $files)
                                 <tr>
                                     <th scope="row">{{$files->file_id}}</th>
-                                    <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 0px;">{{$files->file_name}}</td>
+                                    <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 0px;"><a href="{{route('frontend.frontend.view_file',[$files->file_id,$files->file_name])}}">{{$files->file_name}}</a> </td>
                                     <td>{{$files->file_type}}</td>
                                     <td>{{$files->size}}KB</td>
                                     <td>{{$files->created_at}}</td>
