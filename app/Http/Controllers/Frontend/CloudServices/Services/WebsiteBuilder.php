@@ -176,7 +176,11 @@ class WebsiteBuilder extends Controller
 
     public function edit_template ($template_id)
     {
-        dd($template_id);
+        $my_service_details = MyService::get_service_details(3);
+
+        return view('frontend.user.service_pages.QulintBuilder.pages.template_editor',[
+            'get_service_details' => $my_service_details,
+        ]);
     }
 
     public function view_template ($template_id)
