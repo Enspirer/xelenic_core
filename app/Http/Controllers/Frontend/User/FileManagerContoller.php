@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\CloudService;
 use App\ServiceModel\FileManager\FileManager;
-
+use File;
+use Response;
+use DB;
 
 class FileManagerContoller extends Controller
 {
@@ -48,4 +50,22 @@ class FileManagerContoller extends Controller
     {
 
     }
+
+
+
+    public static function view_file ($file_id,$file_name)
+    {
+        $data = DB::table('file_manager')->where('file_id', $file_id)->first();
+        $path = 'storage/' .'user_storage/'.'user_id_'.$data->user_id.'/'.$data->file_type.'/'. $data->file_name;
+        if(!File::exists($path))
+            $path = storage_path('app/public/lesson_image_contents/') . 'default.png';
+        $file = File::get($path);
+        $type = File::mimeType($path);
+        $response = Response::make($file, 200);
+        $response->header("Content-Type", $type);
+        return $response;
+    }
+
+
+
 }
