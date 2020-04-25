@@ -1,17 +1,9 @@
+@include('frontend.user.filemanager.dialogs.upload_dialog')
+
 <div class="tab-pane fade show active" role="tabpanel" id="upload" style="text-align: left;">
     <div class="row">
         <div class="col-xl-12">
-            <section class="hk-sec-wrapper">
-                <h5 class="hk-sec-title">Dropzone</h5>
-                <p class="mb-40">A lightweight open source library that provides drag’n’drop file uploads with image previews.</p>
-                <div  class="row">
-                    <div class="col-sm">
-                        <form method="post" action="{{route('frontend.user.file_manager.save')}}" enctype="multipart/form-data" class="dropzone" id="dropzone">
-                            {{csrf_field()}}
-                        </form>
-                    </div>
-                </div>
-            </section>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#upload_files">Upload</button>
         </div>
     </div>
 </div>
