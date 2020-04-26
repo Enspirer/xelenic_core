@@ -20,9 +20,7 @@
 <div class="hk-pg-wrapper">
 
     <div class="container-fluid px-xxl-65 px-xl-20" style="text-align: left;">
-
         <div class="row">
-
             <div class="col-xl-12">
                 <section class="hk-sec-wrapper">
                     <h5 class="hk-sec-title">File Manager</h5>
@@ -43,14 +41,10 @@
                     <div class="tab-content">
                         @include('frontend.user.filemanager.pages.file_upload')
                         @include('frontend.user.filemanager.pages.files')
-
-
                 </section>
             </div>
         </div>
-
     </div>
-
 </div>
 
 
