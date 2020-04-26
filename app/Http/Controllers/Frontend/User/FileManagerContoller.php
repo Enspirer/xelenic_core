@@ -66,6 +66,13 @@ class FileManagerContoller extends Controller
         return $response;
     }
 
+    public function get_files_api($type)
+    {
+       $files = FileManager::get_files_by_type($type);
+
+       return $files;
+    }
+
 
 
 }
