@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-xl navbar-dark fixed-top hk-navbar" style="background-color: #4d90fe;">
     <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" href="javascript:void(0);"><span class="feather-icon"><i data-feather="more-vertical"></i></span></a>
     <a id="navbar_toggle_btn" class="navbar-toggle-btn nav-link-hover" href="javascript:void(0);"><span class="feather-icon"><i data-feather="menu"></i></span></a>
-    <a class="navbar-brand" href="index.html">
-        icovden
+    <a class="navbar-brand" href="{{route('frontend.user.dashboard')}}">
+        {{env('APP_NAME')}}
     </a>
     <ul class="navbar-nav hk-navbar-content order-xl-2">
         <li class="nav-item">
@@ -140,26 +140,26 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-0">
             <li class="nav-item">
-                <a href="#" class="nav-link active">Tutorial</a>
+                <a href="{{route('frontend.index')}}" class="nav-link active">Home</a>
             </li>
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sales</a>
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Learning Center</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Documentation</a>
+                    <a class="dropdown-item" href="#">Tutorial</a>
+                    <a class="dropdown-item" href="#">FAQ</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
+                    <a class="dropdown-item" href="#">Write your Tutorial</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Help Desk</a>
+                <a href="#" class="nav-link">Hire</a>
             </li>
             <li class="nav-item">
-                <a href="calendar.html" class="nav-link">Calendar</a>
+                <a href="calendar.html" class="nav-link">Products</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Email</a>
+                <a href="#" class="nav-link">Blog</a>
             </li>
             <li class="nav-item">
                 <a href="file-manager.html" class="nav-link">File Manager</a>
