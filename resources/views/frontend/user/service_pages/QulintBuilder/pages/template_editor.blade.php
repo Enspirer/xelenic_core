@@ -9,6 +9,8 @@
 <!-- Vertical Nav -->
 @include('frontend.user.dashboard_components.sidebar')
 
+@include('frontend.user.service_pages.QulintBuilder.dialogs.template_header_settings')
+
 <div id="hk_nav_backdrop" class="hk-nav-backdrop"></div>
 <!-- /Vertical Nav -->
 
@@ -44,7 +46,7 @@
             <div style="margin: 50px;">
                 <div class="" style="height: 60px;border-color: #bdbdbd;border-width: 2px;padding: 10px;background: #4d90fe;color: white;margin-bottom: 6px;">
                     Header Settings
-                    <button class="btn btn-light pull-right" style="margin-right: 5px;"><i class="fa fa-edit"></i> Settings </button>
+                    <button data-toggle="modal" data-target="#template_header_settings" class="btn btn-light pull-right" style="margin-right: 5px;"><i class="fa fa-edit"></i> Settings </button>
                     <button class="btn btn-light pull-right" style="margin-right: 5px;"><i class="ion ion-md-outlet"></i> Add Script </button>
 
                 </div>
