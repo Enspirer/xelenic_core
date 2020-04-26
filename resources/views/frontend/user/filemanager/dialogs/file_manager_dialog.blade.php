@@ -4,20 +4,25 @@
         <div class="modal-content">
             <div class="modal-header">
                 Upload Files
-            </div> <br><br>
+            </div>
 
             <div class="modal-body">
                 <div  class="row">
-                    <div class="col-sm">
-                        <form method="post" action="{{route('frontend.user.file_manager.save')}}" enctype="multipart/form-data" class="dropzone" id="dropzone" style="border-style: dashed;">
-                            {{csrf_field()}}
-                        </form>
+                    <div class="col-lg">
+                        <ul class="nav nav-light nav-tabs" role="tablist">
+                            <li class="nav-item active">
+                                <a data-toggle="tab" href="#menu1" class="d-flex h-60p align-items-center nav-link active">Files</a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="tab" href="#menu2" class="d-flex h-60p align-items-center nav-link">Upload</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             <div class="modal-footer">
-                <a href="" class="btn btn-primary pull-right">Done</a>
+                <a href="" class="btn btn-primary pull-right">Add File</a>
             </div>
         </div>
     </div>
