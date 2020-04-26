@@ -9,7 +9,7 @@
             <div class="modal-body">
                 <div  class="row">
                     <div class="col-sm">
-                        <form method="post" action="{{route('frontend.user.file_manager.save')}}" enctype="multipart/form-data" class="dropzone" id="dropzone" style="border-style: dashed;">
+                        <form method="post" action="{{route('frontend.user.file_manager.save')}}" enctype="multipart/form-data" class="dropzone" id="dropzone" s>
                             {{csrf_field()}}
                         </form>
                     </div>
@@ -18,6 +18,7 @@
 
             <div class="modal-footer">
                 <a href="" class="btn btn-primary pull-right">Done</a>
+                <a href="" class="btn btn-primary pull-right">Close</a>
             </div>
         </div>
     </div>
