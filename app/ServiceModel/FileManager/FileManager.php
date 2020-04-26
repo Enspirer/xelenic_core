@@ -46,4 +46,15 @@ class FileManager extends Model
     {
 
     }
+
+    public static function get_files_by_type($type)
+    {
+        $get_files = DB::table('file_manager')
+            ->where('file_type',$type)
+            ->where('user_id' , auth()->user()->id)
+            ->get();
+
+        return $get_files;
+
+    }
 }
