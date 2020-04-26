@@ -97,6 +97,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
+
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
@@ -107,6 +108,8 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
                     'store'=>'file_manager.save',
                 ]
             );
+
+        Route::get('file-manager/api/files/{type}', [FileManagerContoller::class, 'get_files_api'])->name('qulint_builder.get_files_api');
 
 
 
