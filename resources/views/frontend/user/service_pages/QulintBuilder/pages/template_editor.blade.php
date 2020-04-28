@@ -10,7 +10,9 @@
 @include('frontend.user.dashboard_components.sidebar')
 
 @include('frontend.user.service_pages.QulintBuilder.dialogs.template_header_settings')
-@include('frontend.user.filemanager.dialogs.file_manager_dialog')
+
+@include('frontend.user.filemanager.dialogs.script_manager')
+
 <div id="hk_nav_backdrop" class="hk-nav-backdrop"></div>
 <!-- /Vertical Nav -->
 
@@ -47,8 +49,7 @@
                 <div class="" style="height: 60px;border-color: #bdbdbd;border-width: 2px;padding: 10px;background: #4d90fe;color: white;margin-bottom: 6px;">
                     Header Settings
                     <button data-toggle="modal" data-target="#template_header_settings" class="btn btn-light pull-right" style="margin-right: 5px;"><i class="fa fa-edit"></i> Settings </button>
-                    <button data-toggle="modal" data-target="#file_manager_dialog" class="btn btn-light pull-right" style="margin-right: 5px;"><i class="ion ion-md-outlet"></i> Add Script </button>
-
+                    <button data-toggle="modal" data-target="#script_manager" class="btn btn-light pull-right" style="margin-right: 5px;"><i class="ion ion-md-outlet"></i> Add Script </button>
                 </div>
 
                 <div class="" style="border-style: dashed;border-color: #bdbdbd;height: 200px;border-width: 2px;margin-bottom: 10px;padding: 10px;">
