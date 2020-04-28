@@ -39,6 +39,17 @@ class Service extends Migration
             $table->text('is_publish');
             $table->timestamp('created_at')->useCurrent();
         });
+
+
+        Schema::create('settings', function (Blueprint $table) {
+            $table->bigIncrements('settings_id');
+            $table->text('settings_name');
+            $table->longText('key');
+            $table->timestamp('created_at')->useCurrent();
+        });
+
+
+
     }
 
     /**
