@@ -24,6 +24,7 @@ class WebsiteBuilder extends Controller
         $get_website_unpublsied = Website::get_websites(0);
         $get_user_template = Template::get_templates_by_user();
 
+
         $api_builder_details = MyService::get_service_details_by_user(1);
 
         if ($api_builder_details == null)
@@ -47,6 +48,7 @@ class WebsiteBuilder extends Controller
             $tanle = [
                 'get_website_published' => $get_website_publsied,
                 'get_website_unpublished' => $get_website_unpublsied,
+                'get_user_templates' => $get_user_template,
                 'service_id' => $service_id,
                 'api_apps' => $get_apps
             ];
