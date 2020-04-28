@@ -70,7 +70,7 @@ class FileManagerContoller extends Controller
     {
        $files = FileManager::get_files_by_type($type);
 
-       return $files;
+       return response()->json($files);
     }
 
 
