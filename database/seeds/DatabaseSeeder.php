@@ -78,6 +78,12 @@ class DatabaseSeeder extends Seeder
         Settings::add_settings('homepage_feature_section','true');
         Settings::add_settings('footer_color','#222222');
         Settings::add_settings('banner_section','true');
+        Settings::add_settings('banner_image','logo.png');
+        Settings::add_settings('homepage_custom_solution_section','true');
+        Settings::add_settings('homepage_custom_solution_title','Looking for custom solutions');
+        Settings::add_settings('homepage_custom_solution_description','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.');
+        Settings::add_settings('homepage_custom_solution_button','Request free solution');
+        Settings::add_settings('homepage_custom_solution_link','url');
 
 
         Model::unguard();

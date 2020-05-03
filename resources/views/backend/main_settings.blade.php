@@ -22,14 +22,18 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <div>Home Page Title</div>
-                        <input type="text" class="form-control" value="" required name="home_page_title">
+                        <div>Page Title</div>
+                        <input type="text" class="form-control" value="{{xelenic_settings('homepage_title')}}" required name="home_page_title">
                     </div>
                     <div class="form-group">
-                        <div>Home Page Title</div>
-                        <input type="text" class="form-control" value="" required name="home_page_title">
+                        <div>Banner Title</div>
+                        <input type="text" class="form-control" value="{{xelenic_settings('homepage_banner_head')}}" required name="banner_title">
                     </div>
-                    sdfdsfsf
+                    <div class="form-group">
+                        <div>Banner Title</div>
+                        <textarea type="text" class="form-control" required name="homepage_banner_head" style="margin-top: 0px; margin-bottom: 0px; height: 127px;">{{xelenic_settings('homepage_banner_text')}}</textarea>
+                    </div>
+
                 </div>
                 <div class="col-md-6">
                     sdfjhksdhf

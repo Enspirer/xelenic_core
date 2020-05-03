@@ -118,7 +118,7 @@
                 <a class="btn btn-primary pull-right" style="color: white">Get started</a>
             </div>
             <div class="col-md-6">
-                <div class="" style="background-image: url('FrontPage/img/logo_frame.png');height: 396px;background-repeat: no-repeat;background-position: center;background-size: contain;margin-top: 60px;">
+                <div class="" style="background-image: url('FrontPage/img/{{xelenic_settings('banner_image')}}');height: 396px;background-repeat: no-repeat;background-position: center;background-size: contain;margin-top: 60px;">
 
                 </div>
             </div>
