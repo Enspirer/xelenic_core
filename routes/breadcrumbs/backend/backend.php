@@ -14,10 +14,6 @@ Breadcrumbs::for('admin.edit_blog', function ($trail) {
     $trail->push('Edit Blog', route('admin.edit_blog',1));
 });
 
-Breadcrumbs::for('admin.settings', function ($trail) {
-    $trail->parent('admin.settings');
-    $trail->push('Settings', route('admin.settings',1));
-});
 
 
 Breadcrumbs::for('admin.pages', function ($trail) {
@@ -30,6 +26,11 @@ Breadcrumbs::for('admin.partnerships', function ($trail) {
 Breadcrumbs::for('admin.cloud_service', function ($trail) {
     $trail->push('Cloud Service', route('admin.cloud_service'));
 });
+
+Breadcrumbs::for('admin.settings', function ($trail) {
+    $trail->push('Homepage Settings', route('admin.settings'));
+});
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
