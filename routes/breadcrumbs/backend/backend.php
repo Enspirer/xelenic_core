@@ -14,7 +14,10 @@ Breadcrumbs::for('admin.edit_blog', function ($trail) {
     $trail->push('Edit Blog', route('admin.edit_blog',1));
 });
 
-
+Breadcrumbs::for('admin.settings', function ($trail) {
+    $trail->parent('admin.settings');
+    $trail->push('Settings', route('admin.settings',1));
+});
 
 
 Breadcrumbs::for('admin.pages', function ($trail) {
