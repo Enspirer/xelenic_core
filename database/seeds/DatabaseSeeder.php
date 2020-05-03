@@ -3,6 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 use App\Http\Controllers\CommonFunctions\ServiceContents;
+use App\Settings;
 
 class DatabaseSeeder extends Seeder
 {
@@ -68,6 +69,15 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        Settings::add_settings('homepage_title',env('APP_NAME'));
+        Settings::add_settings('copyright_text','Xelenic PVT Ltd');
+        Settings::add_settings('homepage_banner_head','Welcome to Xelenic');
+        Settings::add_settings('homepage_banner_text','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,');
+        Settings::add_settings('logo','logo.png');
+        Settings::add_settings('homepage_partner_logo_section','true');
+        Settings::add_settings('homepage_feature_section','true');
+        Settings::add_settings('footer_color','##222222');
+        Settings::add_settings('footer_color','##222222');
 
 
         Model::unguard();
