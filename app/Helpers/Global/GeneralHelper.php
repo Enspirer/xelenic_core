@@ -34,7 +34,16 @@ if (! function_exists('xelenic_settings')) {
             ->select('key')
             ->first();
 
-        $key = $get_data->key;
+        if ($get_data == null)
+        {
+            $key =null;
+        }else {
+            $key = $get_data->key;
+
+        }
+
+
+
 
 
 
