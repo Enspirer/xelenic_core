@@ -76,8 +76,8 @@ class DatabaseSeeder extends Seeder
         Settings::add_settings('logo','logo.png');
         Settings::add_settings('homepage_partner_logo_section','true');
         Settings::add_settings('homepage_feature_section','true');
-        Settings::add_settings('footer_color','##222222');
-        Settings::add_settings('footer_color','##222222');
+        Settings::add_settings('footer_color','#222222');
+        Settings::add_settings('banner_section','true');
 
 
         Model::unguard();
