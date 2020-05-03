@@ -23,7 +23,11 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <div>Home Page Title</div>
-                        <input type="text" class="form-control" value="" required>
+                        <input type="text" class="form-control" value="" required name="home_page_title">
+                    </div>
+                    <div class="form-group">
+                        <div>Home Page Title</div>
+                        <input type="text" class="form-control" value="" required name="home_page_title">
                     </div>
                     sdfdsfsf
                 </div>
