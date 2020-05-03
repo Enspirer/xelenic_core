@@ -2,7 +2,16 @@
 @include('frontend.components.head')
 <body>
 @include('frontend.components.header')
-@include('frontend.components.banner')
+
+
+@if(xelenic_settings('banner_section') == 'true')
+    @include('frontend.components.banner')
+@elseif(xelenic_settings('banner_section') == 'true')
+
+@else
+
+@endif
+
 
 
 
