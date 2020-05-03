@@ -22,6 +22,28 @@ if (! function_exists('gravatar')) {
     }
 }
 
+
+if (! function_exists('xelenic_settings')) {
+    /**
+     * Access the gravatar helper.
+     */
+    function xelenic_settings($setting_name)
+    {
+        $get_data = DB::table('settings')
+            ->where('settings_name',$setting_name)
+            ->select('key')
+            ->first();
+
+        $key = $get_data->key;
+
+
+
+        return $key;
+    }
+}
+
+
+
 if (! function_exists('home_route')) {
     /**
      * Return the route to the "home" page depending on authentication/authorization status.
