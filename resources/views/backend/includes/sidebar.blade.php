@@ -84,9 +84,6 @@
                         <li class="nav-item">
                             <a class="nav-link {{active_class(Route::is('admin/settings'))}}" href="{{ route('admin.settings') }}">Homepage Settings</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{active_class(Route::is('admin/settings'))}}" href="{{ route('admin.settings') }}">Settings</a>
-                        </li>
                     </ul>
                 </li>
 
