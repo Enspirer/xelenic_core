@@ -9,6 +9,6 @@ class SettingsController extends Controller
 {
     public function index()
     {
-        dd('Gelll');
+        return view('backend.settings.main_settings');
     }
 }
