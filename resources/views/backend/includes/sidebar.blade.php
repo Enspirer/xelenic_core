@@ -47,8 +47,7 @@
                 <li class="divider"></li>
 
                 <li class="nav-item nav-dropdown {{active_class(Route::is('admin/log-viewer*'), 'open')}}">
-                        <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/log-viewer*'))}}" href="#"><i class="nav-icon fas fa-list"></i> @lang('menus.backend.log-viewer.main')
-                    </a>
+                        <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/log-viewer*'))}}" href="#"><i class="nav-icon fas fa-list"></i> @lang('menus.backend.log-viewer.main')</a>
 
                     <ul class="nav-dropdown-items">
                         <li class="nav-item">
@@ -76,9 +75,21 @@
                     <a class="nav-link {{active_class(Route::is('admin/cloud-service'))}}" href="{{ route('admin.cloud_service') }}"><i class="nav-icon fas fa-cloud"></i>Cloud Service</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link {{active_class(Route::is('admin/settings'))}}" href="{{ route('admin.settings') }}"><i class="nav-icon fas fa-edit"></i>Settings</a>
+
+
+                <li class="nav-item nav-dropdown {{active_class(Route::is('admin/settings*'), 'open')}}">
+                    <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/settings*'))}}" href="#"><i class="nav-icon fas fa-cogs"></i>Xelenic Settings</a>
+
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link {{active_class(Route::is('admin/settings'))}}" href="{{ route('admin.settings') }}">Homepage Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{active_class(Route::is('admin/settings'))}}" href="{{ route('admin.settings') }}">Settings</a>
+                        </li>
+                    </ul>
                 </li>
+
 
 
             @endif
