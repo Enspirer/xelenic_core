@@ -5,9 +5,7 @@
                 @lang('menus.backend.sidebar.general')
             </li>
             <li class="nav-item">
-                <a class="nav-link {{
-                    active_class(Route::is('admin/dashboard'))
-                }}" href="{{ route('admin.dashboard') }}">
+                <a class="nav-link {{active_class(Route::is('admin/dashboard'))}}" href="{{ route('admin.dashboard') }}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     @lang('menus.backend.sidebar.dashboard')
                 </a>
@@ -18,12 +16,8 @@
                     @lang('menus.backend.sidebar.system')
                 </li>
 
-                <li class="nav-item nav-dropdown {{
-                    active_class(Route::is('admin/auth*'), 'open')
-                }}">
-                    <a class="nav-link nav-dropdown-toggle {{
-                        active_class(Route::is('admin/auth*'))
-                    }}" href="#">
+                <li class="nav-item nav-dropdown {{active_class(Route::is('admin/auth*'), 'open')}}">
+                    <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/auth*'))}}" href="#">
                         <i class="nav-icon far fa-user"></i>
                         @lang('menus.backend.access.title')
 
@@ -34,9 +28,7 @@
 
                     <ul class="nav-dropdown-items">
                         <li class="nav-item">
-                            <a class="nav-link {{
-                                active_class(Route::is('admin/auth/user*'))
-                            }}" href="{{ route('admin.auth.user.index') }}">
+                            <a class="nav-link {{active_class(Route::is('admin/auth/user*'))}}" href="{{ route('admin.auth.user.index') }}">
                                 @lang('labels.backend.access.users.management')
 
                                 @if ($pending_approval > 0)
@@ -45,9 +37,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{
-                                active_class(Route::is('admin/auth/role*'))
-                            }}" href="{{ route('admin.auth.role.index') }}">
+                            <a class="nav-link {{active_class(Route::is('admin/auth/role*'))}}" href="{{ route('admin.auth.role.index') }}">
                                 @lang('labels.backend.access.roles.management')
                             </a>
                         </li>
@@ -56,64 +46,38 @@
 
                 <li class="divider"></li>
 
-                <li class="nav-item nav-dropdown {{
-                    active_class(Route::is('admin/log-viewer*'), 'open')
-                }}">
-                        <a class="nav-link nav-dropdown-toggle {{
-                            active_class(Route::is('admin/log-viewer*'))
-                        }}" href="#">
-                        <i class="nav-icon fas fa-list"></i> @lang('menus.backend.log-viewer.main')
+                <li class="nav-item nav-dropdown {{active_class(Route::is('admin/log-viewer*'), 'open')}}">
+                        <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/log-viewer*'))}}" href="#"><i class="nav-icon fas fa-list"></i> @lang('menus.backend.log-viewer.main')
                     </a>
 
                     <ul class="nav-dropdown-items">
                         <li class="nav-item">
-                            <a class="nav-link {{
-                            active_class(Route::is('admin/log-viewer'))
-                        }}" href="{{ route('log-viewer::dashboard') }}">
-                                @lang('menus.backend.log-viewer.dashboard')
-                            </a>
+                            <a class="nav-link {{active_class(Route::is('admin/log-viewer'))}}" href="{{ route('log-viewer::dashboard') }}">@lang('menus.backend.log-viewer.dashboard')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{
-                            active_class(Route::is('admin/log-viewer/logs*'))
-                        }}" href="{{ route('log-viewer::logs.list') }}">
+                            <a class="nav-link {{active_class(Route::is('admin/log-viewer/logs*'))}}" href="{{ route('log-viewer::logs.list') }}">
                                 @lang('menus.backend.log-viewer.logs')
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{
-                    active_class(Route::is('admin/blog'))
-                }}" href="{{ route('admin.blog') }}">
-                        <i class="nav-icon fas fa-book"></i>
-                        Blog
+                    <a class="nav-link {{active_class(Route::is('admin/blog'))}}" href="{{ route('admin.blog') }}"><i class="nav-icon fas fa-book"></i>Blog
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{
-                    active_class(Route::is('admin/pages'))
-                }}" href="{{ route('admin.pages') }}">
-                        <i class="nav-icon fas fa-file"></i>
-                        Pages
-                    </a>
+                    <a class="nav-link {{active_class(Route::is('admin/pages'))}}" href="{{ route('admin.pages') }}"><i class="nav-icon fas fa-file"></i>Pages </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{
-                    active_class(Route::is('admin/partnerships'))
-                }}" href="{{ route('admin.partnerships') }}">
-                        <i class="nav-icon fas fa-hand-holding"></i>
-                        Partnerships
-                    </a>
+                    <a class="nav-link {{active_class(Route::is('admin/partnerships'))}}" href="{{ route('admin.partnerships') }}"><i class="nav-icon fas fa-hand-holding"></i>Partnerships</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {{
-                    active_class(Route::is('admin/cloud-service'))
-                }}" href="{{ route('admin.cloud_service') }}">
-                        <i class="nav-icon fas fa-cloud"></i>
-                        Cloud Service
-                    </a>
+                    <a class="nav-link {{active_class(Route::is('admin/cloud-service'))}}" href="{{ route('admin.cloud_service') }}"><i class="nav-icon fas fa-cloud"></i>Cloud Service</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{active_class(Route::is('admin/settings'))}}" href="{{ route('admin.settings') }}"><i class="nav-icon fas fa-edit"></i>Settings</a>
                 </li>
 
 

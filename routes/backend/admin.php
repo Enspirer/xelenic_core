@@ -5,6 +5,7 @@ use  App\Http\Controllers\Backend\BlogController;
 use  App\Http\Controllers\Backend\PagesController;
 use  App\Http\Controllers\Backend\PartnershipsController;
 use App\Http\Controllers\Backend\CloudServiceController;
+use App\Http\Controllers\Backend\SettingsController;
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -22,4 +23,9 @@ Route::get('pages', [PagesController::class, 'index'])->name('pages');
 Route::get('partnerships', [PartnershipsController::class, 'index'])->name('partnerships');
 
 Route::get('cloud-services', [CloudServiceController::class, 'index'])->name('cloud_service');
+
+Route::get('settings', [SettingsController::class, 'index'])->name('settings');
+
 Route::post('cloud-services/insert', [CloudServiceController::class, 'insert'])->name('cloud_service.insert');
+
+
