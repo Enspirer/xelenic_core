@@ -33,7 +33,7 @@
                 <div class="col-xl-4">
                     <div class="card card-lg">
                         <div class="card-body">
-                            <h4>API Builder v2.0</h4> <br>
+                            <h4>{{ xelenic_settings('appple') }}</h4> <br>
                             <p>You received this message because you are subscribed to the Google Groups "Slax users" group.
                                 To unsubscribe from this group and stop receiving emails from it, send an email to
                                 slax-users+unsubscribe@googlegroups.com. To view this discussion on the web
