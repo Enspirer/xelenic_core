@@ -6,7 +6,7 @@
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-               aria-selected="true">Home</a>
+               aria-selected="true">Home Page</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
@@ -21,23 +21,72 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <div>Page Title</div>
-                        <input type="text" class="form-control" value="{{xelenic_settings('homepage_title')}}" required name="home_page_title">
-                    </div>
-                    <div class="form-group">
-                        <div>Banner Title</div>
-                        <input type="text" class="form-control" value="{{xelenic_settings('homepage_banner_head')}}" required name="banner_title">
-                    </div>
-                    <div class="form-group">
-                        <div>Banner Title</div>
-                        <textarea type="text" class="form-control" required name="homepage_banner_head" style="margin-top: 0px; margin-bottom: 0px; height: 127px;">{{xelenic_settings('homepage_banner_text')}}</textarea>
-                    </div>
 
+                    <h4>Banner Section</h4>
+
+
+                    <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;margin-bottom: 30px;">
+                        <div class="form-group">
+                            <label>Banner Title</label>
+                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_banner_head')}}" required name="homepage_banner_head">
+                        </div>
+                        <div class="form-group">
+                            <label>Banner Description</label>
+                            <textarea type="text" class="form-control" required name="homepage_banner_text" style="margin-top: 0px; margin-bottom: 0px; height: 127px;">{{xelenic_settings('homepage_banner_text')}}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Logo</label>
+                            <input type="file" class="form-control-file" style="background: white;padding: 10px;border-style: dashed;border-width: 1px;border-color: #cdcdcd;">
+                        </div>
+
+                        <div class="checkbox d-flex align-items-center">
+                            <label class="switch switch-label switch-pill switch-primary mr-2" for="permission-1">
+                                <input class="switch-input" type="checkbox" name="banner_section_status" id="permission-1" value="view backend">
+                                <span class="switch-slider" data-checked="on" data-unchecked="off"></span>
+                            </label>
+                            <label for="permission-1">Banner Section Enabled</label>
+                        </div>
+                    </div>
+                    <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px; margin-bottom: 30px;">
+                        <div class="form-group">
+                            <label>Banner Title</label>
+                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_banner_head')}}" required name="homepage_banner_head">
+                        </div>
+                        <div class="form-group">
+                            <label>Banner Description</label>
+                            <textarea type="text" class="form-control" required name="homepage_banner_text" style="margin-top: 0px; margin-bottom: 0px; height: 127px;">{{xelenic_settings('homepage_banner_text')}}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Logo</label>
+                            <input type="file" class="form-control-file" style="background: white;padding: 10px;border-style: dashed;border-width: 1px;border-color: #cdcdcd;">
+                        </div>
+
+                        <div class="checkbox d-flex align-items-center">
+                            <label class="switch switch-label switch-pill switch-primary mr-2" for="permission-1">
+                                <input class="switch-input" type="checkbox" name="banner_section_status" id="permission-1" value="view backend">
+                                <span class="switch-slider" data-checked="on" data-unchecked="off"></span>
+                            </label>
+                            <label for="permission-1">Banner Section Enabled</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    sdfjhksdhf
 
+
+
+                <div class="col-md-6">
+                    <h4>Partner Logo Section</h4>
+                    <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;">
+                        <div class="form-group">
+                            <label>Partner Logo Section title</label>
+                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_banner_head')}}" required name="banner_title">
+                        </div>
+                        <div class="checkbox d-flex align-items-center">
+                            <label class="switch switch-label switch-pill switch-primary mr-2" for="permission-1"><input class="switch-input" type="checkbox" name="banner_section_status" id="permission-1" value="view backend"><span class="switch-slider" data-checked="on" data-unchecked="off"></span></label>
+                            <label for="permission-1">Logo Section Enabled</label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
