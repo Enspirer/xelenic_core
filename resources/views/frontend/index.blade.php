@@ -13,54 +13,20 @@
 @endif
 
 
+@if(xelenic_settings('homepage_partner_logo_section') == 'true')
+    @include('frontend.components.partner_logo')
+@elseif(xelenic_settings('banner_section') == 'true')
+
+@else
+
+@endif
 
 
 
-<!-- Start brand Area -->
-<section class="brand-area pt-40">
-    <div class="container">
-        <div class="row logo-wrap">
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l1.png" alt="">
-            </a>
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l2.png" alt="">
-            </a>
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l3.png" alt="">
-            </a>
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l4.png" alt="">
-            </a>
-            <a class="col single-img" href="#">
-                <img class="d-block mx-auto" src="FrontPage/img/l5.png" alt="">
-            </a>
-        </div>
-    </div>
-</section>
-<!-- End brand Area -->
 
-<!-- Start details Area -->
-<section class="details-area pt-50">
-    <div class="container">
-        <div class="details-section">
-            <div class="row align-items-center">
-                <div class="col-lg-2 detials-left">
-                    <h5 class="text-uppercase">Mark Wiens</h5>
-                    <p>
-                        Windows Inc.
-                    </p>
-                </div>
-                <div class="col-lg-9 detials-right">
-                    <p>
-                        inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,”
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End details Area -->
+
+
+
 
 <!-- Start price Area -->
 <section class="price-area section-gap" id="plan">
