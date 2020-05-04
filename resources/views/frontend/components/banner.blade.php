@@ -13,7 +13,6 @@
     p {
         letter-spacing: 1px;
         font-size:14px;
-        color: #333333;
     }
 
     .header {
