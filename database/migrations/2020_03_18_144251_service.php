@@ -61,5 +61,6 @@ class Service extends Migration
     {
         Schema::dropIfExists('cloud_service');
         Schema::dropIfExists('cloud_service_wiki');
+        Schema::dropIfExists('settings');
     }
 }
