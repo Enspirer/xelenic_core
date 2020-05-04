@@ -48,6 +48,17 @@ class Service extends Migration
             $table->timestamp('created_at')->useCurrent();
         });
 
+        Schema::create('service_packages', function (Blueprint $table) {
+            $table->bigIncrements('s_package');
+            $table->text('package_name');
+            $table->string('feature');
+            $table->text('price');
+            $table->text('short_text');
+            $table->longText('html_content');
+            $table->longText('description');
+            $table->timestamp('created_at')->useCurrent();
+        });
+
 
 
     }
@@ -62,5 +73,6 @@ class Service extends Migration
         Schema::dropIfExists('cloud_service');
         Schema::dropIfExists('cloud_service_wiki');
         Schema::dropIfExists('settings');
+        Schema::dropIfExists('service_packages');
     }
 }
