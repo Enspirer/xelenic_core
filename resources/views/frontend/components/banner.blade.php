@@ -124,7 +124,7 @@
         </div>
     </div>
 
-    <div class=" flex">
+    <div class=" flex" style="">
 
     </div>
 
