@@ -38,7 +38,23 @@ class SettingsFiller extends Controller
         Settings::add_settings('homepage_custom_solution_link','url');
 
 
-        Settings::add_settings('homepage_feature_section','true');
+        //Belive Block
+        Settings::add_settings('homepage_block_1','true');
+        Settings::add_settings('homepage_desc_block_1','We Believe that Interior beautifies the');
+        Settings::add_settings('homepage_desc_block_1_title','We Believe that Interior beautifies the');
+        Settings::add_settings('homepage_desc_block_1_desc','Inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that.');
+        Settings::add_settings('homepage_desc_block_button','See Details');
+        Settings::add_settings('homepage_desc_block_link','#link');
+        Settings::add_settings('homepage_desc_block_image','c1.jpg');
+
+        //Feature Description
+        Settings::add_settings('homepage_block_1','true');
+        Settings::add_settings('homepage_feature_title','Some Features that Made us Unique');
+        Settings::add_settings('homepage_feature_subtitle','Who are in extremely love with eco friendly system.');
+
+
+
+    Settings::add_settings('homepage_feature_section','true');
         Settings::add_settings('footer_color','#222222');
 
 
