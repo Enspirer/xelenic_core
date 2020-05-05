@@ -6,7 +6,7 @@
 
 @if(xelenic_settings('banner_section') == 'true')
     @include('frontend.components.banner')
-@elseif(xelenic_settings('banner_section') == 'true')
+@elseif(xelenic_settings('banner_section') == 'false')
 
 @else
 
@@ -15,7 +15,7 @@
 
 @if(xelenic_settings('homepage_partner_logo_section') == 'true')
     @include('frontend.components.partner_logo')
-@elseif(xelenic_settings('banner_section') == 'true')
+@elseif(xelenic_settings('homepage_partner_logo_section') == 'false')
 
 @else
 
@@ -193,21 +193,13 @@
 </section>
 <!-- End faq Area -->
 
-<!-- Start call-action Area -->
-<section class="call-action-area section-gap">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-9">
-                <h1 class="text-white">Looking for a Custom Solution?</h1>
-                <p class="text-white pt-20 pb-20">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
-                <a href="#" class="primary-btn header-btn text-uppercase">Request Free Consultation</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End call-action Area -->
+@if(xelenic_settings('homepage_custom_solution_section') == 'true')
+    @include('frontend.components.custom_solution')
+@elseif(xelenic_settings('homepage_custom_solution_section') == 'true')
+
+@else
+
+@endif
 
 
 <!-- start contact Area -->

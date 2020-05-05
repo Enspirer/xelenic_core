@@ -13,6 +13,8 @@ class SettingsFiller extends Controller
         //Common Section
         Settings::add_settings('homepage_title',env('APP_NAME'));
         Settings::add_settings('copyright_text','Xelenic PVT Ltd');
+        Settings::add_settings('logo','logo.png');
+        Settings::add_settings('calibrate_mode','true');
 
         //Banner Section
         Settings::add_settings('homepage_banner_head','Welcome to Xelenic');
@@ -28,7 +30,7 @@ class SettingsFiller extends Controller
         Settings::add_settings('homepage_plans','true');
 
 
-        //Custom Solution 
+        //Custom Solution
         Settings::add_settings('homepage_custom_solution_section','true');
         Settings::add_settings('homepage_custom_solution_title','Looking for custom solutions');
         Settings::add_settings('homepage_custom_solution_description','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.');
@@ -36,7 +38,6 @@ class SettingsFiller extends Controller
         Settings::add_settings('homepage_custom_solution_link','url');
 
 
-        Settings::add_settings('logo','logo.png');
         Settings::add_settings('homepage_feature_section','true');
         Settings::add_settings('footer_color','#222222');
 
