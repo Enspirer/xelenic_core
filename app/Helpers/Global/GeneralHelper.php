@@ -40,9 +40,14 @@ if (! function_exists('xelenic_settings')) {
         }else {
             $key = $get_data->key;
 
+            if (json_decode($key) == null)
+            {
+                $key = $get_data->key;
+
+            }else {
+                $key = json_decode($get_data->key);
+            }
         }
-
-
 
 
 
