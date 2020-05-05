@@ -48,15 +48,38 @@ class SettingsFiller extends Controller
         Settings::add_settings('homepage_desc_block_image','c1.jpg');
 
         //Feature Description
-        Settings::add_settings('homepage_block_1','true');
+        Settings::add_settings('homepage_feature','true');
         Settings::add_settings('homepage_feature_title','Some Features that Made us Unique');
         Settings::add_settings('homepage_feature_subtitle','Who are in extremely love with eco friendly system.');
 
 
+        $data_features1  =  [
+            'head' => 'Expert Technugal',
+            'description' => 'Usage of the Internet is becoming more common due to rapid advancement of technology and power.',
+            'icon' => 'lnr lnr-user',
+        ];
 
-    Settings::add_settings('homepage_feature_section','true');
+        $data_features2  =  [
+            'head' => 'Expert Technugal',
+            'description' => 'Usage of the Internet is becoming more common due to rapid advancement of technology and power.',
+            'icon' => 'lnr lnr-license',
+        ];
+
+        $data_features3  =  [
+            'head' => 'Expert Technugal',
+            'description' => 'Usage of the Internet is becoming more common due to rapid advancement of technology and power.',
+            'icon' => 'lnr lnr-phone',
+        ];
+
+        $esmash = [$data_features1,$data_features2,$data_features3];
+        $calime = json_encode($esmash);
+        Settings::add_settings('homepage_feature_data',$calime);
+        Settings::add_settings('homepage_feature_section','true');
+
+
+
+
         Settings::add_settings('footer_color','#222222');
-
 
     }
 }
