@@ -10,6 +10,8 @@
         <input type="text" class="form-control" value="{{xelenic_settings('homepage_feature_subtitle')}}" required name="homepage_feature_subtitle">
     </div>
 
+
+
     <div style="border-style: dashed;border-color: darkgray;border-width: 1px;padding: 10px;margin-bottom: 10px;">
 
     </div>
