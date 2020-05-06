@@ -41,13 +41,19 @@
                         </div>
 
                         <div class="checkbox d-flex align-items-center">
-                            <label class="switch switch-label switch-pill switch-primary mr-2" for="permission-1">
-                                <input class="switch-input" type="checkbox" name="banner_section_status" id="permission-1" value="view backend">
+                            <label class="switch switch-label switch-pill switch-primary mr-2" for="banner_section_status-1">
+                                <input class="switch-input" type="checkbox" name="banner_section_status" id="banner_section_status-1" value="on">
                                 <span class="switch-slider" data-checked="on" data-unchecked="off"></span>
                             </label>
                             <label for="permission-1">Banner Section Enabled</label>
                         </div>
                     </div>
+
+
+
+
+
+
                 </div>
 
 
@@ -57,20 +63,73 @@
                     <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;">
                         <div class="form-group">
                             <label>Partner Logo Section title</label>
-                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_banner_head')}}" required name="banner_title">
+                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_partner_logo_section_title')}}" required name="banner_title">
                         </div>
                         <div class="checkbox d-flex align-items-center">
-                            <label class="switch switch-label switch-pill switch-primary mr-2" for="permission-1"><input class="switch-input" type="checkbox" name="banner_section_status" id="permission-1" value="view backend"><span class="switch-slider" data-checked="on" data-unchecked="off"></span></label>
-                            <label for="permission-1">Logo Section Enabled</label>
+                            <label class="switch switch-label switch-pill switch-primary mr-2" for="banner_section_status-1"><input class="switch-input" type="checkbox" name="banner_section_status" id="banner_section_status-1" value="on"><span class="switch-slider" data-checked="on" data-unchecked="off"></span></label>
+                            <label for="banner_section_status-1">Logo Section Enabled</label>
                         </div>
                     </div>
+                    <br>
+                    <h4>Feature Section</h4>
+                    <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;">
+                        <div class="form-group">
+                            <label>Feature Title</label>
+                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_feature_title')}}" required name="homepage_feature_title">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Sub Title</label>
+                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_feature_subtitle')}}" required name="homepage_feature_subtitle">
+                        </div>
+
+                        <div style="border-style: dashed;border-color: darkgray;border-width: 1px;padding: 10px;margin-bottom: 10px;">
+
+                        </div>
+
+                        <div class="checkbox d-flex align-items-center">
+                            <label class="switch switch-label switch-pill switch-primary mr-2" for="permission-1"><input class="switch-input" type="checkbox" name="banner_section_status" id="permission-1" value="view backend"><span class="switch-slider" data-checked="on" data-unchecked="off"></span></label>
+                            <label for="permission-1">Feature Section Enabled</label>
+                        </div>
+
+
+                    </div>
                 </div>
+
+
+
+
+
+
+
+
+
             </div>
 
         </div>
+
+
+
+
+
+
+
+
+
+
+
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
         </div>
+
+
+
+
+
+
+
+
+
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Etsy mixtape
             wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack
             lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard
