@@ -75,10 +75,6 @@ class SettingsFiller extends Controller
         $calime = json_encode($esmash);
         Settings::add_settings('homepage_feature_data',$calime);
         Settings::add_settings('homepage_feature_section','true');
-
-
-
-
         Settings::add_settings('footer_color','#222222');
 
     }
