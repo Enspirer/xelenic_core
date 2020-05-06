@@ -48,10 +48,6 @@ if (! function_exists('xelenic_settings')) {
                 $key = json_decode($get_data->key);
             }
         }
-
-
-
-
         return $key;
     }
 }
