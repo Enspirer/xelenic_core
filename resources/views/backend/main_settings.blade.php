@@ -9,8 +9,8 @@
                aria-selected="true">Home Page</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-               aria-selected="false">Profile</a>
+            <a class="nav-link" id="feature_data-tab" data-toggle="tab" href="#feature_data" role="tab" aria-controls="feature_data"
+               aria-selected="false">Feature Data</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
@@ -23,23 +23,11 @@
                 <div class="col-md-6">
                     @include('backend.settings.settings_block.banner_section')
                 </div>
-
-
-
                 <div class="col-md-6">
                    @include('backend.settings.settings_block.partner_logo_section')
                     <br>
-                    @include('backend.settings.settings_block.feature_section')
+                   @include('backend.settings.settings_block.feature_section')
                 </div>
-
-
-
-
-
-
-
-
-
             </div>
 
         </div>
@@ -54,8 +42,8 @@
 
 
 
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
+        <div class="tab-pane fade" id="feature_data" role="tabpanel" aria-labelledby="feature_data-tab">
+            @include('backend.settings.settings_block.feature_data')
         </div>
 
 
