@@ -13,7 +13,6 @@ class Settings extends Model
     public static function add_settings($settings_name, $key)
     {
         $settings_id = DB::table('settings')
-            ->where('settings_id')
             ->InsertGetId(
                 [
                     'settings_name' => $settings_name,
@@ -22,5 +21,18 @@ class Settings extends Model
             );
 
         return $settings_id;
+    }
+
+    public static function set_settings($setting_name, $key)
+    {
+        $settings_id = DB::table('settings')
+            ->where('settings_id',$setting_name)
+            ->update(
+                [
+                    'key' => $key
+                ]
+            );
+
+        return 'Settings Updated';
     }
 }
