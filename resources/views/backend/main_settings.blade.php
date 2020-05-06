@@ -19,16 +19,22 @@
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="row">
-                <div class="col-md-6">
-                    @include('backend.settings.settings_block.banner_section')
+            <form action="{{route('admin.settings.home_page.save')}}" method="post">
+                {{csrf_field()}}
+                <div class="row">
+                    <div class="col-md-6">
+                        @include('backend.settings.settings_block.banner_section')
+                    </div>
+                    <div class="col-md-6">
+                        @include('backend.settings.settings_block.partner_logo_section')
+                        <br>
+                        @include('backend.settings.settings_block.feature_section')
+                    </div>
                 </div>
-                <div class="col-md-6">
-                   @include('backend.settings.settings_block.partner_logo_section')
-                    <br>
-                   @include('backend.settings.settings_block.feature_section')
-                </div>
-            </div>
+                <button type="submit" class="btn btn-primary">Save Settings</button>
+
+            </form>
+
 
         </div>
 
