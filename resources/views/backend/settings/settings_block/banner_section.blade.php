@@ -16,10 +16,10 @@
     </div>
 
     <div class="checkbox d-flex align-items-center">
-        <label class="switch switch-label switch-pill switch-primary mr-2" for="banner_section_status-1">
-            <input class="switch-input" type="checkbox" name="banner_section_status" id="banner_section_status-1" value="on">
+        <label class="switch switch-label switch-pill switch-primary mr-2" for="homepage_partner_logo_section-1">
+            <input class="switch-input" type="checkbox" name="homepage_partner_logo_section" id="homepage_partner_logo_section-1" value="on">
             <span class="switch-slider" data-checked="on" data-unchecked="off"></span>
         </label>
-        <label for="permission-1">Banner Section Enabled</label>
+        <label for="homepage_partner_logo_section-1">Banner Section Enabled</label>
     </div>
 </div>
