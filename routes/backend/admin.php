@@ -25,6 +25,7 @@ Route::get('partnerships', [PartnershipsController::class, 'index'])->name('part
 Route::get('cloud-services', [CloudServiceController::class, 'index'])->name('cloud_service');
 
 Route::get('settings', [SettingsController::class, 'index'])->name('settings');
+Route::post('settings/save-settings/homepage', [SettingsController::class, 'store'])->name('settings.home_page.save');
 
 Route::post('cloud-services/insert', [CloudServiceController::class, 'insert'])->name('cloud_service.insert');
 
