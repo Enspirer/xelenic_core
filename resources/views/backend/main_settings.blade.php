@@ -21,55 +21,13 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="row">
                 <div class="col-md-6">
-
-                    <h4>Banner Section</h4>
-
-
-                    <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;margin-bottom: 30px;">
-                        <div class="form-group">
-                            <label>Banner Title</label>
-                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_banner_head')}}" required name="homepage_banner_head">
-                        </div>
-                        <div class="form-group">
-                            <label>Banner Description</label>
-                            <textarea type="text" class="form-control" required name="homepage_banner_text" style="margin-top: 0px; margin-bottom: 0px; height: 127px;">{{xelenic_settings('homepage_banner_text')}}</textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Logo</label>
-                            <input type="file" class="form-control-file" style="background: white;padding: 10px;border-style: dashed;border-width: 1px;border-color: #cdcdcd;">
-                        </div>
-
-                        <div class="checkbox d-flex align-items-center">
-                            <label class="switch switch-label switch-pill switch-primary mr-2" for="banner_section_status-1">
-                                <input class="switch-input" type="checkbox" name="banner_section_status" id="banner_section_status-1" value="on">
-                                <span class="switch-slider" data-checked="on" data-unchecked="off"></span>
-                            </label>
-                            <label for="permission-1">Banner Section Enabled</label>
-                        </div>
-                    </div>
-
-
-
-
-
-
+                    @include('backend.settings.settings_block.banner_section')
                 </div>
 
 
 
                 <div class="col-md-6">
-                    <h4>Partner Logo Section</h4>
-                    <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;">
-                        <div class="form-group">
-                            <label>Partner Logo Section title</label>
-                            <input type="text" class="form-control" value="{{xelenic_settings('homepage_partner_logo_section_title')}}" required name="banner_title">
-                        </div>
-                        <div class="checkbox d-flex align-items-center">
-                            <label class="switch switch-label switch-pill switch-primary mr-2" for="banner_section_status-1"><input class="switch-input" type="checkbox" name="banner_section_status" id="banner_section_status-1" value="on"><span class="switch-slider" data-checked="on" data-unchecked="off"></span></label>
-                            <label for="banner_section_status-1">Logo Section Enabled</label>
-                        </div>
-                    </div>
+                   @include('backend.settings.settings_block.partner_logo_section')
                     <br>
                     <h4>Feature Section</h4>
                     <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;">
