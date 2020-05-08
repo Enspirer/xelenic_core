@@ -5,7 +5,7 @@
             <div class="col-lg-6 col-md-12 about-left">
                 <h1>{{xelenic_settings('homepage_desc_block_1_title')}}</h1>
                 <p>{{xelenic_settings('homepage_desc_block_1_desc')}}</p>
-                <a href="#" class="primary-btn header-btn text-uppercase">See Details</a>
+                <a href="{{xelenic_settings('homepage_desc_block_link')}}" class="primary-btn header-btn text-uppercase">{{xelenic_settings('homepage_desc_block_button')}}</a>
             </div>
             <div class="col-lg-6 col-md-12 about-right no-padding">
                 <img class="img-fluid" src="FrontPage/img/c1.jpg" alt="">
