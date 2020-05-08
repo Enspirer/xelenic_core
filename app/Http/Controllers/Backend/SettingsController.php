@@ -23,6 +23,7 @@ class SettingsController extends Controller
         Settings::set_settings('banner_section', $banner_section);
         Settings::set_settings('homepage_block_1', $homepage_block_1);
         Settings::set_settings('homepage_partner_logo_section', $homepage_partner_logo_section);
+        Settings::set_settings('homepage_block_1', $homepage_block_1);
 
 
 
