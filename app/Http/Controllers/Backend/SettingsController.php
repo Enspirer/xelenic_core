@@ -49,7 +49,7 @@ class SettingsController extends Controller
         $stein = '';
 
         $array_base = [];
-        
+
 
         foreach($request->id as $key => $value){
 
@@ -58,7 +58,12 @@ class SettingsController extends Controller
             $link = $request->link[$key];
             $icon = $request->icon[$key];
 
+            $rand_number1 = rand(10,20);
+            $rand_number2 = rand(10,20);
+            $rand_number3 = rand(10,20);
+
             $entype = [
+              'id' => $rand_number1.$rand_number2.$rand_number3,
               'head' => $head,
               'description' => $description,
               'link' => $link,
