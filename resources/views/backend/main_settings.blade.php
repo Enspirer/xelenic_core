@@ -29,6 +29,8 @@
                         @include('backend.settings.settings_block.partner_logo_section')
                         <br>
                         @include('backend.settings.settings_block.feature_section')
+                        <br>
+                        @include('backend.settings.settings_block.description_block1')
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Save Settings</button>
