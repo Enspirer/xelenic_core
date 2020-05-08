@@ -4,26 +4,26 @@
 @include('frontend.components.header')
 
 
-@if(xelenic_settings('banner_section') == 'true')
+@if(xelenic_settings('banner_section') == '1')
     @include('frontend.components.banner')
-@elseif(xelenic_settings('banner_section') == 'false')
+@elseif(xelenic_settings('banner_section') == '0')
 
 @else
 
 @endif
 
 
-@if(xelenic_settings('homepage_partner_logo_section') == 'true')
+@if(xelenic_settings('homepage_partner_logo_section') == '1')
     @include('frontend.components.partner_logo')
-@elseif(xelenic_settings('homepage_partner_logo_section') == 'false')
+@elseif(xelenic_settings('homepage_partner_logo_section') == '0')
 
 @else
 
 @endif
 
-@if(xelenic_settings('homepage_block_1') == 'true')
+@if(xelenic_settings('homepage_block_1') == '1')
     @include('frontend.components.description_block')
-@elseif(xelenic_settings('homepage_block_1') == 'false')
+@elseif(xelenic_settings('homepage_block_1') == '0')
 
 @else
 
@@ -31,9 +31,9 @@
 
 
 
-@if(xelenic_settings('homepage_feature_section') == 'true')
+@if(xelenic_settings('homepage_feature_section') == '1')
     @include('frontend.components.homepage_feature')
-@elseif(xelenic_settings('homepage_feature_section') == 'false')
+@elseif(xelenic_settings('homepage_feature_section') == '0')
 
 @else
 
