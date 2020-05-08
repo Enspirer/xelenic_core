@@ -18,7 +18,7 @@
 
     <div class="checkbox d-flex align-items-center">
         <label class="switch switch-label switch-pill switch-primary mr-2" for="permission-1">
-            <input class="switch-input" type="checkbox" name="banner_section_status" id="permission-1" value="true">
+            <input class="switch-input" type="checkbox" name="" id="permission-1" value="true">
             <span class="switch-slider" data-checked="on" data-unchecked="off"></span></label>
         <label for="permission-1">Feature Section Enabled</label>
     </div>
