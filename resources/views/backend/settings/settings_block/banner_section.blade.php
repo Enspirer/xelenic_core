@@ -12,14 +12,17 @@
 
     <div class="form-group">
         <label>Logo</label>
-        <input type="file" class="form-control-file" name="banner_section" style="background: white;padding: 10px;border-style: dashed;border-width: 1px;border-color: #cdcdcd;">
+        <input type="file" class="form-control-file" name="" style="background: white;padding: 10px;border-style: dashed;border-width: 1px;border-color: #cdcdcd;">
     </div>
 
-    <div class="checkbox d-flex align-items-center">
-        <label class="switch switch-label switch-pill switch-primary mr-2" for="homepage_partner_logo_section-1">
-            <input class="switch-input" type="checkbox" name="banner_section" id="homepage_partner_logo_section-1" value="{{xelenic_settings('banner_section')}}" {{ xelenic_settings('banner_section') == "true" ? "checked" : ""}}>
-            <span class="switch-slider" data-checked="on" data-unchecked="off"></span>
-        </label>
-        <label for="homepage_partner_logo_section-1">Banner Section Enabled</label>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="banner_section"  name="banner_section" {{ xelenic_settings('banner_section') == "1" ? "checked" : "0"}} >
+        <label class="form-check-label" for="banner_section"  >Enabled Banner Section</label>
     </div>
+
+
+
+
+
 </div>

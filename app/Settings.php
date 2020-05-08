@@ -26,7 +26,7 @@ class Settings extends Model
     public static function set_settings($setting_name, $key)
     {
         $settings_id = DB::table('settings')
-            ->where('settings_id',$setting_name)
+            ->where('settings_name',$setting_name)
             ->update(
                 [
                     'key' => $key
