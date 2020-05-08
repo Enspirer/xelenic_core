@@ -46,11 +46,36 @@ class SettingsController extends Controller
 
     public function save_features_data (Request $request)
     {
+        $stein = '';
 
-        foreach ($request->id as $req_number){
-            echo "apple";
+        $array_base = [];
+        
+
+        foreach($request->id as $key => $value){
+
+            $head = $request->head[$key];
+            $description = $request->description[$key];
+            $link = $request->link[$key];
+            $icon = $request->icon[$key];
+
+            $entype = [
+              'head' => $head,
+              'description' => $description,
+              'link' => $link,
+              'icon' => $icon,
+            ];
+
+            array_push($array_base,$entype);
 
         }
+
+       $save_data = json_encode($array_base);
+
+//        xelenic_settings('homepage_feature_data',$save_data);
+
+        Settings::set_settings('homepage_feature_data', $save_data);
+
+        return back();
 
 
     }
