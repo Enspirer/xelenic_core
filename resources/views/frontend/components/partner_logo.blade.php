@@ -1,7 +1,8 @@
 <!-- Start brand Area -->
 <section class="brand-area pt-40">
     <div class="container">
-        <div class="row logo-wrap">
+        <h3 style="text-align: center">{{xelenic_settings('homepage_partner_logo_section_title')}}</h3>
+        <div class="row logo-wrap" style="padding-top: 10px;">
             <a class="col single-img" href="#">
                 <img class="d-block mx-auto" src="FrontPage/img/l1.png" alt="">
             </a>
