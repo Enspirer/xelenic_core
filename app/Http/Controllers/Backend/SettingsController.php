@@ -25,13 +25,18 @@ class SettingsController extends Controller
         Settings::set_settings('homepage_partner_logo_section', $homepage_partner_logo_section);
         Settings::set_settings('homepage_block_1', $homepage_block_1);
 
-        //Core Services
+
 
 
 
 
         Settings::set_settings('homepage_banner_head',$request->homepage_banner_head);
         Settings::set_settings('homepage_banner_text',$request->homepage_banner_text);
+
+        Settings::set_settings('homepage_desc_block_1_title',$request->homepage_desc_block_1_title);
+        Settings::set_settings('homepage_desc_block_1_desc',$request->homepage_desc_block_1_desc);
+        Settings::set_settings('homepage_desc_block_link',$request->homepage_desc_block_link);
+        Settings::set_settings('homepage_desc_block_button',$request->homepage_desc_block_button);
 
 
         Settings::set_settings('homepage_partner_logo_section_title', $request->homepage_partner_logo_section_title);
