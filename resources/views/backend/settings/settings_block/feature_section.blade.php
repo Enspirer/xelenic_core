@@ -16,11 +16,9 @@
 
     </div>
 
-    <div class="checkbox d-flex align-items-center">
-        <label class="switch switch-label switch-pill switch-primary mr-2" for="permission-1">
-            <input class="switch-input" type="checkbox" name="" id="permission-1" value="true">
-            <span class="switch-slider" data-checked="on" data-unchecked="off"></span></label>
-        <label for="permission-1">Feature Section Enabled</label>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="homepage_feature_section"  name="homepage_feature_section" {{ xelenic_settings('homepage_feature_section') == "1" ? "checked" : "0"}}>
+        <label class="form-check-label" for="homepage_feature_section"  >Enabled Feature Section</label>
     </div>
 
 
