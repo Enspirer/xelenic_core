@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-8 pb-40 header-text">
-                <h1>Some Features that Made us Unique</h1>
+                <h1>{{xelenic_settings('homepage_feature_title')}}</h1>
                 <p>
-                    Who are in extremely love with eco friendly system.
+                   {{xelenic_settings('homepage_feature_subtitle')}}
                 </p>
             </div>
         </div>
