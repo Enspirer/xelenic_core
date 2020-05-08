@@ -37,6 +37,9 @@ class SettingsController extends Controller
         Settings::set_settings('homepage_desc_block_1_desc',$request->homepage_desc_block_1_desc);
         Settings::set_settings('homepage_desc_block_link',$request->homepage_desc_block_link);
         Settings::set_settings('homepage_desc_block_button',$request->homepage_desc_block_button);
+        
+        Settings::set_settings('homepage_feature_title',$request->homepage_feature_title);
+        Settings::set_settings('homepage_feature_subtitle',$request->homepage_feature_subtitle);
 
 
         Settings::set_settings('homepage_partner_logo_section_title', $request->homepage_partner_logo_section_title);
