@@ -6,10 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Settings;
 
+use App\Http\Controllers\CommonFunctions\DBJsonPipline;
+
 class SettingsController extends Controller
 {
     public function index()
     {
+
+        $get_setin = DBJsonPipline::where(xelenic_settings('homepage_feature_data'),'head','Cool Man');
+
+
         return view('backend.main_settings');
     }
 
