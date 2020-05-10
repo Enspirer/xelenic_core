@@ -74,6 +74,17 @@ class QulintBuilder extends Migration
             $table->timestamp('created_at')->useCurrent();
         });
 
+        Schema::create('template_script', function (Blueprint $table) {
+            $table->bigIncrements('template_id');
+            $table->text('file_id');
+            $table->text('file_type');
+            $table->integer('user_id');
+            $table->text('position');
+            $table->integer('order');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->useCurrent();
+        });
+
 
     }
 
@@ -88,5 +99,6 @@ class QulintBuilder extends Migration
         Schema::dropIfExists('scripts');
         Schema::dropIfExists('websites');
         Schema::dropIfExists('qulint_templates');
+        Schema::dropIfExists('template_script');
     }
 }
