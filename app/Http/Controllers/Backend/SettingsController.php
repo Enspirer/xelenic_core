@@ -17,13 +17,15 @@ class SettingsController extends Controller
 
     public function store(Request $request)
     {
-
+        //Convert null Data with 1,0 number
         $banner_section = self::enabled_state($request->banner_section);
         $homepage_partner_logo_section = self::enabled_state($request->homepage_partner_logo_section);
         $homepage_block_1 = self::enabled_state($request->homepage_block_1);
         $homepage_feature_section = self::enabled_state($request->homepage_feature_section);
 
-        //Convert null Data with 1,0 number
+        $homepage_custom_solution_section = self::enabled_state($request->homepage_custom_solution_section);
+
+
         Settings::set_settings('banner_section', $banner_section);
         Settings::set_settings('homepage_block_1', $homepage_block_1);
         Settings::set_settings('homepage_partner_logo_section', $homepage_partner_logo_section);
@@ -41,6 +43,12 @@ class SettingsController extends Controller
         Settings::set_settings('homepage_feature_title',$request->homepage_feature_title);
         Settings::set_settings('homepage_feature_subtitle',$request->homepage_feature_subtitle);
         Settings::set_settings('homepage_partner_logo_section_title', $request->homepage_partner_logo_section_title);
+
+        Settings::set_settings('homepage_custom_solution_section', $homepage_custom_solution_section);
+        Settings::set_settings('homepage_custom_solution_title', $request->homepage_custom_solution_title);
+        Settings::set_settings('homepage_custom_solution_description', $request->homepage_custom_solution_description);
+        Settings::set_settings('homepage_custom_solution_button', $request->homepage_custom_solution_button);
+        Settings::set_settings('homepage_custom_solution_link', $request->homepage_custom_solution_link);
 
       return back();
     }
