@@ -16,7 +16,11 @@
         </li>
 
         <li class="nav-item px-3">
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">@lang('navs.frontend.dashboard')</a>
+            <a class="nav-link" href="{{ route('admin.dashboard') }}">Admin @lang('navs.frontend.dashboard')</a>
+        </li>
+
+        <li class="nav-item px-3">
+            <a class="nav-link" href="{{ route('frontend.user.dashboard') }}">User @lang('navs.frontend.dashboard')</a>
         </li>
 
         @if(config('locale.status') && count(config('locale.languages')) > 1)
