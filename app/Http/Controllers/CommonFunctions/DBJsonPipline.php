@@ -26,8 +26,6 @@ class DBJsonPipline extends Controller
                 $return_ar = $d_data->$data_name;
             }
 
-            dd($return_ar);
-
         }
 
 
