@@ -1,4 +1,4 @@
-<h4>Banner Section</h4>
+<h4>Custom Solution Section</h4>
 
 <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;margin-bottom: 30px;">
     <div class="form-group">
