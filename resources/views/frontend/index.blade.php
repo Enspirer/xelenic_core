@@ -30,7 +30,6 @@
 @endif
 
 
-
 @if(xelenic_settings('homepage_feature_section') == '1')
     @include('frontend.components.homepage_feature')
 @elseif(xelenic_settings('homepage_feature_section') == '0')
@@ -38,13 +37,6 @@
 @else
 
 @endif
-
-
-
-
-
-
-
 
 
 @if(xelenic_settings('homepage_custom_solution_section') == '1')
@@ -117,14 +109,6 @@
         </div>
     </div>
 </section>
-<!-- End faq Area -->
-
-
-<!-- start contact Area -->
-
-<!-- end contact Area -->
-
-
 
 
 @include('frontend.components.footer')
