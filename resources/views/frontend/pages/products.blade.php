@@ -20,6 +20,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="card" style="height: 300px;">
+                <div class="" style="background-image: url('{{url('/')}}/storage/product_logo/animtrap_css.png');height: 250px;background-position: center;background-repeat: no-repeat;"></div>
 
                 <p style="text-align: center;">AnimTrap CSS</p>
 
