@@ -25,7 +25,10 @@ use App\Http\Controllers\Frontend\User\FileManagerContoller;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('about', [AboutController::class, 'index'])->name('frontend.about');
 Route::get('services', [ServicesController::class, 'index'])->name('frontend.services');
+
 Route::get('products', [ProductsController::class, 'index'])->name('frontend.products');
+Route::get('products/{product_slug}/{product_id}', [ProductsController::class, 'show_product'])->name('frontend.show_product');
+
 Route::get('partnerships', [PartnershipsController::class, 'index'])->name('frontend.partnerships');
 Route::get('blog', [BlogController::class, 'index'])->name('frontend.blog');
 Route::get('faq', [FaqController::class, 'index'])->name('frontend.faq');
