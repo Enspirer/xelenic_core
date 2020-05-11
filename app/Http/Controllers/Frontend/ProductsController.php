@@ -8,6 +8,7 @@ class ProductsController extends Controller
 {
     public function index()
     {
+        //Stash Comment
         return view('frontend.pages.products');
     }
 
