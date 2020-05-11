@@ -6,6 +6,7 @@ use  App\Http\Controllers\Backend\PagesController;
 use  App\Http\Controllers\Backend\PartnershipsController;
 use App\Http\Controllers\Backend\CloudServiceController;
 use App\Http\Controllers\Backend\SettingsController;
+use App\Http\Controllers\Backend\ProductController;
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -32,6 +33,6 @@ Route::post('settings/save-settings/save_basic_settings', [SettingsController::c
 Route::post('cloud-services/insert', [CloudServiceController::class, 'insert'])->name('cloud_service.insert');
 
 
-Route::get('products', [CloudServiceController::class, 'index'])->name('products.index');
+Route::get('products', [ProductController::class, 'index'])->name('products.index');
 
 
