@@ -16,20 +16,18 @@ API Builder also has support for other input formats
 
 Download native client libraries with no (or almost no) dependencies. We take special care to make sure that the client libraries are a pleasure to use.
 
-### Community 
-
-As an open source project, Xelenic welcomes contributions from the community. To start contributing, read these contribution guidelines for information on how you should go about contributing to our project.
-
-
-
-Check the issue tracker for open issues that interest you. We look forward to receiving your contributions.
-
-Chat live with us on our [Slack channel](http://xelenic.slack.com).
-
-
 
 
 ![Test Image 1](https://raw.githubusercontent.com/Icovden/icoden_core/master/public/diagram.png)
 
+
+
+### Community 
+
+As an open source project, Xelenic welcomes contributions from the community. To start contributing, read these contribution guidelines for information on how you should go about contributing to our project.
+
+Check the issue tracker for open issues that interest you. We look forward to receiving your contributions.
+
+Chat live with us on our [Slack channel](http://xelenic.slack.com).
 
 
