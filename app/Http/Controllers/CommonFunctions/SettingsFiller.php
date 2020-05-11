@@ -57,25 +57,34 @@ class SettingsFiller extends Controller
             'head' => 'Expert Technugal',
             'description' => 'Usage of the Internet is becoming more common due to rapid advancement of technology and power.',
             'icon' => 'lnr lnr-user',
+            'id' => '1',
         ];
 
         $data_features2  =  [
             'head' => 'Expert Technugal',
             'description' => 'Usage of the Internet is becoming more common due to rapid advancement of technology and power.',
             'icon' => 'lnr lnr-license',
+            'id' => '1',
         ];
 
         $data_features3  =  [
             'head' => 'Expert Technugal',
             'description' => 'Usage of the Internet is becoming more common due to rapid advancement of technology and power.',
             'icon' => 'lnr lnr-phone',
+            'id' => '1',
         ];
 
         $esmash = [$data_features1,$data_features2,$data_features3];
         $calime = json_encode($esmash);
         Settings::add_settings('homepage_feature_data',$calime);
         Settings::add_settings('homepage_feature_section','true');
-        Settings::add_settings('footer_color','#222222');
+
+        Settings::add_settings('footer_color','#4d90fe');
+        Settings::add_settings('wave_color','#4d90fe');
+
+        Settings::add_settings('menu_color','#4d90fe');
+        Settings::add_settings('menu_option_color','#2c59ff');
+        Settings::add_settings('menu_option_border_color','#4d90fe');
 
     }
 }
