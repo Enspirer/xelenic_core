@@ -10,4 +10,9 @@ class ProductsController extends Controller
     {
         return view('frontend.pages.products');
     }
+
+    public function show_product ($product_slug,$product_id)
+    {
+        dd($product_slug);
+    }
 }
