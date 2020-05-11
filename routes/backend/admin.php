@@ -27,6 +27,7 @@ Route::get('cloud-services', [CloudServiceController::class, 'index'])->name('cl
 Route::get('settings', [SettingsController::class, 'index'])->name('settings');
 Route::post('settings/save-settings/homepage', [SettingsController::class, 'store'])->name('settings.home_page.save');
 Route::post('settings/save-settings/save_features_data', [SettingsController::class, 'save_features_data'])->name('settings.home_page.save_features_data.save');
+Route::post('settings/save-settings/save_basic_settings', [SettingsController::class, 'save_main_settings'])->name('settings.home_page.save_main_settings.save');
 
 Route::post('cloud-services/insert', [CloudServiceController::class, 'insert'])->name('cloud_service.insert');
 
