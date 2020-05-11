@@ -32,3 +32,6 @@ Route::post('settings/save-settings/save_basic_settings', [SettingsController::c
 Route::post('cloud-services/insert', [CloudServiceController::class, 'insert'])->name('cloud_service.insert');
 
 
+Route::get('products', [CloudServiceController::class, 'index'])->name('products.index');
+
+
