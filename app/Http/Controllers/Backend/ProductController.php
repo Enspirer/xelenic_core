@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public  function index(){
 
-        dd('Hello');
+        return view('backend.product');
 
     }
 }
