@@ -104,7 +104,7 @@
 </style>
 
 <!-- start banner Area -->
-<section class="" id="home" style="background: #4d90fe;padding-top: 50px;">
+<section class="" id="home" style="background: {{xelenic_settings('wave_color')}};padding-top: 50px;">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
