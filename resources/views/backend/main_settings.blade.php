@@ -72,36 +72,46 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h4>Background Settings</h4>
-
                         <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;margin-bottom: 30px;">
-                            <div class="form-group">
-                                <label>Footer Background Color</label>
-                                <input type="text" class="form-control" value="{{xelenic_settings('footer_color')}}" required name="footer_color">
-                            </div>
-                            <div class="form-group">
-                                <label>Banner Description</label>
-                                <textarea type="text" class="form-control" required name="homepage_banner_text" style="margin-top: 0px; margin-bottom: 0px; height: 127px;">{{xelenic_settings('homepage_banner_text')}}</textarea>
-                            </div>
+                        <div class="row">
 
-                            <div class="form-group">
-                                <label>Logo</label>
-                                <input type="file" class="form-control-file" name="" style="background: white;padding: 10px;border-style: dashed;border-width: 1px;border-color: #cdcdcd;">
+                                <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Footer Background Color</label>
+                                            <input type="text" class="form-control" value="{{xelenic_settings('footer_color')}}" required name="footer_color">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Wave Background Color</label>
+                                            <input type="text" class="form-control" value="{{xelenic_settings('wave_color')}}" required name="wave_color">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Menu Background Color</label>
+                                            <input type="text" class="form-control" value="{{xelenic_settings('menu_color')}}" required name="menu_color">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Menu Option Color</label>
+                                            <input type="text" class="form-control" value="{{xelenic_settings('menu_option_color')}}" required name="menu_option_color">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Menu Boarder Color</label>
+                                            <input type="text" class="form-control" value="{{xelenic_settings('menu_option_border_color')}}" required name="menu_option_border_color">
+                                        </div>
+                                </div>
+
+                            <div class="col-md-6">
+
                             </div>
-
-
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="banner_section"  name="banner_section" {{ xelenic_settings('banner_section') == "1" ? "checked" : "0"}} >
-                                <label class="form-check-label" for="banner_section"  >Enabled Banner Section</label>
-                            </div>
-
                         </div>
+                        </div>
+
+
                     </div>
                     <div class="col-md-6">
 
 
                     </div>
                 </div>
-
+            <button class="btn btn-primary" type="submit">Save Settings</button>
             </form>
         </div>
     </div>
