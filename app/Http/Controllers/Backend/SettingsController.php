@@ -17,7 +17,13 @@ class SettingsController extends Controller
 
     public function save_main_settings (Request $request)
     {
-        dd($request);
+        Settings::set_settings('footer_color', $request->footer_color);
+        Settings::set_settings('wave_color', $request->wave_color);
+        Settings::set_settings('menu_color', $request->menu_color);
+        Settings::set_settings('menu_option_color', $request->menu_option_color);
+        Settings::set_settings('menu_option_border_color', $request->menu_option_border_color);
+
+        return back();
     }
 
     public function store(Request $request)
