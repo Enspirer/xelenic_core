@@ -21,8 +21,4 @@
         <label class="form-check-label" for="banner_section"  >Enabled Banner Section</label>
     </div>
 
-
-
-
-
 </div>
