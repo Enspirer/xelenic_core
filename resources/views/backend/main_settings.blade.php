@@ -14,7 +14,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-               aria-selected="false">Contact</a>
+               aria-selected="false">Main Settings</a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -65,13 +65,44 @@
 
 
 
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Etsy mixtape
-            wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack
-            lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard
-            locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify
-            squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie
-            etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog
-            stumptown. Pitchfork sustainable tofu synth chambray yr.
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <form action="{{route('admin.settings.home_page.save_main_settings.save')}}" method="post">
+                {{csrf_field()}}
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Background Settings</h4>
+
+                        <div class="group" style="background: #f4f4f4;padding: 10px;border-radius: 5px;margin-bottom: 30px;">
+                            <div class="form-group">
+                                <label>Footer Background Color</label>
+                                <input type="text" class="form-control" value="{{xelenic_settings('footer_color')}}" required name="footer_color">
+                            </div>
+                            <div class="form-group">
+                                <label>Banner Description</label>
+                                <textarea type="text" class="form-control" required name="homepage_banner_text" style="margin-top: 0px; margin-bottom: 0px; height: 127px;">{{xelenic_settings('homepage_banner_text')}}</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Logo</label>
+                                <input type="file" class="form-control-file" name="" style="background: white;padding: 10px;border-style: dashed;border-width: 1px;border-color: #cdcdcd;">
+                            </div>
+
+
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="banner_section"  name="banner_section" {{ xelenic_settings('banner_section') == "1" ? "checked" : "0"}} >
+                                <label class="form-check-label" for="banner_section"  >Enabled Banner Section</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+
+                    </div>
+                </div>
+
+            </form>
         </div>
     </div>
 @endsection
