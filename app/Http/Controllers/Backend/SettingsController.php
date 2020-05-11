@@ -15,6 +15,11 @@ class SettingsController extends Controller
         return view('backend.main_settings');
     }
 
+    public function save_main_settings (Request $request)
+    {
+        dd($request);
+    }
+
     public function store(Request $request)
     {
         //Convert null Data with 1,0 number
@@ -24,7 +29,6 @@ class SettingsController extends Controller
         $homepage_feature_section = self::enabled_state($request->homepage_feature_section);
 
         $homepage_custom_solution_section = self::enabled_state($request->homepage_custom_solution_section);
-
 
         Settings::set_settings('banner_section', $banner_section);
         Settings::set_settings('homepage_block_1', $homepage_block_1);
