@@ -12,13 +12,14 @@
             </li>
 
 
-            <li class="nav-item nav-dropdown {{active_class(Route::is('admin/settings*'), 'open')}}">
-                <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/settings*'))}}" href="#"><i class="nav-icon fas fa-cogs"></i>Xelenic Settings</a>
+            <li class="nav-item nav-dropdown {{active_class(Route::is('admin/products*'), 'open')}}">
+                <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/products*'))}}" href="#"><i class="nav-icon fas fa-cogs"></i>Products</a>
 
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link {{active_class(Route::is('admin/settings'))}}" href="{{ route('admin.settings') }}">Homepage Settings</a>
+                        <a class="nav-link {{active_class(Route::is('admin/products'))}}" href="{{ route('admin.products.index') }}">Product List</a>
                     </li>
+
                 </ul>
             </li>
 
