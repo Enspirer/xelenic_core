@@ -1,5 +1,5 @@
 <!-- start footer Area -->
-<footer class="footer-area section-gap">
+<footer class="footer-area section-gap" style="background-color: {{xelenic_settings('footer_color')}};">
     <div class="container">
         <div class="row">
             <div class="col-lg-3  col-md-12">
