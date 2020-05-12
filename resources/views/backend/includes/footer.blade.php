@@ -1,8 +1,8 @@
 <footer class="app-footer">
     <div>
-        <strong>@lang('labels.general.copyright') &copy; {{ date('Y') }}
-            <a href="http://laravel-boilerplate.com">
-                @lang('strings.backend.general.boilerplate_link')
+        <strong>{{env('APP_NAME')}} Pvt Ltd &copy; {{ date('Y') }}
+            <a href="http://xelenic.com/copyright/apache2">
+                {{env('APP_NAME')}}
             </a>
         </strong> @lang('strings.backend.general.all_rights_reserved')
     </div>

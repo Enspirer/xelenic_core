@@ -86,6 +86,21 @@ class QulintBuilder extends Migration
         });
 
 
+        Schema::create('products', function (Blueprint $table) {
+            $table->bigIncrements('product_id');
+            $table->text('product_name');
+            $table->text('product_type');
+            $table->longText('description');
+            $table->text('category');
+            $table->text('slug');
+            $table->text('download_count');
+            $table->text('product_image');
+            $table->integer('user_id');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->useCurrent();
+        });
+
+
     }
 
     /**
