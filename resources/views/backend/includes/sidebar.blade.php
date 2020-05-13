@@ -13,7 +13,7 @@
 
 
             <li class="nav-item nav-dropdown {{active_class(Route::is('admin/products*'), 'open')}}">
-                <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/products*'))}}" href="#"><i class="nav-icon fas fa-cogs"></i>Products</a>
+                <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/products*'))}}" href="#"><i class="nav-icon fas fa-box"></i>Products</a>
 
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
