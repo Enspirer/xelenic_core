@@ -19,7 +19,7 @@
    </ul>
    <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+         @include('backend.product_pages.product_overview')
       </div>
 
       <div class="tab-pane fade" id="feature_data" role="tabpanel" aria-labelledby="feature_data-tab">
