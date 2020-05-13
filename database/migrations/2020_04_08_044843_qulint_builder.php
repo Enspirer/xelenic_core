@@ -92,10 +92,26 @@ class QulintBuilder extends Migration
             $table->text('product_type');
             $table->longText('description');
             $table->text('category');
+            $table->text('seo_tags')->nullable();
             $table->text('slug');
-            $table->text('download_count');
-            $table->text('product_image');
+            $table->text('download_count')->nullable();
+            $table->text('product_image')->nullable();
+            $table->text('page_url')->nullable();
             $table->integer('user_id');
+            $table->integer('status');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->useCurrent();
+        });
+
+        Schema::create('product_documentation', function (Blueprint $table) {
+            $table->bigIncrements('doc_id');
+            $table->integer('product_id');
+            $table->text('title');
+            $table->integer('order');
+            $table->longText('summery')->nullable();
+            $table->longText('body')->nullable();
+            $table->integer('user_id');
+            $table->integer('status');
             $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
         });
@@ -115,5 +131,7 @@ class QulintBuilder extends Migration
         Schema::dropIfExists('websites');
         Schema::dropIfExists('qulint_templates');
         Schema::dropIfExists('template_script');
+        Schema::dropIfExists('products');
+        Schema::dropIfExists('product_documentation');
     }
 }
