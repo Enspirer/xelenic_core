@@ -4,7 +4,7 @@ namespace App\Http\Controllers\CommonFunctions;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use DB;
 class Entrosement extends Controller
 {
     public static function generate_APIKey($length = 10) {
@@ -16,4 +16,14 @@ class Entrosement extends Controller
         }
         return $randomString;
     }
+
+    public static function  testing_json_function()
+    {
+        $test_function = DB::table('settings')
+            ->where('settings_id','27')
+            ->select('key')
+            ->first();
+        return $test_function;
+    }
+
 }
