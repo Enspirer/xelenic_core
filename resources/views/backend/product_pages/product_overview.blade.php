@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label>Product Image</label>
-                    <div class="" style="border-style:dashed;border-width: 2px;height: 300px;border-color: #bababa;text-align: center;background-color: white;">
+                    <div class="" style="border-style:dashed;border-width: 2px;height: 300px;border-color: #bababa;text-align: center;background-color: white;"  data-toggle="modal" data-target="#file_manager_dialog">
                         <i class="fa fa-image" style="font-size: 60px;padding-top: 100px;color: #e4e5e6;"></i>
                         <h4 style="color: #e4e5e6">Image Here</h4>
                     </div>
@@ -63,6 +63,14 @@
     </div>
 </form>
 
+
+@include('backend.dialogs.file_manager_dialog')
+
+<script>
+    $('#file_manager_dialog').on('show.bs.modal', function (e) {
+      console.log('Hello');
+    })
+</script>
 
 
 <script>

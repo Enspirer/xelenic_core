@@ -11,6 +11,13 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/file_manager'))}}" href="{{ route('admin.dashboard') }}">
+                    <i class="nav-icon fas fa-folder"></i>
+                    File Manager
+                </a>
+            </li>
+
 
             <li class="nav-item nav-dropdown {{active_class(Route::is('admin/products*'), 'open')}}">
                 <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/products*'))}}" href="#"><i class="nav-icon fas fa-box"></i>Products</a>
