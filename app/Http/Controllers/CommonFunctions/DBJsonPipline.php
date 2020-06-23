@@ -44,8 +44,6 @@ class DBJsonPipline extends Controller
         $erome = array_keys($data);
         
 
-        dd($erome);
-
 
 
 
