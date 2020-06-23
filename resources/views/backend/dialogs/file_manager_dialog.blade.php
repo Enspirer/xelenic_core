@@ -12,9 +12,20 @@
                 ...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="model_hide_file_manager()">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function modal_click_file_manager() {
+//        alert('smaeh_tales');
+
+    }
+
+    function model_hide_file_manager() {
+//        alert('hide');
+    }
+</script>
