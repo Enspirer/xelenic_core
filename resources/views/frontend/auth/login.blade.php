@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<!-- 
+<!--
 Template Name: dashgrin - Responsive Bootstrap 4 Admin Dashboard Template
 Author: Hencework
 
@@ -11,8 +11,8 @@ License: You must have a valid license purchased only from themeforest to legall
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>dashgrin I Login</title>
-    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+    <title>Xelenic Login</title>
+    <meta name="description" content="Xelenic Clouding Platform" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -40,17 +40,36 @@ License: You must have a valid license purchased only from themeforest to legall
             <div class="row">
                 <div class="col-xl-7 pa-0">
                     <div class="auth-form-wrap py-xl-0 py-50">
-                        <div class="auth-form w-sm-90 w-100 ">
-                            <div style="background-image: url('{{url('/')}}/FrontDashboard/dist/img/stash.png');height: 300px;background-position: center;background-size: contain;background-repeat: no-repeat;"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci lacus, mollis id quam porttitor, elementum eleifend nunc. Sed sit amet libero quis eros ultricies mollis nec at enim. Suspendisse auctor, nisi vitae fringilla consequat, felis nibh sagittis sapien, sed mollis libero turpis nec massa. Suspendisse mi tortor, placerat tincidunt ligula suscipit, suscipit sagittis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus malesuada volutpat risus. </p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2 style="text-align: center">Lorem ipsum dolor sit amet<br></h2><br>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="" style="background-image: url('{{url('/')}}/images/xelenic_login.png');height: 310px;background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                  </div>
+                                <div class="col-md-6">
+                                    <h3>Welcome to Xelenic</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                        standard dummy text ever since the 1500s,</p><br>
+
+                                    <h4>What is Lorem Ipsum?</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                        standard dummy text ever since the 1500s,</p><br>
+
+                                    <h4>Where does it come from?</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                        standard dummy text ever since the 1500s,</p><br>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
-                    <div class="auth-form-wrap py-xl-0 py-50">
-                        <div class="auth-form w-sm-90 w-100 ">
-                            <div style="background-image: url('{{url('/')}}/FrontDashboard/dist/img/stash.png');height: 300px;background-position: center;background-size: contain;background-repeat: no-repeat;"></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci lacus, mollis id quam porttitor, elementum eleifend nunc. Sed sit amet libero quis eros ultricies mollis nec at enim. Suspendisse auctor, nisi vitae fringilla consequat, felis nibh sagittis sapien, sed mollis libero turpis nec massa. Suspendisse mi tortor, placerat tincidunt ligula suscipit, suscipit sagittis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus malesuada volutpat risus. </p>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="col-xl-5 pa-0">
                     <div class="auth-form-wrap py-xl-0 py-50">
