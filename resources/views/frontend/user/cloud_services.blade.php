@@ -32,10 +32,11 @@
             @foreach($get_services as $get_service)
                 <div class="col-xl-4">
                     <div class="card card-lg">
-                        <div style="background-image: url('storage/service_img/{{$get_service->cover_image}}');height: 140px;background-position: center;background-size: cover;background-repeat: no-repeat;"></div>
+
+                        <div style="background-image: url('{{route('resource_route.service_img_route',$get_service->cover_image)}}');height: 140px;background-position: center;background-size: cover;background-repeat: no-repeat;"></div>
                         <div class="card-body">
                             <h4>{{$get_service->service_name}}</h4> <br>
-                            <p style="overflow: hidden;height: 190px;">
+                            <p style="overflow: hidden;height: 190px;text-align: initial;">
                                 {{$get_service->service_description}}
                             </p> <br>
                             <a href="{{route('frontend.user.cloud_services.view',$get_service->service_id)}}" class="btn btn-primary btn-rounded pull-right">Read More</a>
