@@ -2,6 +2,7 @@
 
 namespace App\ServiceModel\CloudAPIBuilder;
 
+use App\Models\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 class CloudAPIDataEntry extends Model
@@ -11,8 +12,7 @@ class CloudAPIDataEntry extends Model
 
     public static function get_data_record( $ab_id, $table_id)
     {
-        $thing = DB::table('cloud_api_data_entry')
-            ->where('table_id',$table_id)
+        $thing = CloudAPIDataEntry::where('table_id',$table_id)
             ->get();
         $get_data = $thing->groupBy('row_number');
         return $get_data;
@@ -20,16 +20,13 @@ class CloudAPIDataEntry extends Model
 
     public static function api_get_data_records($table_key,$auth_key)
     {
-        $get_user_details = DB::table('users')
-            ->where('user_key',$auth_key)
+        $get_user_details = User::where('user_key',$auth_key)
             ->first();
 
-        $get_table_details = DB::table('cloud_api_data_table')
-            ->where('key',$table_key)
+        $get_table_details = CloudAPIDataTable::where('key',$table_key)
             ->first();
 
-        $thing = DB::table('cloud_api_data_entry')
-            ->where('user_id',$get_user_details->id)
+        $thing = CloudAPIDataEntry::where('user_id',$get_user_details->id)
             ->where('table_id',$get_table_details->table_id)
             ->get();
 
@@ -41,8 +38,7 @@ class CloudAPIDataEntry extends Model
 
     public static function get_next_row ($ab_id,$table_id)
     {
-        $get_lastest_record = DB::table('cloud_api_data_entry')
-            ->where('ab_id',$ab_id)
+        $get_lastest_record =CloudAPIDataEntry::where('ab_id',$ab_id)
             ->where('table_id',$table_id)
             ->orderBy('row_number','desc')
             ->first();
@@ -63,17 +59,17 @@ class CloudAPIDataEntry extends Model
 
     public static function insert_data_static ($data,$tpe,$order,$user_id,$table_id,$ab_id,$field_id,$row_number)
     {
-        $get_id = DB::table('cloud_api_data_entry')
-            ->insertGetId([
-               'data' => $data,
-               'type' => $tpe,
-               'order' => $order,
-               'user_id' => $user_id,
-               'table_id' => $table_id,
-               'ab_id' => $ab_id,
-               'field_id' => $field_id,
-               'row_number' => $row_number,
-            ]);
+        $CloudAPIDataEntry = new CloudAPIDataEntry;
+        $CloudAPIDataEntry->data = $data;
+        $CloudAPIDataEntry->type = $tpe;
+        $CloudAPIDataEntry->order = $order;
+        $CloudAPIDataEntry->user_id = $user_id;
+        $CloudAPIDataEntry->table_id =$table_id;
+        $CloudAPIDataEntry->ab_id = $ab_id;
+        $CloudAPIDataEntry->field_id = $field_id;
+        $CloudAPIDataEntry->row_number = $row_number;
+        $CloudAPIDataEntry->save();
+        $get_id = $CloudAPIDataEntry->entry_id;
 
         return $get_id;
     }
