@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend\CloudServices\Services;
 
 use App\CloudService;
+use App\Models\Auth\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CommonFunctions\Entrosement;
@@ -225,20 +226,17 @@ class APIManager extends Controller
 
 
 
-        $get_user_details = DB::table('users')->where('user_key',$auth_key)->first();
+        $get_user_details = User::where('user_key',$auth_key)->first();
 
 
-        $get_table_details = DB::table('cloud_api_data_table')
-            ->where('key',$table_key)
+        $get_table_details = CloudAPIDataTable::where('key',$table_key)
             ->first();
 
-        $get_app_details = DB::table('cloud_api_builder')
-            ->where('key',$app_key)
+        $get_app_details = CloudAPIBuilder::where('key',$app_key)
             ->first();
 
 
-        $get_field_data= DB::table('cloud_api_data_field')
-            ->where('table_id',$get_table_details->table_id)
+        $get_field_data= CloudAPIDataField::where('table_id',$get_table_details->table_id)
             ->get();
 
         if (count($data) == count($get_field_data))
