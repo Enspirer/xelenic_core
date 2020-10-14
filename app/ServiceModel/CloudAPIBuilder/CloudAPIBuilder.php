@@ -5,11 +5,14 @@ namespace App\ServiceModel\CloudAPIBuilder;
 use App\MyService;
 use Illuminate\Database\Eloquent\Model;
 use DB;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class CloudAPIBuilder extends Model
+
+class CloudAPIBuilder extends Eloquent
 {
     protected $table = 'cloud_api_builder';
-    protected $primaryKey = 'ab_id';
+    protected $primaryKey = '_id';
+    protected $connection = 'mongodb';
 
     public static function create_app($app_name,$app_type,$status,$key)
     {
@@ -21,7 +24,8 @@ class CloudAPIBuilder extends Model
         $cloudAPIBuilder->status = $status;
         $cloudAPIBuilder->key = $key;
         $cloudAPIBuilder->save();
-        $get_app_id = $cloudAPIBuilder->ab_id;
+        $get_app_id = $cloudAPIBuilder->_id;
+
 
         $get_all_services = CloudAPIBuilder::where('user_id', auth()->user()->id)
             ->get();
@@ -39,7 +43,8 @@ class CloudAPIBuilder extends Model
 
     public static function change_app_type ($ab_id,$app_type)
     {
-        CloudAPIBuilder::where('ab_id',$ab_id)
+
+        CloudAPIBuilder::where('_id',$ab_id)
             ->update(
                 ['app_type' => $app_type]
             );
@@ -48,7 +53,7 @@ class CloudAPIBuilder extends Model
 
     public static function update_app ($app_id,$app_name,$app_type,$status,$key)
     {
-        CloudAPIBuilder::where('ab_id', $app_id)
+        CloudAPIBuilder::where('_id', $app_id)
             ->update(
                 [
                     'app_name' => $app_name,
@@ -78,7 +83,7 @@ class CloudAPIBuilder extends Model
 
     public static function get_app_details_by_id ($id)
     {
-        $get_app_details = CloudAPIBuilder::where('ab_id',$id)
+        $get_app_details = CloudAPIBuilder::where('_id',$id)
             ->where('user_id',auth()->user()->id)
             ->first();
         return $get_app_details;

@@ -7,11 +7,14 @@ use App\Models\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 use App\Http\Controllers\CommonFunctions\Entrosement;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;;
 
-class CloudAPIDataTable extends Model
+class CloudAPIDataTable extends Eloquent
 {
     protected $table = 'cloud_api_data_table';
-    protected $primaryKey = 'table_id';
+    protected $primaryKey = '_id';
+    protected $connection = 'mongodb';
+
 
     public static function create_table($table_name,$ab_id,$status)
     {
@@ -24,7 +27,7 @@ class CloudAPIDataTable extends Model
         $CLoudAPIDataTable->ab_id = $ab_id;
         $CLoudAPIDataTable->status = $status;
         $CLoudAPIDataTable->save();
-        $id = $CLoudAPIDataTable->table_id;
+        $id = $CLoudAPIDataTable->_id;
 
 
 //        $id = DB::table('cloud_api_data_table')->insertGetId(
@@ -44,7 +47,7 @@ class CloudAPIDataTable extends Model
 
     public static function get_table_by_id ($table_id)
     {
-        $get_table = CloudAPIDataTable::where('table_id',$table_id)
+        $get_table = CloudAPIDataTable::where('_id',$table_id)
             ->first();
         return $get_table;
     }

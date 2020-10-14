@@ -5,10 +5,13 @@ namespace App\ServiceModel\CloudAPIBuilder;
 use App\Models\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use DB;
-class CloudAPIDataEntry extends Model
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+
+class CloudAPIDataEntry extends Eloquent
 {
     protected $table = 'cloud_api_data_entry';
-    protected $primaryKey = 'entry_id';
+    protected $primaryKey = '_id';
+    protected $connection = 'mongodb';
 
     public static function get_data_record( $ab_id, $table_id)
     {
@@ -69,7 +72,7 @@ class CloudAPIDataEntry extends Model
         $CloudAPIDataEntry->field_id = $field_id;
         $CloudAPIDataEntry->row_number = $row_number;
         $CloudAPIDataEntry->save();
-        $get_id = $CloudAPIDataEntry->entry_id;
+        $get_id = $CloudAPIDataEntry->_id;
 
         return $get_id;
     }

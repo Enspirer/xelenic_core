@@ -6,11 +6,13 @@ use App\Models\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 use PharIo\Manifest\ManifestDocumentMapperTest;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;;
 
-class CloudAPIDataField extends Model
+class CloudAPIDataField extends Eloquent
 {
     protected $table = 'cloud_api_data_field';
-    protected $primaryKey = 'data_field_id';
+    protected $primaryKey = '_id';
+    protected $connection = 'mongodb';
 
     public static function create_field ($field_name,$type,$key,$ab_id,$table_id,$order_id)
     {
@@ -24,7 +26,7 @@ class CloudAPIDataField extends Model
         $CloudDataFiled->order = $order_id;
         $CloudDataFiled->save();
 
-        $id = $CloudDataFiled->data_field_id;
+        $id = $CloudDataFiled->_id;
 
         return $id;
     }
