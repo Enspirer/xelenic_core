@@ -113,6 +113,7 @@ class APIManager extends Controller
 
     public function table_edit_page ($table_id,$table_key,$service_id,$app_id)
     {
+
         $service_details =  MyService::get_service_details($service_id);
         $get_app_details = CloudAPIBuilder::get_app_details_by_id($app_id);
         $get_cloud_table = CloudAPIDataTable::get_tables_by_user(auth()->user()->id,$app_id);
@@ -136,11 +137,14 @@ class APIManager extends Controller
         $ab_id =  $request->ab_id;
         $table_id =  $request->table_id;
         $data_type =  $request->data_type;
+
+
         $order = CloudAPIDataField::get_next_field($table_id);
         $key = Entrosement::generate_APIKey(40);
 
-
         CloudAPIDataField::create_field($field_name,$data_type,$key,$ab_id,$table_id,$order);
+
+
 
         return back();
     }
