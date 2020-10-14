@@ -20,7 +20,7 @@
         <ol class="breadcrumb breadcrumb-light bg-transparent">
             <li class="breadcrumb-item "><a href="{{route('frontend.user.my_service.index')}}">My Service</a></li>
             <li class="breadcrumb-item"><a href="{{route('frontend.user.my_service.open_service',[$service_details->service_id,$service_details->token])}}">{{$service_details->service_name}}</a></li>
-            <li class="breadcrumb-item active"><a href="{{route('frontend.user.api_builder.dashboard',[$get_app_details->ab_id,$get_app_details->key,auth()->user()->id,$service_details->service_id])}}">{{$get_app_details->app_name}}</a></li>
+            <li class="breadcrumb-item active"><a href="{{route('frontend.user.api_builder.dashboard',[$get_app_details->_id,$get_app_details->key,auth()->user()->id,$service_details->service_id])}}">{{$get_app_details->app_name}}</a></li>
         </ol>
     </nav>
     <!-- /Breadcrumb -->
@@ -34,7 +34,7 @@
         <div class="tab-content">
             <nav class="hk-breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-light bg-transparent">
-                    <li class="breadcrumb-item active"><a href="{{route('frontend.user.api_builder.dashboard',[$get_app_details->ab_id,$get_app_details->key,auth()->user()->id,$service_details->service_id])}}?#builder_table">{{$get_app_details->app_name}}</a></li>
+                    <li class="breadcrumb-item active"><a href="{{route('frontend.user.api_builder.dashboard',[$get_app_details->_id,$get_app_details->key,auth()->user()->id,$service_details->service_id])}}?#builder_table">{{$get_app_details->app_name}}</a></li>
                     <li class="breadcrumb-item active"><a href="">{{$table_details->table_name}} (Edit Table)</a></li>
                 </ol>
             </nav>
@@ -65,7 +65,7 @@
                                                 <td>{{$field->key}}</td>
                                                 <td>
                                                     <a href="#" class="mr-25" data-toggle="tooltip" data-original-title="Edit"> <i class="icon-pencil"></i> </a>
-                                                    <a href="{{route('frontend.user.api_builder.delete_id',[$field->data_field_id, $field->table_id])}}" data-toggle="tooltip" data-original-title="Delete"> <i class="icon-trash txt-danger"></i> </a>
+                                                    <a href="{{route('frontend.user.api_builder.delete_id',[$field->_id, $field->table_id])}}" data-toggle="tooltip" data-original-title="Delete"> <i class="icon-trash txt-danger"></i> </a>
                                                 </td>
                                             </tr>
                                         @endforeach

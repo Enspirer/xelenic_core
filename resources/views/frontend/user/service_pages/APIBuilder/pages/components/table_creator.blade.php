@@ -1,6 +1,6 @@
 <nav class="hk-breadcrumb" aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-light bg-transparent">
-        <li class="breadcrumb-item active"><a href="{{route('frontend.user.api_builder.dashboard',[$get_app_details->ab_id,$get_app_details->key,auth()->user()->id,$service_details->service_id])}}">{{$get_app_details->app_name}}</a></li>
+        <li class="breadcrumb-item active"><a href="{{route('frontend.user.api_builder.dashboard',[$get_app_details->_id,$get_app_details->key,auth()->user()->id,$service_details->service_id])}}">{{$get_app_details->app_name}}</a></li>
     </ol>
 </nav>
 
@@ -31,11 +31,11 @@
                                 </a>
 
                                 <div role="menu" class="dropdown-menu" style="will-change: transform;">
-                                    <a class="dropdown-item" href="{{route('frontend.user.view_data_entry',[$tables->table_id,$tables->key,$service_details->service_id,$get_app_details->ab_id])}}">View Data Entry</a>
-                                    <a class="dropdown-item" href="{{route('frontend.user.table_edit_page',[$tables->table_id,$tables->key,$service_details->service_id,$get_app_details->ab_id])}}">Edit Table</a>
+                                    <a class="dropdown-item" href="{{route('frontend.user.view_data_entry',[$tables->_id,$tables->key,$service_details->service_id,$get_app_details->_id])}}">View Data Entry</a>
+                                    <a class="dropdown-item" href="{{route('frontend.user.table_edit_page',[$tables->_id,$tables->key,$service_details->service_id,$get_app_details->_id])}}">Edit Table</a>
                                     <a class="dropdown-item" href="">End Points</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item dark" href="{{route('frontend.user.api_builder.delete_table_permenent',$tables->table_id)}}" style="color: red;">Permanent Delete</a>
+                                    <a class="dropdown-item dark" href="{{route('frontend.user.api_builder.delete_table_permenent',$tables->_id)}}" style="color: red;">Permanent Delete</a>
                                 </div>
                             </div>
                         </div>

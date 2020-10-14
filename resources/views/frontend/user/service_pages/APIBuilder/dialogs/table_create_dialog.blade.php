@@ -15,7 +15,7 @@
                                 {{csrf_field()}}
                                 <div class="form-group">
                                     <label>Table name</label>
-                                    <input type="hidden" value="{{$get_app_details->ab_id}}" placeholder="Table name" class="form-control" name="ab_id" required>
+                                    <input type="hidden" value="{{$get_app_details->_id}}" placeholder="Table name" class="form-control" name="ab_id" required>
                                     <input type="hidden" value="{{$service_details->service_id}}" placeholder="Table name" class="form-control" name="service_id" required>
                                     <input type="hidden" value="{{$get_app_details->key}}" placeholder="Table name" class="form-control" name="api_key" required>
                                     <input type="text" value="" placeholder="Table name" class="form-control" name="table_name" required>

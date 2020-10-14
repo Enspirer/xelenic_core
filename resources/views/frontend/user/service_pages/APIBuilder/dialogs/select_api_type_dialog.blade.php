@@ -23,7 +23,7 @@
                     {{csrf_field()}}
                     <input type="hidden" value="1" name="api_type">
                     <input type="hidden" value="{{$get_app_details->key}}" name="api_key">
-                    <input type="hidden" value="{{$get_app_details->ab_id}}" name="ab_id">
+                    <input type="hidden" value="{{$get_app_details->_id}}" name="ab_id">
                     <input type="hidden" value="{{$service_id}}" name="service_id">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-danger">Activate</button>

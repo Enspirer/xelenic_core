@@ -13,7 +13,7 @@ class Apibuilder extends Migration
      */
     public function up()
     {
-        Schema::create('cloud_api_builder', function (Blueprint $table) {
+        Schema::connection('mongodb')->create('cloud_api_builder', function (Blueprint $table) {
             $table->bigIncrements('ab_id');
             $table->text('app_name');
             $table->integer('user_id');
@@ -24,7 +24,7 @@ class Apibuilder extends Migration
             $table->timestamp('created_at')->useCurrent();
         });
 
-        Schema::create('cloud_api_data_table', function (Blueprint $table) {
+        Schema::connection('mongodb')->create('cloud_api_data_table', function (Blueprint $table) {
             $table->bigIncrements('table_id');
             $table->text('table_name');
             $table->integer('user_id');
@@ -35,7 +35,7 @@ class Apibuilder extends Migration
             $table->timestamp('created_at')->useCurrent();
         });
 
-        Schema::create('cloud_api_data_field', function (Blueprint $table) {
+        Schema::connection('mongodb')->create('cloud_api_data_field', function (Blueprint $table) {
             $table->bigIncrements('data_field_id');
             $table->text('field_name');
             $table->text('type');
@@ -47,7 +47,7 @@ class Apibuilder extends Migration
             $table->timestamp('updated_at');
             $table->timestamp('created_at')->useCurrent();
         });
-        Schema::create('cloud_api_data_entry', function (Blueprint $table) {
+        Schema::connection('mongodb')->create('cloud_api_data_entry', function (Blueprint $table) {
             $table->bigIncrements('entry_id');
             $table->longText('data');
             $table->text('type');
@@ -70,10 +70,10 @@ class Apibuilder extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cloud_api_builder');
-        Schema::dropIfExists('cloud_api_data_field');
-        Schema::dropIfExists('cloud_api_data_table');
-        Schema::dropIfExists('cloud_api_data_entry');
+        Schema::connection('mongodb')->dropIfExists('cloud_api_builder');
+        Schema::connection('mongodb')->dropIfExists('cloud_api_data_field');
+        Schema::connection('mongodb')->dropIfExists('cloud_api_data_table');
+        Schema::connection('mongodb')->dropIfExists('cloud_api_data_entry');
 
     }
 }

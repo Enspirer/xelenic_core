@@ -14,8 +14,8 @@
                                 <label>Field Name</label>
                                 <input type="text" class="form-control" name="field_name" required>
                                 <input type="hidden" class="form-control" name="service_id" value="{{$service_details->service_id}}" required>
-                                <input type="hidden" class="form-control" name="ab_id" value="{{$get_app_details->ab_id}}" required>
-                                <input type="hidden" class="form-control" name="table_id" value="{{$table_details->table_id}}" required>
+                                <input type="hidden" class="form-control" name="ab_id" value="{{$get_app_details->_id}}" required>
+                                <input type="hidden" class="form-control" name="table_id" value="{{$table_details->_id}}" required>
                             </div>
                             <div class="form-group">
                                 <label>Data Type</label>

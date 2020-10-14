@@ -3,7 +3,20 @@
         <div class="col-xl-12">
            @if (auth()->user()->user_key == null)
                 @if ($authfaction == null)
-                    <h3 style="color: grey;text-align: center">Install AuthFactor Service</h3>
+                    <h3 style="color: grey;text-align: center">Install AuthFactor Service</h3> <br>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container">
+                                <p style="text-align: center;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's
+                                    standard dummy text ever since the 1500s, <br>when an unknown printer took a galley of type
+                                    and scrambled it to make a type specimen book.</p>
+                                <div class="" style="background-image: url('{{url('/')}}/images/auth_factor_apis.jpg');height: 300px;background-repeat: no-repeat;background-position: center;background-size: contain;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @else
                     <h3 style="color: grey;text-align: center">AuthFactor not active</h3>
                 @endif
