@@ -16,4 +16,9 @@ class HomeController extends Controller
     {
         return view('frontend.index');
     }
+
+    public function service_error($error_module)
+    {
+        return view('frontend.pages.service_error');
+    }
 }
