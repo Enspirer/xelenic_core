@@ -7,6 +7,7 @@ use  App\Http\Controllers\Backend\PartnershipsController;
 use App\Http\Controllers\Backend\CloudServiceController;
 use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\LeedsController;
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -35,5 +36,11 @@ Route::post('cloud-services/insert', [CloudServiceController::class, 'insert'])-
 
 Route::get('products', [ProductController::class, 'index'])->name('products.index');
 Route::post('inser_product', [ProductController::class, 'shore'])->name('products.store');
+
+
+Route::get('leeds/service-complain', [LeedsController::class, 'service_complain'])->name('leeds.service_complain');
+Route::get('leeds/customer-complain', [LeedsController::class, 'customer_complain'])->name('leeds.customer_complain');
+Route::get('leeds/sales-complain', [LeedsController::class, 'sales_complain'])->name('leeds.sales_complain');
+Route::get('leeds/feedback', [LeedsController::class, 'feedback'])->name('leeds.feedback');
 
 
