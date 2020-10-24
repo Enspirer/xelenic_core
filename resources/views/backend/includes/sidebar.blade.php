@@ -11,12 +11,32 @@
                 </a>
             </li>
 
+            <li class="nav-item nav-dropdown {{active_class(Route::is('admin/settings*'), 'open')}}">
+                <a class="nav-link nav-dropdown-toggle {{active_class(Route::is('admin/settings*'))}}" href="#"><i class="nav-icon fas fa-mail-bulk"></i>Leeds</a>
+
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/service-complain'))}}" href="{{ route('admin.leeds.service_complain') }}">Service Complain</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/customer-complain'))}}" href="{{ route('admin.leeds.customer_complain') }}">Customer Complain</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/sales-complain'))}}" href="{{ route('admin.leeds.sales_complain') }}">Sales Complain</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{active_class(Route::is('admin/feedback'))}}" href="{{ route('admin.leeds.feedback') }}">Feedback</a>
+                    </li>
+                </ul>
+            </li>
+
             <li class="nav-item">
-                <a class="nav-link {{active_class(Route::is('admin/file_manager'))}}" href="{{ route('admin.dashboard') }}">
+                <a class="nav-link {{active_class(Route::is('admin/file_manager'))}}" href="">
                     <i class="nav-icon fas fa-folder"></i>
                     File Manager
                 </a>
             </li>
+
 
 
             <li class="nav-item nav-dropdown {{active_class(Route::is('admin/products*'), 'open')}}">
