@@ -5,8 +5,9 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use MongoDB\Driver\Exception\ConnectionTimeoutException;
 use Spatie\Permission\Exceptions\UnauthorizedException;
-
+use Auth;
 /**
  * Class Handler.
  */
@@ -59,6 +60,13 @@ class Handler extends ExceptionHandler
             return redirect()
                 ->route(home_route())
                 ->withFlashDanger(__('auth.general_error'));
+        }
+
+        if ($exception instanceof ConnectionTimeoutException)
+        {
+
+               return redirect()->route('frontend.service-error','ConnectionTimeoutException');
+
         }
 
         return parent::render($request, $exception);
