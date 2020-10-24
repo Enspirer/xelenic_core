@@ -18,6 +18,7 @@ use App\Http\Controllers\Frontend\CloudServices\Services\AutFactor;
 use App\Http\Controllers\Frontend\CloudServices\Services\APIManager;
 use App\Http\Controllers\Frontend\CloudServices\Services\WebsiteBuilder;
 use App\Http\Controllers\Frontend\User\FileManagerContoller;
+
 /*
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
@@ -39,6 +40,7 @@ Route::get('events', [EventsController::class, 'index'])->name('frontend.events'
 Route::get('user-files/{file_id}/{file_name}', [FileManagerContoller::class, 'view_file'])->name('frontend.view_file');
 
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
+Route::get('service-error/{error_module}', [HomeController::class, 'service_error'])->name('service-error');
 
 
 //API Builder API Endpoints

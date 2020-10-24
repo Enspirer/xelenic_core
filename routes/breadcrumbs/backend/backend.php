@@ -36,6 +36,23 @@ Breadcrumbs::for('admin.products.index', function ($trail) {
     $trail->push('Products', route('admin.products.index'));
 });
 
+Breadcrumbs::for('admin.leeds.service_complain', function ($trail) {
+    $trail->push('Service Complain', route('admin.leeds.service_complain'));
+});
+
+Breadcrumbs::for('admin.leeds.customer_complain', function ($trail) {
+    $trail->push('Customer Complain', route('admin.leeds.customer_complain'));
+});
+
+Breadcrumbs::for('admin.leeds.sales_complain', function ($trail) {
+    $trail->push('Service Complain', route('admin.leeds.sales_complain'));
+});
+
+Breadcrumbs::for('admin.leeds.feedback', function ($trail) {
+    $trail->push('Feedback', route('admin.leeds.feedback'));
+});
+
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
