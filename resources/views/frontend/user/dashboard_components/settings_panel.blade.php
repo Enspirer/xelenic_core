@@ -2,8 +2,8 @@
 <div class="hk-settings-panel">
     <div class="nicescroll-bar position-relative">
         <div class="settings-panel-wrap">
-            <div class="settings-panel-head">
-                <img class="brand-img d-inline-block align-top" src="dist/img/logo-light.png" alt="brand" />
+            <div class="settings-panel-head" style="background-image: url('{{url('/')}}/images/xelenic_cloud solution.png');height: 100px;background-size: contain;background-repeat: no-repeat;">
+                <div class="" style=""></div>
                 <a href="javascript:void(0);" id="settings_panel_close" class="settings-panel-close"><span class="feather-icon"><i data-feather="x"></i></span></a>
             </div>
 
